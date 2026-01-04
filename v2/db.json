@@ -1,0 +1,43 @@
+{
+  "fishermen": [
+    {
+      "name": "juminit",
+      "email": "juminto@gamial.com",
+      "team": "Tara-Club",
+      "id": "FISH-7424",
+      "status": "Active",
+      "catches": [
+        {
+          "id": "0ea3d379-61a3-4076-a145-0ba8386b64f4",
+          "weight": 123,
+          "timestamp": "2026-01-04T08:09:13.981Z"
+        },
+        {
+          "id": "9b3fa56d-9fc1-49b6-aadf-0f8ce8121db4",
+          "weight": 1,
+          "timestamp": "2026-01-04T08:09:30.176Z"
+        },
+        {
+          "id": "aaa70585-47b4-47bf-9284-8ee330fd7e9f",
+          "weight": 111,
+          "timestamp": "2026-01-04T08:09:34.581Z"
+        },
+        {
+          "id": "16d8f5ca-323f-4b3f-b6d0-970af727610c",
+          "weight": 1212,
+          "timestamp": "2026-01-04T08:09:40.472Z"
+        },
+        {
+          "id": "7250acfa-c054-4e40-b91d-8349895a3d95",
+          "weight": 12,
+          "timestamp": "2026-01-04T08:09:44.531Z"
+        }
+      ],
+      "registeredAt": "2026-01-04T08:08:04.698Z"
+    }
+  ],
+  "settings": {
+    "eventName": "Mancing Mantap 2021",
+    "bgImage": ""
+  }
+}

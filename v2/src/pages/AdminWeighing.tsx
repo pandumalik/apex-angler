@@ -1,6 +1,90 @@
+import { useState, useEffect } from 'react';
 import { ChevronRight, RotateCcw, User, Save, Fish, Scale, Edit, Loader2 } from 'lucide-react';
+import { api } from '../services/api';
+import type { Fisherman, Catch } from '../types';
 
 export default function AdminWeighing() {
+    const [participants, setParticipants] = useState<Fisherman[]>([]);
+    const [selectedId, setSelectedId] = useState('');
+    const [weight, setWeight] = useState('');
+    const [isLoading, setIsLoading] = useState(false);
+    const [identifiedFisherman, setIdentifiedFisherman] = useState<Fisherman | null>(null);
+    const [recentCatches, setRecentCatches] = useState<{ time: string; name: string; id: string; weight: string }[]>([]);
+
+    useEffect(() => {
+        fetchParticipants();
+    }, []);
+
+    // Effect to identify fisherman when ID is typed
+    useEffect(() => {
+        if (!selectedId) {
+            setIdentifiedFisherman(null);
+            return;
+        }
+        const found = participants.find(p => p.id.toLowerCase() === selectedId.toLowerCase() || p.id.toLowerCase().includes(selectedId.toLowerCase()));
+        if (found) {
+            setIdentifiedFisherman(found);
+        } else {
+            setIdentifiedFisherman(null);
+        }
+    }, [selectedId, participants]);
+
+    const fetchParticipants = async () => {
+        try {
+            const data = await api.getData();
+            setParticipants(data.fishermen || []);
+        } catch (error) {
+            console.error('Failed to fetch participants:', error);
+        }
+    };
+
+    const handleRecordCatch = async () => {
+        if (!identifiedFisherman || !weight || parseFloat(weight) <= 0) {
+            alert('Please select a valid participant and enter a weight.');
+            return;
+        }
+
+        setIsLoading(true);
+        try {
+            const newCatch: Catch = {
+                id: crypto.randomUUID(),
+                weight: parseFloat(weight),
+                timestamp: new Date().toISOString()
+            };
+
+            const updatedCatches = [...(identifiedFisherman.catches || []), newCatch];
+
+            await api.updateFisherman(identifiedFisherman.id, {
+                catches: updatedCatches
+            });
+
+            // Update local state for immediate feedback
+            const now = new Date();
+            setRecentCatches(prev => [
+                {
+                    time: now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
+                    name: identifiedFisherman.name,
+                    id: identifiedFisherman.id,
+                    weight: parseFloat(weight).toFixed(2)
+                },
+                ...prev
+            ].slice(0, 5));
+
+            setWeight('');
+            setSelectedId('');
+            setIdentifiedFisherman(null);
+            fetchParticipants(); // Refresh data to ensure sync
+            alert('Catch recorded successfully!');
+        } catch (error) {
+            console.error('Failed to record catch:', error);
+            alert('Failed to record catch.');
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const currentTotalWeight = identifiedFisherman?.catches?.reduce((sum, c) => sum + c.weight, 0).toFixed(2) || '0.00';
+
     return (
         <div className="max-w-7xl mx-auto flex flex-col gap-6">
             {/* Breadcrumbs */}
@@ -54,7 +138,7 @@ export default function AdminWeighing() {
                         <div className="p-6 flex flex-col gap-6">
                             <div className="flex items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-700">
                                 <h3 className="text-lg font-bold text-slate-900 dark:text-white">Input Details</h3>
-                                <button className="text-primary text-sm font-medium hover:underline flex items-center gap-1">
+                                <button onClick={() => { setSelectedId(''); setWeight(''); setIdentifiedFisherman(null); }} className="text-primary text-sm font-medium hover:underline flex items-center gap-1">
                                     <RotateCcw size={16} />
                                     Reset Form
                                 </button>
@@ -67,39 +151,66 @@ export default function AdminWeighing() {
                                         <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 pointer-events-none">
                                             <User size={20} />
                                         </div>
-                                        <input autoFocus className="w-full h-14 pl-12 pr-4 bg-slate-50 dark:bg-[#101c22] border border-slate-200 dark:border-slate-700 rounded-lg text-lg text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all font-mono" placeholder="Enter ID (e.g. #8821)" type="text" defaultValue="#2941" />
+                                        <input
+                                            autoFocus
+                                            className="w-full h-14 pl-12 pr-4 bg-slate-50 dark:bg-[#101c22] border border-slate-200 dark:border-slate-700 rounded-lg text-lg text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all font-mono"
+                                            placeholder="Enter ID (e.g. FISH-123)"
+                                            type="text"
+                                            value={selectedId}
+                                            onChange={(e) => setSelectedId(e.target.value)}
+                                        />
                                     </div>
                                 </label>
                                 {/* Weight Input */}
                                 <label className="flex flex-col gap-2">
                                     <span className="text-sm font-medium text-slate-700 dark:text-slate-300">Fish Weight</span>
                                     <div className="relative">
-                                        <input className="w-full h-14 pl-4 pr-12 bg-slate-50 dark:bg-[#101c22] border border-slate-200 dark:border-slate-700 rounded-lg text-2xl font-bold text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-right font-mono" placeholder="0.00" step="0.01" type="number" />
-                                        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 font-medium">kg</span>
+                                        <input
+                                            className="w-full h-14 pl-4 pr-12 bg-slate-50 dark:bg-[#101c22] border border-slate-200 dark:border-slate-700 rounded-lg text-2xl font-bold text-slate-900 dark:text-white placeholder:text-slate-400 focus:ring-2 focus:ring-primary focus:border-primary transition-all text-right font-mono"
+                                            placeholder="0.00"
+                                            step="0.01"
+                                            type="number"
+                                            value={weight}
+                                            onChange={(e) => setWeight(e.target.value)}
+                                        />
+                                        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 font-medium">lbs</span>
                                     </div>
                                 </label>
                             </div>
 
                             {/* Detected Participant Card (Dynamic View) */}
-                            <div className="bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-lg p-4 flex flex-col sm:flex-row gap-4 items-center">
-                                <div className="h-12 w-12 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden flex-shrink-0">
-                                    <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYnmiZBKn8fWqxyEu9cuUBAZBUagNmD6USpFHTYG8SEf5bQK9leamitWCsqsdalFR1Ld-c3hOzRsO5bZSNvp48qJYNiXGwfUz1_adhYMyKPhyEinIEvjaAptW_0qLdPt9eOYAuRo9qgPx-u-Skmqf2KGNi51EuleS_9p3CO6B1kQCbZQZJhkccyT3mNM7mfa3hBcJCSNMw_tZupbvIKc1YuXbNKfTTvn_VoFGKPArmAXkU_3G5nBtz2d4Kin9wH8E4h1Yan6AC_9g")' }}></div>
+                            {identifiedFisherman ? (
+                                <div className="bg-primary/5 dark:bg-primary/10 border border-primary/20 rounded-lg p-4 flex flex-col sm:flex-row gap-4 items-center animate-in fade-in slide-in-from-bottom-2 duration-300">
+                                    <div className="h-12 w-12 rounded-full bg-slate-200 dark:bg-slate-700 overflow-hidden flex-shrink-0">
+                                        <div className="w-full h-full bg-cover bg-center" style={{ backgroundImage: `url('${identifiedFisherman.avatar || "https://ui-avatars.com/api/?name=" + identifiedFisherman.name}')` }}></div>
+                                    </div>
+                                    <div className="flex-1 text-center sm:text-left">
+                                        <p className="text-sm text-primary font-semibold uppercase tracking-wider">Identified</p>
+                                        <h4 className="text-lg font-bold text-slate-900 dark:text-white">{identifiedFisherman.name}</h4>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400">Team: <span className="text-slate-700 dark:text-slate-300 font-medium">{identifiedFisherman.team || 'None'}</span></p>
+                                    </div>
+                                    <div className="text-right px-4 hidden sm:block">
+                                        <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">Current Total</p>
+                                        <p className="text-xl font-mono font-bold text-slate-900 dark:text-white">{currentTotalWeight} lbs</p>
+                                    </div>
                                 </div>
-                                <div className="flex-1 text-center sm:text-left">
-                                    <p className="text-sm text-primary font-semibold uppercase tracking-wider">Identified</p>
-                                    <h4 className="text-lg font-bold text-slate-900 dark:text-white">Michael Foster</h4>
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">Team: <span className="text-slate-700 dark:text-slate-300 font-medium">Deep Blue Anglers</span></p>
+                            ) : (
+                                <div className="h-24 bg-slate-50 dark:bg-[#101c22] border border-slate-200 dark:border-slate-700 border-dashed rounded-lg flex items-center justify-center text-slate-400 text-sm">
+                                    Participant not identified...
                                 </div>
-                                <div className="text-right px-4 hidden sm:block">
-                                    <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">Current Total</p>
-                                    <p className="text-xl font-mono font-bold text-slate-900 dark:text-white">12.45 kg</p>
-                                </div>
-                            </div>
+                            )}
 
                             {/* Action Button */}
-                            <button className="w-full h-14 mt-2 bg-primary hover:bg-sky-500 active:bg-sky-600 text-white text-lg font-bold rounded-lg shadow-lg shadow-primary/20 transition-all flex items-center justify-center gap-2">
-                                <Save size={24} />
-                                Record Catch
+                            <button
+                                onClick={handleRecordCatch}
+                                disabled={isLoading || !identifiedFisherman || !weight}
+                                className={`w-full h-14 mt-2 text-white text-lg font-bold rounded-lg shadow-lg transition-all flex items-center justify-center gap-2 ${isLoading || !identifiedFisherman || !weight
+                                    ? 'bg-slate-300 dark:bg-slate-700 cursor-not-allowed text-slate-500'
+                                    : 'bg-primary hover:bg-sky-500 active:bg-sky-600 shadow-primary/20'
+                                    }`}
+                            >
+                                {isLoading ? <Loader2 className="animate-spin" /> : <Save size={24} />}
+                                {isLoading ? 'Recording...' : 'Record Catch'}
                             </button>
                         </div>
                     </div>
@@ -112,16 +223,16 @@ export default function AdminWeighing() {
                         <div className="bg-white dark:bg-[#192b33] p-4 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
                             <div className="flex items-center gap-2 mb-2 text-slate-500 dark:text-slate-400">
                                 <Fish size={20} />
-                                <span className="text-xs font-semibold uppercase">Catches Today</span>
+                                <span className="text-xs font-semibold uppercase">Session</span>
                             </div>
-                            <p className="text-3xl font-black text-slate-900 dark:text-white">142</p>
+                            <p className="text-3xl font-black text-slate-900 dark:text-white">{recentCatches.length}</p>
                         </div>
                         <div className="bg-white dark:bg-[#192b33] p-4 rounded-xl shadow-sm border border-slate-200 dark:border-slate-800">
                             <div className="flex items-center gap-2 mb-2 text-slate-500 dark:text-slate-400">
                                 <Scale size={20} />
-                                <span className="text-xs font-semibold uppercase">Avg. Weight</span>
+                                <span className="text-xs font-semibold uppercase">Last</span>
                             </div>
-                            <p className="text-3xl font-black text-slate-900 dark:text-white">3.8 <span className="text-base font-medium text-slate-400">kg</span></p>
+                            <p className="text-3xl font-black text-slate-900 dark:text-white">{recentCatches[0]?.weight || '0.0'} <span className="text-base font-medium text-slate-400">lbs</span></p>
                         </div>
                     </div>
 
@@ -142,12 +253,9 @@ export default function AdminWeighing() {
                                     </tr>
                                 </thead>
                                 <tbody className="divide-y divide-slate-100 dark:divide-slate-700 text-sm">
-                                    {[
-                                        { time: '10:42', name: 'S. Williams', id: '#8821', weight: '4.25' },
-                                        { time: '10:38', name: 'D. Johnson', id: '#4120', weight: '2.80' },
-                                        { time: '10:35', name: 'M. Chen', id: '#3301', weight: '5.12' },
-                                        { time: '10:31', name: 'A. Rodriguez', id: '#2199', weight: '1.95' }
-                                    ].map((item, i) => (
+                                    {recentCatches.length === 0 ? (
+                                        <tr><td colSpan={4} className="p-4 text-center text-slate-400">No catches recorded in this session.</td></tr>
+                                    ) : recentCatches.map((item, i) => (
                                         <tr key={i} className="group hover:bg-slate-50 dark:hover:bg-white/5 transition-colors">
                                             <td className="px-4 py-3 text-slate-500 dark:text-slate-400 font-mono">{item.time}</td>
                                             <td className="px-4 py-3">

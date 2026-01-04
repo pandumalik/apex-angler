@@ -1,31 +1,95 @@
 
+import { useState, useEffect } from 'react';
 import { ArrowUp, ArrowDown, Minus, ChevronRight, Users, Scale, Trophy, Search, Download } from 'lucide-react';
+import { api } from '../services/api';
+import type { Fisherman } from '../types';
 
 export default function Leaderboard() {
-    // Mock Data (TODO: Fetch from API)
-    const rankings = [
-        { rank: 1, name: 'Sarah Jenkins', team: 'The Reel Deal', fish: '5 / 5', big: '12.5 lbs', total: '24.8 lbs', movement: 'up', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCA2rba0ewXfO7F8LiRDVJuUuDGUvuI0nYfqMA0eyOeCGFMFDM54u_UNUjaO2ETEMYbDN_Si6hGSjJcOQscZ8FJ_4Bg7258fGjLeZ2b8N8ooHso97YFqpzTKDrFPcDD1RWDNUcyPecHTn4c4jciO_Piv6DG91wyYd-_xQy0Y3uniiBl9X4SCdhxFOnAKzOzrtLYNYv26cLyAfaP0NsZtsbO4C_unCeM2SVqLek0UVPKChNjEgcagGuimrzvXATFbx7dfLKFjPhsIN0' },
-        { rank: 2, name: 'Mike Ross', team: 'Bass Buster', fish: '5 / 5', big: '8.2 lbs', total: '22.1 lbs', movement: 'down', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCJ3k40JXNwNNRG10kHDADCXYIuUguf5yEGBqgUklqYpXPGkc25eag-9zMXf0312H6s0UoJzkDz3wk7PIU1rTIDB570Jqnz-yCo2g1pCp8jeu-U1p6a2XuID5uJ4FzY2i4R9VvWLx6OkdKzxVyU03wLRSRnFDjETnLd2mGzTh-2i5bt5PVFywiTX_-nQfd4MDs_q9LAGZfrtbQuSMkdcAS4lJ198yQTo4t_AjOygk6NA6lJzyQLz6NXKaIc9AAu_leMo2FtrsWXNJk' },
-        { rank: 3, name: 'James T.', team: 'Weekend Warrior', fish: '4 / 5', big: '6.5 lbs', total: '19.5 lbs', movement: 'same', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD0QDt9K1fNaX2kxYmfUD-X-zz7lDN4Hatl7jkBVxsVOPcHmuT8yw2k0CvpJ_9liscO1d621TG-dIG1k-1dnJYU6vJEnsPuAnAEKgTyjKZl_AnTn8SAuCOkUpZpxdgYEMXASx6Zr7kkQBsVJ2xhFVws8pqvNzP6ftgH7jglxglCy3MYxhG3G20Jha-H79LeD6puOgGr1qOwbDisgUb4lviZRKIYEl797nXB_jE9mIsNBfNXa8COT4UYLMI4Hey0Te0w1LDr8lQh7V8' },
-    ];
+    const [rankings, setRankings] = useState<any[]>([]);
+    const [stats, setStats] = useState({ participants: 0, totalWeight: 0, bigBass: 0, bigBassHolder: '-' });
+    const [isLoading, setIsLoading] = useState(true);
+
+    useEffect(() => {
+        fetchData();
+        // Optional: Polling for live updates
+        const interval = setInterval(fetchData, 10000);
+        return () => clearInterval(interval);
+    }, []);
+
+    const fetchData = async () => {
+        try {
+            const data = await api.getData();
+            processLeaderboard(data.fishermen || []);
+        } catch (error) {
+            console.error(error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const processLeaderboard = (fishermen: Fisherman[]) => {
+        let totalW = 0;
+        let maxBass = 0;
+        let maxBassHolder = '-';
+
+        const processed = fishermen
+            .filter(f => f.status === 'Active') // Only show active
+            .map(f => {
+                const catches = f.catches || [];
+                const totalWeight = catches.reduce((sum, c) => sum + c.weight, 0);
+                const bigBass = catches.reduce((max, c) => Math.max(max, c.weight), 0);
+
+                totalW += totalWeight;
+                if (bigBass > maxBass) {
+                    maxBass = bigBass;
+                    maxBassHolder = f.name;
+                }
+
+                return {
+                    id: f.id,
+                    name: f.name,
+                    team: f.team,
+                    fishCount: catches.length,
+                    bigBass: bigBass,
+                    totalWeight: totalWeight,
+                    avatar: f.avatar
+                };
+            })
+            .sort((a, b) => b.totalWeight - a.totalWeight) // Sort by heavy bags
+            .map((f, index) => ({
+                ...f,
+                rank: index + 1,
+                movement: 'same' // Placeholder logic for movement
+            }));
+
+        setRankings(processed);
+        setStats({
+            participants: fishermen.length,
+            totalWeight: parseFloat(totalW.toFixed(2)),
+            bigBass: maxBass,
+            bigBassHolder: maxBassHolder
+        });
+    };
+
+    if (isLoading) return <div className="p-10 text-center text-slate-500">Loading Leaderboard...</div>;
 
     return (
         <div className="max-w-[1400px] mx-auto flex flex-col gap-6">
-            {/* Stats Row - Only show on large screens or specific contexts? The design has it on Top. */}
+            {/* Stats Row */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="bg-white dark:bg-[#16242c] p-5 rounded-xl border border-slate-200 dark:border-[#325567] shadow-sm flex flex-col gap-1">
                     <div className="flex items-center justify-between"><p className="text-slate-500 dark:text-[#92b7c9] text-sm font-medium">Total Participants</p><Users className="text-primary/50" size={24} /></div>
-                    <p className="text-2xl font-bold tracking-tight">84 <span className="text-sm font-normal text-slate-400">Anglers</span></p>
+                    <p className="text-2xl font-bold tracking-tight">{stats.participants} <span className="text-sm font-normal text-slate-400">Anglers</span></p>
                 </div>
                 <div className="bg-white dark:bg-[#16242c] p-5 rounded-xl border border-slate-200 dark:border-[#325567] shadow-sm flex flex-col gap-1 relative overflow-hidden">
                     <div className="absolute right-0 top-0 h-full w-1 bg-primary"></div>
                     <div className="flex items-center justify-between"><p className="text-slate-500 dark:text-[#92b7c9] text-sm font-medium">Total Catch Weight</p><Scale className="text-primary/50" size={24} /></div>
-                    <p className="text-2xl font-bold tracking-tight">1,240 <span className="text-sm font-normal text-slate-400">lbs</span></p>
+                    <p className="text-2xl font-bold tracking-tight">{stats.totalWeight.toFixed(2)} <span className="text-sm font-normal text-slate-400">lbs</span></p>
                 </div>
                 <div className="bg-white dark:bg-[#16242c] p-5 rounded-xl border border-slate-200 dark:border-[#325567] shadow-sm flex flex-col gap-1">
                     <div className="flex items-center justify-between"><p className="text-slate-500 dark:text-[#92b7c9] text-sm font-medium">Biggest Catch</p><Trophy className="text-primary/50" size={24} /></div>
-                    <p className="text-2xl font-bold tracking-tight text-primary">12.5 <span className="text-sm font-normal text-slate-400 dark:text-slate-500">lbs</span></p>
-                    <p className="text-xs text-slate-400 mt-1">Held by: Sarah Jenkins</p>
+                    <p className="text-2xl font-bold tracking-tight text-primary">{stats.bigBass.toFixed(2)} <span className="text-sm font-normal text-slate-400 dark:text-slate-500">lbs</span></p>
+                    <p className="text-xs text-slate-400 mt-1">Held by: {stats.bigBassHolder}</p>
                 </div>
             </div>
 
@@ -54,14 +118,16 @@ export default function Leaderboard() {
                                 <th className="px-6 py-4 text-left text-xs font-semibold text-slate-500 dark:text-[#92b7c9] uppercase tracking-wider w-24">Rank</th>
                                 <th className="px-6 py-4 text-left text-xs font-semibold text-slate-500 dark:text-[#92b7c9] uppercase tracking-wider">Angler</th>
                                 <th className="px-6 py-4 text-left text-xs font-semibold text-slate-500 dark:text-[#92b7c9] uppercase tracking-wider hidden sm:table-cell">Team</th>
-                                <th className="px-6 py-4 text-center text-xs font-semibold text-slate-500 dark:text-[#92b7c9] uppercase tracking-wider w-32">Fish</th>
+
                                 <th className="px-6 py-4 text-right text-xs font-semibold text-slate-500 dark:text-[#92b7c9] uppercase tracking-wider hidden md:table-cell">Big Bass</th>
                                 <th className="px-6 py-4 text-right text-xs font-semibold text-primary uppercase tracking-wider">Total</th>
                                 <th className="px-6 py-4 w-12"></th>
                             </tr>
                         </thead>
                         <tbody className="divide-y divide-slate-200 dark:divide-slate-800/50">
-                            {rankings.map((angler) => (
+                            {rankings.length === 0 ? (
+                                <tr><td colSpan={6} className="p-8 text-center text-slate-500">No catches yet. Start fishing!</td></tr>
+                            ) : rankings.map((angler) => (
                                 <tr key={angler.rank} className="bg-white dark:bg-transparent hover:bg-slate-50 dark:hover:bg-[#1f2937] transition-colors cursor-pointer group">
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="flex items-center gap-2">
@@ -73,7 +139,7 @@ export default function Leaderboard() {
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="flex items-center">
-                                            <div className="h-10 w-10 flex-shrink-0 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center ring-2 ring-yellow-400/50" style={{ backgroundImage: `url('${angler.avatar}')` }}></div>
+                                            <div className="h-10 w-10 flex-shrink-0 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center ring-2 ring-yellow-400/50" style={{ backgroundImage: `url('${angler.avatar || "https://ui-avatars.com/api/?name=" + angler.name}')` }}></div>
                                             <div className="ml-4">
                                                 <div className="text-sm font-bold text-slate-900 dark:text-white">{angler.name}</div>
                                                 <div className="text-xs text-slate-500 dark:text-slate-400">Pro Division</div>
@@ -81,18 +147,14 @@ export default function Leaderboard() {
                                         </div>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap hidden sm:table-cell">
-                                        <div className="text-sm text-slate-700 dark:text-slate-300">{angler.team}</div>
+                                        <div className="text-sm text-slate-700 dark:text-slate-300">{angler.team || 'Individual'}</div>
                                     </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-center">
-                                        <span className="px-2 py-1 inline-flex text-xs leading-5 font-semibold rounded-md bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200">
-                                            {angler.fish}
-                                        </span>
-                                    </td>
+
                                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-slate-500 dark:text-slate-400 hidden md:table-cell font-mono">
-                                        {angler.big}
+                                        {angler.bigBass.toFixed(2)} lbs
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-right">
-                                        <div className="text-lg font-black text-primary font-mono">{angler.total}</div>
+                                        <div className="text-lg font-black text-primary font-mono">{angler.totalWeight.toFixed(2)} lbs</div>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <ChevronRight className="text-slate-400 group-hover:text-primary transition-colors" size={20} />

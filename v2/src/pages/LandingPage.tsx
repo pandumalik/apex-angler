@@ -1,7 +1,17 @@
-import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Anchor, ClipboardList, Fish, ArrowRight } from 'lucide-react';
 
 export default function LandingPage() {
+    const navigate = useNavigate();
+
+    useEffect(() => {
+        const isAdminAuthenticated = localStorage.getItem('isAdminAuthenticated') === 'true';
+        if (isAdminAuthenticated) {
+            navigate('/admin/overview');
+        }
+    }, [navigate]);
+
     return (
         <div className="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden text-slate-900 dark:text-white">
             {/* Navigation */}

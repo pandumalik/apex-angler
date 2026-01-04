@@ -1,7 +1,58 @@
 
-import { Image as ImageIcon, Save, Download, AlertTriangle, Trash2, HelpCircle } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Image as ImageIcon, Save, Download, AlertTriangle, Trash2, HelpCircle, Loader2 } from 'lucide-react';
+import { api } from '../services/api';
+import type { Settings } from '../types';
 
 export default function AdminSettings() {
+    const [settings, setSettings] = useState<Settings>({ eventName: '', bgImage: '' });
+    const [isLoading, setIsLoading] = useState(false);
+    const [isSaving, setIsSaving] = useState(false);
+
+    useEffect(() => {
+        fetchSettings();
+    }, []);
+
+    const fetchSettings = async () => {
+        setIsLoading(true);
+        try {
+            const data = await api.getData();
+            setSettings(data.settings || { eventName: '', bgImage: '' });
+        } catch (error) {
+            console.error('Failed to fetch settings:', error);
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
+    const handleSave = async () => {
+        setIsSaving(true);
+        try {
+            await api.updateSettings(settings);
+            alert('Settings saved successfully!');
+        } catch (error) {
+            console.error('Failed to save settings:', error);
+            alert('Failed to save settings.');
+        } finally {
+            setIsSaving(false);
+        }
+    };
+
+    const handleResetData = async () => {
+        if (!confirm('CRITICAL WARNING: This will permanently delete ALL participants and catches. Are you sure?')) return;
+
+        try {
+            await api.clearData();
+            alert('All data has been reset.');
+            window.location.reload(); // Refresh to clear any cached state in other components
+        } catch (error) {
+            console.error('Failed to reset data:', error);
+            alert('Failed to reset data.');
+        }
+    };
+
+    if (isLoading) return <div className="p-10 text-center text-slate-500">Loading Settings...</div>;
+
     return (
         <div className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 pb-20">
             {/* Breadcrumbs */}
@@ -31,39 +82,44 @@ export default function AdminSettings() {
                             {/* Tournament Name Input */}
                             <div className="space-y-2">
                                 <label className="block text-slate-900 dark:text-white text-sm font-medium" htmlFor="tournament-name">Tournament Name</label>
-                                <input className="form-input flex w-full rounded-lg text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#325567] bg-white dark:bg-[#101c22] h-12 px-4 placeholder:text-slate-400 dark:placeholder-[#92b7c9]/50 text-base transition-all" id="tournament-name" placeholder="e.g., Annual Bassmaster Classic 2024" type="text" defaultValue="Grand Lake Fishing Open 2024" />
+                                <input
+                                    className="form-input flex w-full rounded-lg text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#325567] bg-white dark:bg-[#101c22] h-12 px-4 placeholder:text-slate-400 dark:placeholder-[#92b7c9]/50 text-base transition-all"
+                                    id="tournament-name"
+                                    placeholder="e.g., Annual Bassmaster Classic 2024"
+                                    type="text"
+                                    value={settings.eventName}
+                                    onChange={(e) => setSettings({ ...settings, eventName: e.target.value })}
+                                />
                             </div>
-                            {/* Background Image Upload */}
+                            {/* Background Image Upload (Just a URL input for now for simplicity) */}
                             <div className="space-y-2">
-                                <label className="block text-slate-900 dark:text-white text-sm font-medium">Splash Screen / Background Image</label>
-                                <div className="mt-2 flex justify-center rounded-xl border border-dashed border-slate-200 dark:border-[#325567] px-6 py-10 bg-slate-50 dark:bg-[#101c22]/50 hover:bg-slate-100 dark:hover:bg-[#101c22] hover:border-primary/50 transition-all cursor-pointer group">
-                                    <div className="text-center">
-                                        <div className="mx-auto h-12 w-12 text-slate-400 dark:text-[#92b7c9] group-hover:text-primary transition-colors flex items-center justify-center">
-                                            <ImageIcon size={48} strokeWidth={1} />
+                                <label className="block text-slate-900 dark:text-white text-sm font-medium">Splash Screen / Background Image URL</label>
+                                <input
+                                    className="form-input flex w-full rounded-lg text-slate-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-slate-200 dark:border-[#325567] bg-white dark:bg-[#101c22] h-12 px-4 placeholder:text-slate-400 dark:placeholder-[#92b7c9]/50 text-base transition-all"
+                                    id="bg-image"
+                                    placeholder="Enter image URL..."
+                                    type="text"
+                                    value={settings.bgImage}
+                                    onChange={(e) => setSettings({ ...settings, bgImage: e.target.value })}
+                                />
+                                {settings.bgImage && (
+                                    <div className="relative mt-4 w-full h-32 rounded-lg overflow-hidden border border-slate-200 dark:border-[#325567] group">
+                                        <img className="w-full h-full object-cover opacity-60" alt="Current background" src={settings.bgImage} onError={(e) => (e.currentTarget.style.display = 'none')} />
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <p className="text-white text-xs bg-black/50 px-2 py-1 rounded">Current Background</p>
                                         </div>
-                                        <div className="mt-4 flex text-sm leading-6 text-gray-500 dark:text-gray-400 justify-center">
-                                            <label className="relative cursor-pointer rounded-md bg-transparent font-semibold text-primary focus-within:outline-none hover:text-primary/80" htmlFor="file-upload">
-                                                <span>Upload a file</span>
-                                                <input className="sr-only" id="file-upload" name="file-upload" type="file" />
-                                            </label>
-                                            <p className="pl-1">or drag and drop</p>
-                                        </div>
-                                        <p className="text-xs leading-5 text-gray-500 dark:text-gray-500">PNG, JPG, GIF up to 10MB (1920x1080px)</p>
                                     </div>
-                                </div>
-                                {/* Current Image Preview (Optional) */}
-                                <div className="relative mt-4 w-full h-32 rounded-lg overflow-hidden border border-slate-200 dark:border-[#325567] group">
-                                    <img className="w-full h-full object-cover opacity-60" alt="Current background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8gBEOC9_x7r_Y_tkGYzC-znbaIqZd052F16PxVff7FckdvEer-FENkTynU2Eqe35btXY7sYuqRT8PMFi4XIV6CpBO5EuOrGITdPjoaFj4QAGouPOmSQEgITVhc3d566PFkWCeeSFmUMJaiyHeokpETwOOa72CysWjaZCsRR6Y3xKOeRll5VO9yNMBWAOuV6063jPc5MlIPelMo4BHrp2AeS9OqAU7ENqkcC_CJRuXNzlXR2lkX8SGnigN_v-pZSZxIwMXb_-o7JY" />
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <p className="text-white text-xs bg-black/50 px-2 py-1 rounded">Current Background</p>
-                                    </div>
-                                </div>
+                                )}
                             </div>
                         </div>
                         <div className="px-6 py-4 bg-slate-50 dark:bg-[#101c22]/30 border-t border-slate-200 dark:border-[#325567] flex justify-end">
-                            <button className="bg-primary hover:bg-primary/90 text-white font-medium py-2.5 px-5 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20 flex items-center gap-2">
-                                <Save size={18} />
-                                Save Changes
+                            <button
+                                onClick={handleSave}
+                                disabled={isSaving}
+                                className="bg-primary hover:bg-primary/90 text-white font-medium py-2.5 px-5 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20 flex items-center gap-2"
+                            >
+                                {isSaving ? <Loader2 size={18} className="animate-spin" /> : <Save size={18} />}
+                                {isSaving ? 'Saving...' : 'Save Changes'}
                             </button>
                         </div>
                     </div>
@@ -105,7 +161,10 @@ export default function AdminSettings() {
                                     This will permanently delete all catches, participants, and ranking data. This action cannot be undone.
                                 </p>
                             </div>
-                            <button className="w-full bg-red-50 dark:bg-red-600/10 hover:bg-red-100 dark:hover:bg-red-600/20 border border-red-200 dark:border-red-600/50 text-red-500 hover:text-red-600 dark:hover:text-red-400 font-medium py-2.5 px-4 rounded-lg text-sm transition-all flex justify-center items-center gap-2">
+                            <button
+                                onClick={handleResetData}
+                                className="w-full bg-red-50 dark:bg-red-600/10 hover:bg-red-100 dark:hover:bg-red-600/20 border border-red-200 dark:border-red-600/50 text-red-500 hover:text-red-600 dark:hover:text-red-400 font-medium py-2.5 px-4 rounded-lg text-sm transition-all flex justify-center items-center gap-2"
+                            >
                                 <Trash2 size={18} />
                                 Reset All Data
                             </button>

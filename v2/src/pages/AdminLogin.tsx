@@ -16,7 +16,8 @@ export default function AdminLogin() {
         setTimeout(() => {
             // Simple hardcoded check for now (matching V1)
             if (username === 'admin' && (password === 'admin123' || password === 'password123')) {
-                navigate('/admin/dashboard');
+                localStorage.setItem('isAdminAuthenticated', 'true'); // Persist session
+                navigate('/admin/overview');
             } else {
                 alert('Invalid credentials');
                 setIsLoading(false);

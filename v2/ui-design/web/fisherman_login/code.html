@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fisherman Login - Tournament Tracker</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom subtle texture for background */
+        .bg-water-texture {
+            background-color: #101c22;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(19, 164, 236, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(19, 164, 236, 0.1) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased overflow-x-hidden h-screen flex flex-col">
+<div class="relative flex grow flex-col items-center justify-center p-4 bg-water-texture">
+<!-- Background Abstract Image -->
+<div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+<div class="absolute top-0 left-0 w-full h-full opacity-30 bg-[url('https://images.unsplash.com/photo-1518837695005-2083093ee35b?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center mix-blend-overlay" data-alt="Abstract dark blue water surface with ripples"></div>
+</div>
+<!-- Login Card -->
+<div class="relative z-10 w-full max-w-[480px] flex flex-col bg-[#192b33] rounded-2xl shadow-2xl border border-[#233c48]/50 overflow-hidden">
+<!-- Header Section -->
+<div class="flex flex-col items-center pt-10 pb-4 px-8 text-center">
+<!-- Logo Icon -->
+<div class="mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 border border-primary/20 text-primary">
+<span class="material-symbols-outlined text-4xl">sailing</span>
+</div>
+<!-- Headline -->
+<h1 class="text-white text-[28px] font-bold leading-tight tracking-tight mb-2">Welcome, Angler</h1>
+<!-- Body Text -->
+<p class="text-slate-400 text-base font-normal leading-relaxed">
+                    Please enter your unique Participant ID to access the live leaderboard and submit your catches.
+                </p>
+</div>
+<!-- Form Section -->
+<div class="px-8 pb-10 pt-2 w-full">
+<form class="flex flex-col gap-5" onsubmit="event.preventDefault();">
+<!-- Input Field -->
+<div class="flex flex-col gap-2">
+<label class="text-white text-sm font-medium leading-normal pl-1" for="participant-id">Participant ID</label>
+<div class="relative group">
+<div class="absolute inset-y-0 left-0 flex items-center pl-4 pointer-events-none text-slate-400 group-focus-within:text-primary transition-colors">
+<span class="material-symbols-outlined text-xl">badge</span>
+</div>
+<input autofocus="" class="form-input flex w-full rounded-xl text-white border border-[#325567] bg-[#111c22] focus:border-primary focus:ring-1 focus:ring-primary h-14 pl-12 pr-4 placeholder:text-slate-500 text-base font-normal transition-all shadow-sm" id="participant-id" placeholder="Enter your 6-digit ID" type="text" value=""/>
+</div>
+</div>
+<!-- Action Button -->
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-12 px-6 bg-primary hover:bg-[#0f8ecf] text-white text-base font-bold leading-normal tracking-[0.015em] transition-colors shadow-lg shadow-primary/20 mt-2">
+<span class="truncate">Enter Tournament</span>
+<span class="material-symbols-outlined ml-2 text-xl">arrow_forward</span>
+</button>
+<!-- Helper Links -->
+<div class="flex items-center justify-between mt-4">
+<a class="text-sm text-slate-400 hover:text-primary transition-colors flex items-center gap-1 group" href="#">
+<span class="material-symbols-outlined text-base group-hover:rotate-12 transition-transform">help</span>
+                            Where do I find my ID?
+                        </a>
+<a class="text-sm text-slate-400 hover:text-white transition-colors" href="#">
+                            Contact Admin
+                        </a>
+</div>
+</form>
+</div>
+<!-- Bottom Accent -->
+<div class="h-1.5 w-full bg-gradient-to-r from-[#192b33] via-primary to-[#192b33]"></div>
+</div>
+<!-- Footer Copyright -->
+<div class="relative z-10 mt-8 text-center">
+<p class="text-slate-500 text-xs">© 2024 Tournament Tracker. All rights reserved.</p>
+</div>
+</div>
+</body></html>

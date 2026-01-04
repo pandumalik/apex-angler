@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard - Weighing</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "surface-dark": "#192b33",
+                        "border-dark": "#233c48",
+                        "text-secondary": "#92b7c9",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-gray-900 text-white font-display min-h-screen flex items-center justify-center p-4">
+<!-- Mobile Device Simulation Container -->
+<div class="w-full max-w-[420px] bg-background-dark dark:bg-background-dark rounded-2xl shadow-2xl border border-border-dark overflow-hidden flex flex-col h-[850px] relative">
+<!-- Header -->
+<header class="flex items-center justify-between px-6 py-4 bg-surface-dark/50 backdrop-blur-md border-b border-border-dark sticky top-0 z-10">
+<div class="flex items-center gap-3">
+<div class="bg-primary/10 p-2 rounded-full text-primary">
+<span class="material-symbols-outlined text-[20px]">scale</span>
+</div>
+<div>
+<h1 class="text-base font-bold leading-tight">Weigh-in Station</h1>
+<div class="flex items-center gap-1.5">
+<span class="block w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-xs text-text-secondary font-medium">Online</span>
+</div>
+</div>
+</div>
+<button class="text-text-secondary hover:text-white transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto no-scrollbar pb-24">
+<!-- Step 1: Identification Toggle -->
+<div class="px-5 pt-6 pb-4">
+<div class="flex h-12 w-full items-center justify-center rounded-lg bg-surface-dark p-1 border border-border-dark">
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-md transition-all has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-white text-text-secondary text-sm font-semibold">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">qr_code_scanner</span>Scan QR</span>
+<input checked="" class="hidden" name="id-method" type="radio" value="scan"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center rounded-md transition-all has-[:checked]:bg-background-dark has-[:checked]:shadow-sm has-[:checked]:text-white text-text-secondary text-sm font-semibold">
+<span class="flex items-center gap-2"><span class="material-symbols-outlined text-[18px]">keyboard</span>Manual</span>
+<input class="hidden" name="id-method" type="radio" value="manual"/>
+</label>
+</div>
+</div>
+<!-- Scanner Viewfinder -->
+<div class="px-5 mb-6">
+<div class="relative w-full aspect-[4/3] bg-black rounded-xl overflow-hidden border border-border-dark group cursor-pointer shadow-lg">
+<!-- Simulated Camera Feed Background -->
+<div class="absolute inset-0 bg-cover bg-center opacity-40" data-alt="Dark abstract pattern representing camera view" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBlPd5Jfjj7Vzy6TpYiP8_B77lEaNF0h2FiYGjxfzwp5log7LAz0H_8M1XhcJZMdNxzP63vV71thNU2DxQpbG71A47nE7UHTcAOuAztgpFCmf4Qgm_shi8jElF_zmOUSe9EB__CWiDRTTQO-c65FW9PdtVVjChemw7sEKaok24CgVYNHekOWYdTuCDR-s-cuC7jHKUTCmulZrior3Tf1i7iJGkYIqgxp2hJxX0BVRFM0c_DwcwMf8OwT0bFGNcn8O5oDe18jiFSk_M');"></div>
+<!-- Viewfinder Overlay -->
+<div class="absolute inset-0 flex flex-col items-center justify-center p-6">
+<div class="w-48 h-48 border-2 border-primary/50 rounded-lg relative flex items-center justify-center">
+<!-- Corner brackets -->
+<div class="absolute top-0 left-0 w-4 h-4 border-t-4 border-l-4 border-primary -mt-0.5 -ml-0.5 rounded-tl-sm"></div>
+<div class="absolute top-0 right-0 w-4 h-4 border-t-4 border-r-4 border-primary -mt-0.5 -mr-0.5 rounded-tr-sm"></div>
+<div class="absolute bottom-0 left-0 w-4 h-4 border-b-4 border-l-4 border-primary -mb-0.5 -ml-0.5 rounded-bl-sm"></div>
+<div class="absolute bottom-0 right-0 w-4 h-4 border-b-4 border-r-4 border-primary -mb-0.5 -mr-0.5 rounded-br-sm"></div>
+<!-- Pulse Animation -->
+<div class="absolute inset-0 bg-primary/10 animate-pulse"></div>
+</div>
+<p class="mt-4 text-white font-medium text-sm bg-black/60 px-3 py-1 rounded-full backdrop-blur-sm">Tap to Activate Camera</p>
+</div>
+</div>
+<p class="text-center text-text-secondary text-sm mt-2">Align Angler's QR code within the frame</p>
+</div>
+<!-- Divider -->
+<div class="px-5 mb-6 flex items-center gap-4">
+<div class="h-px bg-border-dark flex-1"></div>
+<div class="text-xs font-bold text-text-secondary uppercase tracking-wider">Step 2: Weigh</div>
+<div class="h-px bg-border-dark flex-1"></div>
+</div>
+<!-- Weight Input Section -->
+<div class="px-5">
+<div class="bg-surface-dark rounded-xl border border-border-dark p-1">
+<div class="flex flex-col items-center justify-center py-6 px-4">
+<label class="text-text-secondary text-sm font-medium mb-2 uppercase tracking-wide">Fish Weight</label>
+<div class="relative flex items-baseline justify-center w-full">
+<input class="w-full bg-transparent text-center text-6xl font-black text-white placeholder-text-secondary/30 border-none focus:ring-0 focus:outline-none p-0 tracking-tight" inputmode="decimal" placeholder="0.00" type="number"/>
+<span class="absolute right-8 bottom-4 text-xl font-bold text-text-secondary">kg</span>
+</div>
+</div>
+<!-- Quick Add Helper Buttons (optional for usability) -->
+<div class="grid grid-cols-4 gap-px bg-border-dark rounded-b-lg overflow-hidden mt-1">
+<button class="bg-background-dark/50 hover:bg-background-dark p-3 text-text-secondary hover:text-white transition text-xs font-medium border-t border-border-dark">-0.1</button>
+<button class="bg-background-dark/50 hover:bg-background-dark p-3 text-text-secondary hover:text-white transition text-xs font-medium border-t border-border-dark border-l border-r">+0.1</button>
+<button class="bg-background-dark/50 hover:bg-background-dark p-3 text-text-secondary hover:text-white transition text-xs font-medium border-t border-border-dark border-r">-1.0</button>
+<button class="bg-background-dark/50 hover:bg-background-dark p-3 text-text-secondary hover:text-white transition text-xs font-medium border-t border-border-dark">+1.0</button>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="px-5 mt-6 grid grid-cols-1 gap-3">
+<button class="group relative flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-xl h-14 bg-primary hover:bg-primary/90 transition-all shadow-[0_0_20px_rgba(19,164,236,0.3)] active:scale-[0.98]">
+<span class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+<span class="relative flex items-center gap-2 text-white text-lg font-bold">
+<span class="material-symbols-outlined">check_circle</span>
+                        Submit Weight
+                    </span>
+</button>
+<button class="flex w-full cursor-pointer items-center justify-center rounded-xl h-12 text-text-secondary hover:text-white hover:bg-surface-dark transition-colors text-sm font-medium">
+                    Reset Form
+                </button>
+</div>
+<!-- Recent History -->
+<div class="mt-8 px-5">
+<h3 class="text-white text-sm font-bold mb-3 flex items-center justify-between">
+<span>Recent Activity</span>
+<span class="text-xs text-text-secondary font-normal hover:text-primary cursor-pointer">View All</span>
+</h3>
+<div class="flex flex-col gap-2">
+<!-- History Item 1 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-dark/50 border border-border-dark/50 hover:border-primary/30 transition-colors">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-background-dark flex items-center justify-center text-text-secondary border border-border-dark">
+<span class="material-symbols-outlined text-sm">person</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">Angler #1042</p>
+<p class="text-text-secondary text-xs">10:42 AM</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-white text-lg font-bold">3.45 <span class="text-xs text-text-secondary">kg</span></p>
+</div>
+</div>
+<!-- History Item 2 -->
+<div class="flex items-center justify-between p-3 rounded-lg bg-surface-dark/50 border border-border-dark/50 hover:border-primary/30 transition-colors">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-background-dark flex items-center justify-center text-text-secondary border border-border-dark">
+<span class="material-symbols-outlined text-sm">person</span>
+</div>
+<div>
+<p class="text-white text-sm font-bold">Angler #882</p>
+<p class="text-text-secondary text-xs">10:38 AM</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-white text-lg font-bold">1.20 <span class="text-xs text-text-secondary">kg</span></p>
+</div>
+</div>
+</div>
+</div>
+<!-- Spacer for bottom nav/scrolling -->
+<div class="h-8"></div>
+</div>
+<!-- Sticky Bottom Nav (Optional for Admin Dashboard context) -->
+<div class="bg-surface-dark/90 backdrop-blur border-t border-border-dark px-6 py-3 flex justify-between items-center z-20 absolute bottom-0 w-full">
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined">scale</span>
+<span class="text-[10px] font-medium">Weigh-in</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-secondary hover:text-white transition">
+<span class="material-symbols-outlined">leaderboard</span>
+<span class="text-[10px] font-medium">Rankings</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-secondary hover:text-white transition">
+<span class="material-symbols-outlined">groups</span>
+<span class="text-[10px] font-medium">Anglers</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-text-secondary hover:text-white transition">
+<span class="material-symbols-outlined">menu</span>
+<span class="text-[10px] font-medium">Menu</span>
+</button>
+</div>
+</div>
+</body></html>

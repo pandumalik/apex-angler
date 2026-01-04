@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FishTracker - Participant Registration</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "surface-dark": "#192b33",
+                        "surface-dark-highlight": "#233c48",
+                        "text-muted": "#92b7c9",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom scrollbar for dark mode feeling */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #101c22; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #233c48; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #325567; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Side Navigation -->
+<aside class="hidden lg:flex flex-col w-72 h-full border-r border-surface-dark-highlight bg-background-dark">
+<div class="p-6 flex items-center gap-3">
+<div class="size-8 text-primary">
+<svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M36.7273 44C33.9891 44 31.6043 39.8386 30.3636 33.69C29.123 39.8386 26.7382 44 24 44C21.2618 44 18.877 39.8386 17.6364 33.69C16.3957 39.8386 14.0109 44 11.2727 44C7.25611 44 4 35.0457 4 24C4 12.9543 7.25611 4 11.2727 4C14.0109 4 16.3957 8.16144 17.6364 14.31C18.877 8.16144 21.2618 4 24 4C26.7382 4 29.123 8.16144 30.3636 14.31C31.6043 8.16144 33.9891 4 36.7273 4C40.7439 4 44 12.9543 44 24C44 35.0457 40.7439 44 36.7273 44Z"></path>
+</svg>
+</div>
+<h1 class="text-xl font-bold tracking-tight">FishTracker</h1>
+</div>
+<div class="flex flex-col gap-1 px-4 py-2 flex-1">
+<div class="mb-4">
+<p class="px-4 text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">Menu</p>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:text-white hover:bg-surface-dark-highlight transition-colors" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="text-sm font-medium">Overview</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg bg-primary/10 text-primary border border-primary/20" href="#">
+<span class="material-symbols-outlined font-variation-settings-fill">person_add</span>
+<span class="text-sm font-medium">Registration</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:text-white hover:bg-surface-dark-highlight transition-colors" href="#">
+<span class="material-symbols-outlined">trophy</span>
+<span class="text-sm font-medium">Leaderboard</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:text-white hover:bg-surface-dark-highlight transition-colors" href="#">
+<span class="material-symbols-outlined">calendar_month</span>
+<span class="text-sm font-medium">Schedule</span>
+</a>
+</div>
+<div>
+<p class="px-4 text-xs font-semibold uppercase tracking-wider text-text-muted mb-2">System</p>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:text-white hover:bg-surface-dark-highlight transition-colors" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="text-sm font-medium">Settings</span>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-text-muted hover:text-white hover:bg-surface-dark-highlight transition-colors" href="#">
+<span class="material-symbols-outlined">help</span>
+<span class="text-sm font-medium">Support</span>
+</a>
+</div>
+</div>
+<div class="p-4 border-t border-surface-dark-highlight">
+<div class="flex items-center gap-3 px-2">
+<div class="size-10 rounded-full bg-cover bg-center" data-alt="Admin profile picture" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDyX0PoE8Kqto2-QSTniMNcuBKJZZL7L8-HupBSKjefhL3aQdqQGVTT2e2NbYP_J3Y1nJN4yC9zLskPuoM06Aa61F1TTc53Wlf43ZGr8U5BGtHVBiRVsrMMrU_D8TqLBdzTuYQ82-wj0BUromsZGiGBO6A_1LUW614c4UkHuYLHQHnVCR7I1sZmPzXrFZa2UYjS-YcYOzePaUfyeq94N13V9R3xfbSp8KkFCaCv7jRuXMSshzmnxvcVR5njHGU1EgJXsgSiwa0qPEw');"></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-white">Tom Admin</span>
+<span class="text-xs text-text-muted">Tournament Director</span>
+</div>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background-light dark:bg-background-dark relative">
+<!-- Mobile Header -->
+<header class="lg:hidden flex items-center justify-between px-4 py-3 bg-surface-dark border-b border-surface-dark-highlight">
+<div class="flex items-center gap-2 text-white">
+<span class="material-symbols-outlined">menu</span>
+<span class="font-bold text-lg">FishTracker</span>
+</div>
+<div class="size-8 rounded-full bg-gray-700" data-alt="User avatar small" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD2HNZXuqNlFozmrZu4slq9RuivAW6UFPmYN_KPQ8DF-e0GpeVmG3sm9lAD7lYPJ8BGi5ZAOGqxswcR9_pXaCShSkpT5eT-tyyObTma2QW9zjkHiR0haqhLTcIY8MJX5Fc14xo1yhMM9f9GKBNnN6Yecy3jprVrGHKMT-N-NwAliJJImQ5lj0MXnNKPojPms7ndAEo2xB5gJcdUUxzy-0RY9_f-3RLwvviMX9La2XsKspfcjAuEs0MvWrvjSSmrhEOUBxZPY6rVTMk'); background-size: cover;"></div>
+</header>
+<div class="flex-1 overflow-y-auto p-4 md:p-8 lg:p-12 scroll-smooth">
+<div class="max-w-7xl mx-auto space-y-8">
+<!-- Page Heading -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+<div>
+<h2 class="text-3xl font-bold text-white tracking-tight">Participant Registration</h2>
+<p class="text-text-muted mt-1">Register new fishermen, assign categories, and generate tournament credentials.</p>
+</div>
+<div class="flex gap-3">
+<button class="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-surface-dark-highlight bg-surface-dark text-white hover:bg-surface-dark-highlight transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-[20px]">print</span>
+                                Print Batch
+                            </button>
+<button class="flex items-center justify-center gap-2 px-4 py-2 rounded-lg border border-surface-dark-highlight bg-surface-dark text-white hover:bg-surface-dark-highlight transition-all text-sm font-medium">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                                Export CSV
+                            </button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Left Column: Registration Form -->
+<div class="lg:col-span-7 flex flex-col gap-6">
+<div class="bg-surface-dark border border-surface-dark-highlight rounded-xl p-6 md:p-8 shadow-sm">
+<h3 class="text-lg font-semibold text-white mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_document</span>
+                                    New Entry Details
+                                </h3>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="col-span-2">
+<label class="block text-sm font-medium text-text-muted mb-2">Full Name</label>
+<input autofocus="" class="w-full h-12 px-4 rounded-lg bg-background-dark border border-surface-dark-highlight text-white placeholder-text-muted/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="e.g. Michael Fisher" type="text"/>
+</div>
+<div class="col-span-2 md:col-span-1">
+<label class="block text-sm font-medium text-text-muted mb-2">Competition Category</label>
+<div class="relative">
+<select class="w-full h-12 px-4 pr-10 rounded-lg bg-background-dark border border-surface-dark-highlight text-white focus:ring-2 focus:ring-primary focus:border-transparent appearance-none transition-all outline-none">
+<option>Shore Fishing</option>
+<option>Boat - Single</option>
+<option>Boat - Team</option>
+<option>Kayak</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-3 text-text-muted pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="col-span-2 md:col-span-1">
+<label class="block text-sm font-medium text-text-muted mb-2">Team Name (Optional)</label>
+<input class="w-full h-12 px-4 rounded-lg bg-background-dark border border-surface-dark-highlight text-white placeholder-text-muted/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="e.g. The Big Catchers" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="block text-sm font-medium text-text-muted mb-2">Email Address</label>
+<input class="w-full h-12 px-4 rounded-lg bg-background-dark border border-surface-dark-highlight text-white placeholder-text-muted/50 focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none" placeholder="fisherman@example.com" type="email"/>
+</div>
+</div>
+<div class="pt-4 flex items-center justify-between gap-4 border-t border-surface-dark-highlight mt-2">
+<div class="flex items-center gap-2">
+<input class="size-4 rounded border-gray-600 bg-background-dark text-primary focus:ring-primary/50" id="waiver" type="checkbox"/>
+<label class="text-sm text-text-muted cursor-pointer select-none" for="waiver">Waiver signed manually</label>
+</div>
+<button class="bg-primary hover:bg-sky-500 text-white font-medium py-3 px-8 rounded-lg shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-all flex items-center gap-2" type="button">
+<span class="material-symbols-outlined">qr_code_2</span>
+                                            Generate ID &amp; QR
+                                        </button>
+</div>
+</form>
+</div>
+<!-- Recent Registrations Table (Below Form) -->
+<div class="bg-surface-dark border border-surface-dark-highlight rounded-xl overflow-hidden shadow-sm flex-1">
+<div class="px-6 py-4 border-b border-surface-dark-highlight flex justify-between items-center">
+<h3 class="text-lg font-semibold text-white">Recent Registrations</h3>
+<a class="text-sm text-primary hover:text-sky-400 font-medium" href="#">View All</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left text-sm text-text-muted">
+<thead class="bg-surface-dark-highlight/50 text-xs uppercase font-semibold text-white">
+<tr>
+<th class="px-6 py-3">Participant</th>
+<th class="px-6 py-3">ID</th>
+<th class="px-6 py-3">Category</th>
+<th class="px-6 py-3">Time</th>
+<th class="px-6 py-3">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-dark-highlight">
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="px-6 py-4 font-medium text-white group-hover:text-primary transition-colors">Sarah Jenkins</td>
+<td class="px-6 py-4 font-mono">#FISH-9921</td>
+<td class="px-6 py-4"><span class="px-2 py-1 rounded bg-blue-500/10 text-blue-400 text-xs font-medium border border-blue-500/20">Boat - Single</span></td>
+<td class="px-6 py-4">2m ago</td>
+<td class="px-6 py-4 text-green-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> 
+                                                    Active
+                                                </td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="px-6 py-4 font-medium text-white group-hover:text-primary transition-colors">David Miller</td>
+<td class="px-6 py-4 font-mono">#FISH-9920</td>
+<td class="px-6 py-4"><span class="px-2 py-1 rounded bg-orange-500/10 text-orange-400 text-xs font-medium border border-orange-500/20">Shore</span></td>
+<td class="px-6 py-4">15m ago</td>
+<td class="px-6 py-4 text-green-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> 
+                                                    Active
+                                                </td>
+</tr>
+<tr class="hover:bg-white/5 transition-colors group">
+<td class="px-6 py-4 font-medium text-white group-hover:text-primary transition-colors">Team Krakens</td>
+<td class="px-6 py-4 font-mono">#FISH-9919</td>
+<td class="px-6 py-4"><span class="px-2 py-1 rounded bg-purple-500/10 text-purple-400 text-xs font-medium border border-purple-500/20">Boat - Team</span></td>
+<td class="px-6 py-4">32m ago</td>
+<td class="px-6 py-4 text-green-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> 
+                                                    Active
+                                                </td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Column: Success/Preview Panel -->
+<div class="lg:col-span-5 flex flex-col gap-6">
+<!-- Digital Pass Preview -->
+<div class="bg-gradient-to-br from-surface-dark to-background-dark border border-surface-dark-highlight rounded-xl p-1 shadow-lg relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-50">
+<div class="text-[120px] leading-none text-white/5 font-black rotate-12 select-none pointer-events-none">PASS</div>
+</div>
+<div class="bg-surface-dark rounded-lg p-6 flex flex-col items-center text-center relative z-10 h-full border border-white/5">
+<div class="w-full flex justify-between items-start mb-6 border-b border-surface-dark-highlight pb-4">
+<div class="text-left">
+<h4 class="text-xs uppercase tracking-widest text-text-muted mb-1">Status</h4>
+<div class="flex items-center gap-1 text-green-400 font-medium text-sm">
+<span class="relative flex h-2 w-2 mr-1">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+</span>
+                                                Registered
+                                            </div>
+</div>
+<div class="text-right">
+<h4 class="text-xs uppercase tracking-widest text-text-muted mb-1">Generated</h4>
+<div class="text-white font-mono text-sm">Today, 08:42 AM</div>
+</div>
+</div>
+<div class="mb-6 bg-white p-4 rounded-lg shadow-inner">
+<img alt="QR Code for participant check-in" class="size-48 mix-blend-multiply" data-alt="Black and white QR code pattern" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLVGCkhcdJJMXCebW1NoEooAP_34NcvVV452B8-V1DcIdTfIUgck7Tc8lI3HCNI_ySSW7WTmUhYW2dx3z0Z3dJlYvMaD5SxMLUc37e_o5SHPWzNPE6Wwr8-tCHkoMCWJt5Y0eyydBPQE-G2W1L3GTkg-0aIscveEZnwug1RbFT2xhUc8FfSPvhf7oj_HHJ2mjhpKuwyb9ZURAJSnWLqAOxwuoDnJ5mjboZmLnOJKw4Sod0KoaVhiXi7mg9Ri0bN-50j_BH9XMGUDQ"/>
+</div>
+<div class="mb-2">
+<h2 class="text-2xl font-bold text-white mb-1">Michael Fisher</h2>
+<p class="text-primary font-medium">Shore Fishing</p>
+</div>
+<div class="bg-background-dark/50 rounded-lg px-6 py-3 mt-4 border border-surface-dark-highlight">
+<p class="text-xs text-text-muted uppercase tracking-wider mb-1">Participant ID</p>
+<p class="text-xl font-mono font-bold text-white tracking-widest">FISH-2024-8821</p>
+</div>
+<div class="grid grid-cols-2 gap-3 w-full mt-8">
+<button class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-surface-dark-highlight hover:bg-[#325567] text-white transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-[18px]">print</span>
+                                            Print Badge
+                                        </button>
+<button class="flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-surface-dark-highlight hover:bg-[#325567] text-white transition-colors text-sm font-medium">
+<span class="material-symbols-outlined text-[18px]">share</span>
+                                            Send Email
+                                        </button>
+</div>
+</div>
+</div>
+<!-- Quick Stats / Helper info -->
+<div class="bg-primary/10 border border-primary/20 rounded-xl p-6">
+<div class="flex items-start gap-4">
+<div class="p-3 rounded-full bg-primary/20 text-primary">
+<span class="material-symbols-outlined">info</span>
+</div>
+<div>
+<h4 class="text-white font-medium mb-1">Registration Tips</h4>
+<p class="text-sm text-text-muted leading-relaxed">
+                                            Ensure the participant has signed the liability waiver before generating the ID. 
+                                            The QR code is required for weigh-in checkouts.
+                                        </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard - Settings</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#111c22",
+                        "surface-dark": "#192b33",
+                        "surface-dark-hover": "#233c48",
+                        "text-secondary": "#92b7c9",
+                        "danger": "#ef4444",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+<div class="relative flex min-h-screen w-full flex-col items-center justify-start py-8">
+<!-- Mobile Simulation Container -->
+<div class="w-full max-w-[480px] flex flex-col bg-background-light dark:bg-background-dark min-h-[800px] shadow-2xl overflow-hidden border border-gray-200 dark:border-[#233c48] sm:rounded-xl">
+<!-- Header -->
+<header class="sticky top-0 z-10 flex items-center justify-between border-b border-gray-200 dark:border-[#233c48] bg-background-light/95 dark:bg-[#111c22]/95 backdrop-blur px-4 py-3">
+<div class="flex items-center gap-3">
+<button class="flex items-center justify-center text-slate-900 dark:text-white hover:text-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back_ios_new</span>
+</button>
+<h2 class="text-lg font-bold leading-tight tracking-tight">App Settings</h2>
+</div>
+<button class="flex h-9 items-center justify-center rounded-lg bg-primary px-4 text-sm font-bold text-white shadow-sm hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 dark:focus:ring-offset-[#111c22]">
+                    Save
+                </button>
+</header>
+<!-- Scrollable Content -->
+<div class="flex-1 overflow-y-auto">
+<!-- Section: Event Branding -->
+<div class="p-4 space-y-6">
+<div>
+<h3 class="px-1 pb-3 text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-text-secondary">Event Branding</h3>
+<!-- Image Uploader Card -->
+<div class="relative group cursor-pointer overflow-hidden rounded-xl bg-white dark:bg-surface-dark shadow-sm ring-1 ring-gray-200 dark:ring-0">
+<div class="aspect-video w-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="Scenic lake view with fishing boats at sunset" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCeSw9SBKBQomh3PjEGHWgCXLRHkQUP6y5pDj7R4L-izHhddy2ujHFbeM8tovgLYjrjn3Tt6N4FKekiv-nZ6PeDP7wEECAXmwzAEn971iOxjVZaBcWiBXtZxy-wVCy0ePzEv-DiyGRiynbnkNhhdVSC0m2JbJGkgxTXilMhQ1FSyDirZGhXaCnBcbMEFmzWbAaaWg2UEpUYzOONc-S71O3YBRvM6f-748SkFF_j2Q2gvc1mmJHBbjfkcsOcnYA2X0q0Y0_BKit2zQc');">
+<div class="absolute inset-0 bg-black/40 transition-opacity group-hover:bg-black/50"></div>
+</div>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-white">
+<div class="mb-2 flex h-10 w-10 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm">
+<span class="material-symbols-outlined text-xl">edit</span>
+</div>
+<span class="text-sm font-medium">Change Cover</span>
+</div>
+</div>
+<p class="mt-2 px-1 text-xs text-slate-500 dark:text-text-secondary">Recommended size: 1200x600px. Max 5MB.</p>
+</div>
+<!-- Event Name Input -->
+<div class="space-y-1">
+<label class="block text-sm font-medium text-slate-700 dark:text-white" for="event-name">Event Name</label>
+<div class="relative">
+<input class="block w-full rounded-lg border-gray-300 dark:border-[#325567] bg-white dark:bg-surface-dark px-4 py-3 text-base text-slate-900 dark:text-white placeholder-slate-400 focus:border-primary focus:ring-primary dark:placeholder-[#92b7c9]" id="event-name" placeholder="e.g. 2024 Bassmaster Elite" type="text" value="Summer Bass Championship 2024"/>
+</div>
+</div>
+</div>
+<!-- Section: Data Management -->
+<div class="border-t border-gray-200 dark:border-[#233c48] p-4 space-y-4">
+<h3 class="px-1 text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-text-secondary">Data &amp; Records</h3>
+<div class="flex flex-col gap-3">
+<!-- Export Button 1 -->
+<button class="flex w-full items-center justify-between rounded-xl bg-white dark:bg-surface-dark p-4 text-left shadow-sm ring-1 ring-gray-200 dark:ring-0 transition-colors hover:bg-gray-50 dark:hover:bg-surface-dark-hover">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">leaderboard</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">Export Leaderboard</p>
+<p class="text-xs text-slate-500 dark:text-text-secondary">Download rankings as CSV</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">download</span>
+</button>
+<!-- Export Button 2 -->
+<button class="flex w-full items-center justify-between rounded-xl bg-white dark:bg-surface-dark p-4 text-left shadow-sm ring-1 ring-gray-200 dark:ring-0 transition-colors hover:bg-gray-50 dark:hover:bg-surface-dark-hover">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+<span class="material-symbols-outlined">group</span>
+</div>
+<div>
+<p class="text-sm font-medium text-slate-900 dark:text-white">Export Participants</p>
+<p class="text-xs text-slate-500 dark:text-text-secondary">Full roster data CSV</p>
+</div>
+</div>
+<span class="material-symbols-outlined text-slate-400">download</span>
+</button>
+</div>
+</div>
+<!-- Section: Configuration Actions -->
+<div class="border-t border-gray-200 dark:border-[#233c48] p-4 space-y-4">
+<h3 class="px-1 text-sm font-bold uppercase tracking-wider text-slate-500 dark:text-text-secondary">Configuration</h3>
+<div class="overflow-hidden rounded-xl bg-white dark:bg-surface-dark shadow-sm ring-1 ring-gray-200 dark:ring-0">
+<a class="flex items-center justify-between border-b border-gray-100 dark:border-[#233c48] p-4 transition-colors hover:bg-gray-50 dark:hover:bg-surface-dark-hover" href="#">
+<span class="text-sm font-medium text-slate-900 dark:text-white">Tournament Rules</span>
+<span class="material-symbols-outlined text-sm text-slate-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between border-b border-gray-100 dark:border-[#233c48] p-4 transition-colors hover:bg-gray-50 dark:hover:bg-surface-dark-hover" href="#">
+<span class="text-sm font-medium text-slate-900 dark:text-white">Scoring System</span>
+<span class="material-symbols-outlined text-sm text-slate-400">arrow_forward_ios</span>
+</a>
+<a class="flex items-center justify-between p-4 transition-colors hover:bg-gray-50 dark:hover:bg-surface-dark-hover" href="#">
+<span class="text-sm font-medium text-slate-900 dark:text-white">Categories &amp; Species</span>
+<span class="material-symbols-outlined text-sm text-slate-400">arrow_forward_ios</span>
+</a>
+</div>
+</div>
+<!-- Section: Danger Zone -->
+<div class="border-t border-gray-200 dark:border-[#233c48] p-4 pb-12 space-y-4">
+<h3 class="px-1 text-sm font-bold uppercase tracking-wider text-danger">Danger Zone</h3>
+<div class="rounded-xl border border-danger/20 bg-danger/5 p-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined mt-0.5 text-danger">warning</span>
+<div class="flex-1">
+<h4 class="text-sm font-bold text-danger">Reset Tournament Data</h4>
+<p class="mt-1 text-xs text-slate-600 dark:text-slate-400">This will permanently delete all catches, scores, and participant progress. This action cannot be undone.</p>
+</div>
+</div>
+<button class="mt-4 w-full rounded-lg border border-danger bg-transparent py-2.5 text-sm font-bold text-danger transition-colors hover:bg-danger hover:text-white">
+                            Reset All Data
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body></html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tournament Settings - Admin Dashboard</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "card-dark": "#192b33",
+                        "card-light": "#ffffff",
+                        "text-secondary-dark": "#92b7c9",
+                        "text-secondary-light": "#64748b",
+                        "border-dark": "#325567",
+                        "border-light": "#e2e8f0",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased transition-colors duration-200">
+<div class="relative flex min-h-screen w-full flex-row overflow-hidden">
+<!-- Sidebar Navigation -->
+<aside class="w-64 flex-shrink-0 hidden lg:flex flex-col bg-[#111c22] border-r border-border-dark/50">
+<div class="flex h-full flex-col justify-between p-4">
+<div class="flex flex-col gap-8">
+<!-- Brand/Profile -->
+<div class="flex gap-3 items-center px-2 pt-2">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border-2 border-primary/30" data-alt="Abstract blue water ripple pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAf2c0eq4UoJ84MRV5JNi8bAo6NddExXY_ojuavDuuudLFK208squOZJkZc0BmxLM6habTgP6XlJ7-l7MbY11jA25-7Fq43DRZDCfIdMMGFWeVqWAj9V8rxkB7Z_6e-wSjJRj0fKBorsyC7GuIC98F6Ud9mOkCavIWMAQp2Qx5I3wqDXVKLyNisgTjR2dDUDm5NrNZJv07d7AYm9clOX3tlbqNY9t-WwdGM2m-Sicf9m6NfPeU9RqmRIKKSK01DdDfFj-asHOi3mtk");'></div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-bold leading-normal">DeepSea Admin</h1>
+<p class="text-text-secondary-dark text-xs font-normal leading-normal">Tournament Console</p>
+</div>
+</div>
+<!-- Navigation Items -->
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-secondary-dark hover:bg-white/5 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">home</span>
+<span class="text-sm font-medium leading-normal">Home</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-secondary-dark hover:bg-white/5 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">groups</span>
+<span class="text-sm font-medium leading-normal">Participants</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-text-secondary-dark hover:bg-white/5 hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined group-hover:text-primary transition-colors">emoji_events</span>
+<span class="text-sm font-medium leading-normal">Leaderboard</span>
+</a>
+<!-- Active Item -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary/10 border border-primary/20 text-white" href="#">
+<span class="material-symbols-outlined text-primary fill-1">settings</span>
+<span class="text-sm font-medium leading-normal">Settings</span>
+</a>
+</nav>
+</div>
+<!-- Footer/Logout -->
+<div class="flex flex-col gap-2 border-t border-white/10 pt-4">
+<a class="flex items-center gap-3 px-3 py-2 text-text-secondary-dark hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="text-sm font-medium leading-normal">Sign Out</span>
+</a>
+</div>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-screen overflow-y-auto">
+<!-- Mobile Header (Visible only on small screens) -->
+<div class="lg:hidden flex items-center justify-between p-4 bg-[#111c22] border-b border-border-dark/50">
+<div class="flex items-center gap-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-8" data-alt="Abstract blue water ripple pattern" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCXqyWuUweyO0p94_qAWJqdV8WpJwVuHmqjs-NOVBEuOrrDhP5tR-103VW2mQnPzcdy6oJ9rrScxl7ouwtHOo8JcwiOGZ9W_GdzTd0LRzASkgylth8xNIfDflKQ3dR6yXATYYPZbNMy91S-fa8U6oCa30qi72vAPraHt6Zrxc_sAb_mY9ZYoLqk4g3CwEe0_cnfEHlWE7blisooi87z9gQbKp0ajFIXnTpJNvU9fm5KqzX28tsDQ_SJXYLMHODnPciOQPkTynEJXLg");'></div>
+<span class="text-white font-bold">DeepSea Admin</span>
+</div>
+<button class="text-white">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+<div class="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8 pb-20">
+<!-- Breadcrumbs -->
+<nav class="flex flex-wrap gap-2 mb-6">
+<a class="text-text-secondary-dark hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Dashboard</a>
+<span class="text-text-secondary-dark text-sm font-medium leading-normal">/</span>
+<span class="text-white text-sm font-medium leading-normal">Settings</span>
+</nav>
+<!-- Page Heading -->
+<div class="flex flex-col gap-2 mb-8">
+<h1 class="text-white text-3xl font-black leading-tight tracking-tight">Tournament Settings</h1>
+<p class="text-text-secondary-dark text-base font-normal">Manage general event configurations, branding, and data controls.</p>
+</div>
+<!-- Grid Layout for Settings Cards -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left Column: Branding & Config (Spans 2 columns) -->
+<div class="lg:col-span-2 flex flex-col gap-6">
+<!-- Event Details Card -->
+<div class="bg-card-dark rounded-xl border border-border-dark/50 overflow-hidden">
+<div class="p-6 border-b border-border-dark/50">
+<h2 class="text-white text-lg font-bold">General Information</h2>
+<p class="text-text-secondary-dark text-sm mt-1">Configure the main display details for the public.</p>
+</div>
+<div class="p-6 space-y-6">
+<!-- Tournament Name Input -->
+<div class="space-y-2">
+<label class="block text-white text-sm font-medium" for="tournament-name">Tournament Name</label>
+<input class="form-input flex w-full rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-primary/50 border border-border-dark bg-background-dark h-12 px-4 placeholder:text-text-secondary-dark/50 text-base transition-all" id="tournament-name" placeholder="e.g., Annual Bassmaster Classic 2024" type="text" value="Grand Lake Fishing Open 2024"/>
+</div>
+<!-- Background Image Upload -->
+<div class="space-y-2">
+<label class="block text-white text-sm font-medium">Splash Screen / Background Image</label>
+<div class="mt-2 flex justify-center rounded-xl border border-dashed border-border-dark px-6 py-10 bg-background-dark/50 hover:bg-background-dark hover:border-primary/50 transition-all cursor-pointer group">
+<div class="text-center">
+<div class="mx-auto h-12 w-12 text-text-secondary-dark group-hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-5xl">image</span>
+</div>
+<div class="mt-4 flex text-sm leading-6 text-gray-400 justify-center">
+<label class="relative cursor-pointer rounded-md bg-transparent font-semibold text-primary focus-within:outline-none hover:text-primary/80" for="file-upload">
+<span>Upload a file</span>
+<input class="sr-only" id="file-upload" name="file-upload" type="file"/>
+</label>
+<p class="pl-1">or drag and drop</p>
+</div>
+<p class="text-xs leading-5 text-gray-500">PNG, JPG, GIF up to 10MB (1920x1080px)</p>
+</div>
+</div>
+<!-- Current Image Preview (Optional) -->
+<div class="relative mt-4 w-full h-32 rounded-lg overflow-hidden border border-border-dark group">
+<img class="w-full h-full object-cover opacity-60" data-alt="Calm lake with foggy mountains in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8gBEOC9_x7r_Y_tkGYzC-znbaIqZd052F16PxVff7FckdvEer-FENkTynU2Eqe35btXY7sYuqRT8PMFi4XIV6CpBO5EuOrGITdPjoaFj4QAGouPOmSQEgITVhc3d566PFkWCeeSFmUMJaiyHeokpETwOOa72CysWjaZCsRR6Y3xKOeRll5VO9yNMBWAOuV6063jPc5MlIPelMo4BHrp2AeS9OqAU7ENqkcC_CJRuXNzlXR2lkX8SGnigN_v-pZSZxIwMXb_-o7JY"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<p class="text-white text-xs bg-black/50 px-2 py-1 rounded">Current Background</p>
+</div>
+</div>
+</div>
+</div>
+<div class="px-6 py-4 bg-background-dark/30 border-t border-border-dark/50 flex justify-end">
+<button class="bg-primary hover:bg-primary/90 text-white font-medium py-2.5 px-5 rounded-lg text-sm transition-colors shadow-lg shadow-primary/20 flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">save</span>
+                                    Save Changes
+                                </button>
+</div>
+</div>
+</div>
+<!-- Right Column: Data & Actions -->
+<div class="flex flex-col gap-6">
+<!-- Data Export Card -->
+<div class="bg-card-dark rounded-xl border border-border-dark/50 overflow-hidden">
+<div class="p-5 border-b border-border-dark/50">
+<h2 class="text-white text-lg font-bold">Data &amp; Privacy</h2>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div>
+<h3 class="text-white text-sm font-semibold">Export Data</h3>
+<p class="text-text-secondary-dark text-xs mt-1 leading-relaxed">Download a full report of participants, catches, and rankings in CSV format.</p>
+</div>
+<button class="w-full border border-border-dark hover:border-primary/50 text-text-secondary-dark hover:text-white hover:bg-background-dark font-medium py-2.5 px-4 rounded-lg text-sm transition-all flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                                    Export CSV
+                                </button>
+</div>
+</div>
+<!-- Danger Zone Card -->
+<div class="bg-card-dark rounded-xl border border-red-900/30 overflow-hidden relative">
+<!-- Red accent top strip -->
+<div class="absolute top-0 left-0 w-full h-1 bg-red-600"></div>
+<div class="p-5 border-b border-red-900/20 bg-red-950/10">
+<div class="flex items-center gap-2 text-red-500">
+<span class="material-symbols-outlined">warning</span>
+<h2 class="text-white text-lg font-bold">Danger Zone</h2>
+</div>
+</div>
+<div class="p-5 flex flex-col gap-4">
+<div>
+<h3 class="text-white text-sm font-semibold">Reset Tournament</h3>
+<p class="text-text-secondary-dark text-xs mt-1 leading-relaxed">
+                                        This will permanently delete all catches, participants, and ranking data. This action cannot be undone.
+                                    </p>
+</div>
+<button class="w-full bg-red-600/10 hover:bg-red-600/20 border border-red-600/50 text-red-500 hover:text-red-400 font-medium py-2.5 px-4 rounded-lg text-sm transition-all flex justify-center items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+                                    Reset All Data
+                                </button>
+</div>
+</div>
+<!-- Quick Help Card -->
+<div class="bg-primary/5 rounded-xl border border-primary/20 p-5">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-primary">help</span>
+<div>
+<h3 class="text-white text-sm font-semibold">Need Help?</h3>
+<p class="text-text-secondary-dark text-xs mt-1">
+                                        Contact support if you need to restore a previous backup.
+                                    </p>
+<a class="text-primary text-xs font-medium mt-2 inline-block hover:underline" href="#">Contact Support →</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

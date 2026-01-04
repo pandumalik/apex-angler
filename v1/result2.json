@@ -1,0 +1,2936 @@
+{
+    "StartDate": "2025-12-02",
+    "EndDate": "2025-12-02",
+    "Currency": "IDR",
+    "StartBalance": "2000000.00",
+    "Data": [
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100020564214812501351 251202110002056421LULUT SUPRIONO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100030564234792501603 251202110003056423RACHMAT SURYA ZAZU"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6769000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100030564244692506403 251202110003056424ANDRY SHALAHUDDIN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100030564244692506403 251202110003056424ANDRY SHALAHUDDIN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3722000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100020564225682503823 251202110002056422GENTA ARISTIA RAMD"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100020564225682503823 251202110002056422GENTA ARISTIA RAMD"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "9998500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100030564274942500667 251202110003056427ANDRI TOPAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100030564274942500667 251202110003056427ANDRI TOPAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "48438500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100040564295682502416 251202110004056429CHRISNA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100040564295682502416 251202110004056429CHRISNA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6448000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100040564284942500463 251202110004056428NUR INDAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100040564284942500463 251202110004056428NUR INDAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "9376000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100030564255682505521 251202110003056425JATI KUSUMO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100030564255682505521 251202110003056425JATI KUSUMO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "38096000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100030564266642500183 251202110003056426EPRILIA TRI ARUM T"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100030564266642500183 251202110003056426EPRILIA TRI ARUM T"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "17324000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100040564306642500581 251202110004056430ILSYE HIENE PAAT "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100040564306642500581 251202110004056430ILSYE HIENE PAAT "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3722000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100040564315962500668 251202110004056431MOHAMAD TAUFIK "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100040564315962500668 251202110004056431MOHAMAD TAUFIK "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100040564344792508702 251202110004056434IRMA YUNITA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5580500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100040564336642500477 251202110004056433ELISABETH ELITA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100040564336642500477 251202110004056433ELISABETH ELITA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100040564326642500386 251202110004056432SIRKE SISWOYO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100060564356642500773 251202110006056435MUH PERKASA T DANI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100070564366642500686 251202110007056436JOKO SETIONO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100090564376642500785 251202110009056437INDRA MARTHANI YUN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "11624500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100250564384132500363 251202110025056438ERSON SARNUBI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100250564384132500363 251202110025056438ERSON SARNUBI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3130500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100270564394122501443 251202110027056439DEBI LUPITASARI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100270564394122501443 251202110027056439DEBI LUPITASARI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "7318500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100280564404042403060 251202110028056440DEPY "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100280564404042403060 251202110028056440DEPY "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5293000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100280564414812500753 251202110028056441ADIEL NOPRIA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100280564414812500753 251202110028056441ADIEL NOPRIA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100280564424622406124 251202110028056442MUHAMMAD ASLAM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "15964000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100290564434132400617 251202110029056443ERWANSYAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100290564434132400617 251202110029056443ERWANSYAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1376000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100290564456372502043 251202110029056445VERONICA NUR ICHSA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100290564456372502043 251202110029056445VERONICA NUR ICHSA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "13000000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100300564466372406237 251202110030056446JAMAL "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100300564466372406237 251202110030056446JAMAL "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "800500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100300564474622507562 251202110030056447M SANDY "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100300564474622507562 251202110030056447M SANDY "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100290564444042502731 251202110029056444YANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100300564485132508259 251202110030056448DESRI AMATUL FIRDH"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "10390500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100300564494122502106 251202110030056449AGUS SALIM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100300564494122502106 251202110030056449AGUS SALIM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100300564504092501249 251202110030056450CHANDRA TJONG "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100310564514622500817 251202110031056451CARTER "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6630500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100330564524122503020 251202110033056452AGUS HERMAWAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100330564524122503020 251202110033056452AGUS HERMAWAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4718500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100330564534792507558 251202110033056453M IBNU BAHAR "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100330564534792507558 251202110033056453M IBNU BAHAR "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5345500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100330564544122503021 251202110033056454AGUS HERMAWAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100330564544122503021 251202110033056454AGUS HERMAWAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "10551000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100340564556642400914 251202110034056455TJO SELAMAT "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100340564556642400914 251202110034056455TJO SELAMAT "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "13107500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100340564564822507961 251202110034056456FAM HARTONO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100340564564822507961 251202110034056456FAM HARTONO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2868000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100350564575912500211 251202110035056457WIWIK EKOWATI SETI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100350564575912500211 251202110035056457WIWIK EKOWATI SETI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4335500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100350564584812401190 251202110035056458BUDI TAKSIH PRIHAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100350564584812401190 251202110035056458BUDI TAKSIH PRIHAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5065500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100360564614812400308 251202110036056461SUWANDI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100360564614812400308 251202110036056461SUWANDI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100360564595692501849 251202110036056459YULIA CITRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "8979000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100360564605672402305 251202110036056460SUPRIYANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100360564605672402305 251202110036056460SUPRIYANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "15392809.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100360564626372505968 251202110036056462JAMAL "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100360564626372505968 251202110036056462JAMAL "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100360564634782506116 251202110036056463RIZKY APRIL AMRULL"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2868500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100370564646012302779 251202110037056464MUHAMMAD RIKZA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100370564646012302779 251202110037056464MUHAMMAD RIKZA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "13072619.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100370564656372505969 251202110037056465JAMAL "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100370564656372505969 251202110037056465JAMAL "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3275500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100380564664122403357 251202110038056466AJENG NISAUL FITRI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100380564664122403357 251202110038056466AJENG NISAUL FITRI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100380564675132503687 251202110038056467ENGKUS KUSNADI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100390564687482312203 251202110039056468AWALUDDIN JAMIL "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100390564694122503217 251202110039056469IRA ERVINDA NAIM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100390564705902500568 251202110039056470FIRMANSYAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4304500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100400564714612505203 251202110040056471HENDRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100400564714612505203 251202110040056471HENDRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1864000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100400564725682402644 251202110040056472SYAIFUL BACHRI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100400564725682402644 251202110040056472SYAIFUL BACHRI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "8473500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100400564734792508294 251202110040056473HARRY BUDIMAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100400564734792508294 251202110040056473HARRY BUDIMAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "9270500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100410564744122501788 251202110041056474RAFIQA ANNISA MUCH"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100410564744122501788 251202110041056474RAFIQA ANNISA MUCH"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "8205000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100410564754792508626 251202110041056475R TOMMY SURYATMADI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100410564754792508626 251202110041056475R TOMMY SURYATMADI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5745500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100410564764812501515 251202110041056476IVAN SONDANG LINGG"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100410564764812501515 251202110041056476IVAN SONDANG LINGG"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2669500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100420564776642400408 251202110042056477EKA PAUZI RIDWAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100420564776642400408 251202110042056477EKA PAUZI RIDWAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3593000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100420564794122501440 251202110042056479IMMANUEL AGUNG SAP"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100420564794122501440 251202110042056479IMMANUEL AGUNG SAP"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100420564784622508698 251202110042056478JESSIKA KRISTI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2310500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100430564814692402747 251202110043056481ACHMAD SUNUADJI SO"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100430564814692402747 251202110043056481ACHMAD SUNUADJI SO"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100430564805372503479 251202110043056480CAHYONO HERI PRASE"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100440564824692509048 251202110044056482SYARIFA  PUTRI  RA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100440564835682401919 251202110044056483LIONG HADI SULAIMA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2944000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100440564866012500464 251202110044056486MOCHAMAD JOHAR PRA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100440564866012500464 251202110044056486MOCHAMAD JOHAR PRA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100440564844812401326 251202110044056484MOH ARIA GUMILAR "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4586000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100450564874782406561 251202110045056487ADRI LEO KRISTIAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100450564874782406561 251202110045056487ADRI LEO KRISTIAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "21999500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100440564854822406564 251202110044056485HENDRY TJHAI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100440564854822406564 251202110044056485HENDRY TJHAI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "13000000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100450564886372406236 251202110045056488JAMAL "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100450564886372406236 251202110045056488JAMAL "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100450564896372501064 251202110045056489ANTON BUDIONO S HU"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "10129000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100460564904642504764 251202110046056490INES NASTITI RAMAD"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100460564904642504764 251202110046056490INES NASTITI RAMAD"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6600390.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100470564916642500985 251202110047056491FENSI FATRIANSYAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100470564916642500985 251202110047056491FENSI FATRIANSYAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4047500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100470564926012500290 251202110047056492ADE SUPRIYANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100470564926012500290 251202110047056492ADE SUPRIYANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1930500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100480564934632500413 251202110048056493ARI BUDIHARTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100480564934632500413 251202110048056493ARI BUDIHARTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1986000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100480564954792503208 251202110048056495KEMAS MUHAMMAD HAF"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100480564954792503208 251202110048056495KEMAS MUHAMMAD HAF"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4480500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100480564965962401340 251202110048056496YUNANTO TRI LAKSON"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100480564965962401340 251202110048056496YUNANTO TRI LAKSON"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100480564944632500670 251202110048056494MUHAMMAD RIVAT SUN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3339500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100480564976642301342 251202110048056497BERTA MARDIYANI CA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100480564976642301342 251202110048056497BERTA MARDIYANI CA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2433500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100490564985242302356 251202110049056498ROSALIN BUNTARAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100490564985242302356 251202110049056498ROSALIN BUNTARAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "25105500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100490564994812501107 251202110049056499RAFIF MUHAMMAD RIZ"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100490564994812501107 251202110049056499RAFIF MUHAMMAD RIZ"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1400500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100500565004622505027 251202110050056500ENDIN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100500565004622505027 251202110050056500ENDIN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100500565016642401090 251202110050056501YANI HANDAYANI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3030500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100500565024662502043 251202110050056502LUKMAN HAKIM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100500565024662502043 251202110050056502LUKMAN HAKIM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2934500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100510565036392505192 251202110051056503LESTARI ANANDA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100510565036392505192 251202110051056503LESTARI ANANDA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "10281000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100510565044792308622 251202110051056504ROFIK ZUMRONI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100510565044792308622 251202110051056504ROFIK ZUMRONI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100510565055032501445 251202110051056505AKHMAD BASORI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6014000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100520565084782408549 251202110052056508DEDY SUMARNA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100520565084782408549 251202110052056508DEDY SUMARNA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5680000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100520565075132509903 251202110052056507A N HARTANTI NINGS"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100520565075132509903 251202110052056507A N HARTANTI NINGS"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3595500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100520565065672302814 251202110052056506GLEDYS DEYANA WAHY"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100520565065672302814 251202110052056506GLEDYS DEYANA WAHY"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100520565095132508545 251202110052056509SRI HANDAYANI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "10540500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100530565114622506234 251202110053056511RONALD CAESAR "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100530565114622506234 251202110053056511RONALD CAESAR "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6411000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100530565105372507972 251202110053056510SUSILAWATI INDRIAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100530565105372507972 251202110053056510SUSILAWATI INDRIAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "7647500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100540565126372505298 251202110054056512PATRISIA EVI NOVIT"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100540565126372505298 251202110054056512PATRISIA EVI NOVIT"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4814000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100550565134792407799 251202110055056513SARIPAH NURSEHA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100550565134792407799 251202110055056513SARIPAH NURSEHA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5915500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100550565154912500860 251202110055056515BACHRUL ULUM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100550565154912500860 251202110055056515BACHRUL ULUM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100550565147322405049 251202110055056514ERNAWATI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "10091400.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100550565167122509176 251202110055056516RICKY RINALDI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100550565167122509176 251202110055056516RICKY RINALDI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100550565174622307703 251202110055056517ANGGIAT SAUT MARUD"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100560565184652507539 251202110056056518MEI RISTIKA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5232000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100560565196372504645 251202110056056519AHMAD BAYHAQI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100560565196372504645 251202110056056519AHMAD BAYHAQI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2861000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100570565204792502446 251202110057056520BAGUS SURYO ARIEOC"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100570565204792502446 251202110057056520BAGUS SURYO ARIEOC"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2090500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100570565214662504598 251202110057056521LINDA PANAWIMA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100570565214662504598 251202110057056521LINDA PANAWIMA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "10163000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100570565224662305278 251202110057056522TEGUH SANTOSO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100570565224662305278 251202110057056522TEGUH SANTOSO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100580565235672500486 251202110058056523SATIBI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4500500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100580565244662504665 251202110058056524DEIFI ADENA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100580565244662504665 251202110058056524DEIFI ADENA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100590565256012400499 251202110059056525RIA ARISTYA DEWI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3255400.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100590565287402508107 251202110059056528ANGGRA PRA KUMALA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100590565287402508107 251202110059056528ANGGRA PRA KUMALA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6842000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100590565276012400653 251202110059056527IRHAM JACUB "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100590565276012400653 251202110059056527IRHAM JACUB "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100590565264662505159 251202110059056526SYAIFUL GHOZI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021100590565294722500734 251202110059056529M FADLIL ADHIM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6130500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021100590565304912501303 251202110059056530ABDUL HADI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021100590565304912501303 251202110059056530ABDUL HADI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3055500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101000565324652500492 251202110100056532RADEN MEGA RACHMAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101000565324652500492 251202110100056532RADEN MEGA RACHMAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101000565314592500641 251202110100056531LUTFI ATHANUZUL KU"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5755500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101000565334622502607 251202110100056533ARIE FEBRIANSYAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101000565334622502607 251202110100056533ARIE FEBRIANSYAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101000565345682504795 251202110100056534RIZAL ZAELANI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4225500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101010565354722504533 251202110101056535IZZATY AMNA NAJA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101010565354722504533 251202110101056535IZZATY AMNA NAJA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101010565367122506112 251202110101056536GUNAWAN IR "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "7990000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101020565374662504643 251202110102056537HARIANTO PEREIRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101020565374662504643 251202110102056537HARIANTO PEREIRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101020565394652503111 251202110102056539SOLIKIN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101020565385132507182 251202110102056538RIZKA YUNINGSIH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101030565404792501660 251202110103056540ABDUL AZIS "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5529500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101030565414662405290 251202110103056541ANA WIDAYANTI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101030565414662405290 251202110103056541ANA WIDAYANTI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3505500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101030565424622308218 251202110103056542MUHAMMAD ZUL FAHMI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101030565424622308218 251202110103056542MUHAMMAD ZUL FAHMI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "14996181.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101030565434662505193 251202110103056543SEPTIAN TAUFAN WID"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101030565434662505193 251202110103056543SEPTIAN TAUFAN WID"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101040565444662503541 251202110104056544ANA DWI WAHYUNDARI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1269000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101050565454952505008 251202110105056545NABILA APRILIA DAM"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101050565454952505008 251202110105056545NABILA APRILIA DAM"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101050565464652407218 251202110105056546SULISTYORINI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3675500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101060565474652502932 251202110106056547YULI KURNIA WULAND"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101060565474652502932 251202110106056547YULI KURNIA WULAND"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4395500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101060565484652503026 251202110106056548OLDY ARYA BUDIARSA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101060565484652503026 251202110106056548OLDY ARYA BUDIARSA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101060565494892306636 251202110106056549EVI KUSDIANA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2363000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101070565504802401341 251202110107056550EKO ERMAWAN PRASET"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101070565504802401341 251202110107056550EKO ERMAWAN PRASET"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1710400.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101080565517402509128 251202110108056551HANA SURYA AMANAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101080565517402509128 251202110108056551HANA SURYA AMANAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "8178700.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101080565527352404019 251202110108056552VENESIA SURATMAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101080565527352404019 251202110108056552VENESIA SURATMAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5416500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101080565534802500912 251202110108056553HENNY MARDIANA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101080565534802500912 251202110108056553HENNY MARDIANA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3050500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101080565544662501664 251202110108056554NANANG RAHMAD BUST"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101080565544662501664 251202110108056554NANANG RAHMAD BUST"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1303500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101080565554212405380 251202110108056555MERRY BERNADETH WA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101080565554212405380 251202110108056555MERRY BERNADETH WA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3180000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101090565564652506059 251202110109056556DITA WULAN OKTAVIA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101090565564652506059 251202110109056556DITA WULAN OKTAVIA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5705500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101090565574912401172 251202110109056557HENI FAIZIN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101090565574912401172 251202110109056557HENI FAIZIN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "721500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101100565584792508849 251202110110056558SAKTI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101100565584792508849 251202110110056558SAKTI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5176900.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101110565596902503060 251202110111056559MOCHAMAD TAUFIK "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101110565596902503060 251202110111056559MOCHAMAD TAUFIK "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2793900.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101110565607082506134 251202110111056560FIKRY SAID RIVAI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101110565607082506134 251202110111056560FIKRY SAID RIVAI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3226500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101110565616232500714 251202110111056561YEHEZKIEL FILEMON "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101110565616232500714 251202110111056561YEHEZKIEL FILEMON "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3317900.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101120565626912502049 251202110112056562ERNI NOVIAYUSNI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101120565626912502049 251202110112056562ERNI NOVIAYUSNI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101120565634782506172 251202110112056563SUSANTO ASAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3045500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101120565644912400412 251202110112056564WULAN PUSPITASARI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101120565644912400412 251202110112056564WULAN PUSPITASARI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6212000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101120565675582501010 251202110112056567EILEEN NOVIANTY MO"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101120565675582501010 251202110112056567EILEEN NOVIANTY MO"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "8799717.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101120565664652507414 251202110112056566HERU BASKORO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101120565664652507414 251202110112056566HERU BASKORO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1373500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101120565655632500893 251202110112056565JEMMY MANGINSIHI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101120565655632500893 251202110112056565JEMMY MANGINSIHI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101130565684652501605 251202110113056568EDY PRIYONO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4158000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101130565694802500626 251202110113056569ERIKA MULYASARI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101130565694802500626 251202110113056569ERIKA MULYASARI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "26724500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101140565704722409908 251202110114056570DONNY KURNIAWAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101140565704722409908 251202110114056570DONNY KURNIAWAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3916800.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101140565726912506141 251202110114056572RACHMADI SUSETIO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101140565726912506141 251202110114056572RACHMADI SUSETIO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101140565715912500826 251202110114056571AULIA AKBAR "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3955500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101150565734792408575 251202110115056573ERINA FEBRIANTI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101150565734792408575 251202110115056573ERINA FEBRIANTI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101160565755132504613 251202110116056575SUSANTI FITRI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2395500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101160565744632405963 251202110116056574TEGUH IMAN SAWIDJI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101160565744632405963 251202110116056574TEGUH IMAN SAWIDJI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6305500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101170565764812301552 251202110117056576GANGGA SUNU DIWANG"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101170565764812301552 251202110117056576GANGGA SUNU DIWANG"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2835500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101170565774662502009 251202110117056577ABRAHAM EDO PRASET"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101170565774662502009 251202110117056577ABRAHAM EDO PRASET"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2497311.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101170565784622509801 251202110117056578LILIS HERLINA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101170565784622509801 251202110117056578LILIS HERLINA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3655500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101170565795812402783 251202110117056579NI KADEK AYU SUMAR"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101170565795812402783 251202110117056579NI KADEK AYU SUMAR"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "16354500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101180565806642400251 251202110118056580EDWINE FAUZY "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101180565806642400251 251202110118056580EDWINE FAUZY "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3496000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101180565816012400640 251202110118056581DEWI MURNI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101180565816012400640 251202110118056581DEWI MURNI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2385500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101190565824912401879 251202110119056582RISTA INDRA LUKMAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101190565824912401879 251202110119056582RISTA INDRA LUKMAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "14263500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101200565844792406931 251202110120056584RIRIS DAME BERLIAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101200565844792406931 251202110120056584RIRIS DAME BERLIAN"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101200565854652500615 251202110120056585ANI KRISNAWATI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "7210500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101200565834692509008 251202110120056583CHRISTOPHER BRANDO"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101200565834692509008 251202110120056583CHRISTOPHER BRANDO"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3988200.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101200565877142310166 251202110120056587M ARIFULLOH S AG "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101200565877142310166 251202110120056587M ARIFULLOH S AG "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5760500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101200565864692508687 251202110120056586AGUS HENDARTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101200565864692508687 251202110120056586AGUS HENDARTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "15246500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101200565886282500374 251202110120056588AGUNG HERIYANSAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101200565886282500374 251202110120056588AGUNG HERIYANSAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101200565895132508664 251202110120056589IVONE CRISTY "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2505500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101210565924812501492 251202110121056592GAGAS PRAKOSO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101210565924812501492 251202110121056592GAGAS PRAKOSO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5215500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101210565915812402816 251202110121056591YAN MAHENDRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101210565915812402816 251202110121056591YAN MAHENDRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101210565904692403384 251202110121056590MUHAMMAD AMIN NASU"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101210565935672400760 251202110121056593UJANG HARI SH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "9672500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101220565946642301293 251202110122056594MARIA THERESIA IKA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101220565946642301293 251202110122056594MARIA THERESIA IKA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "18164000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101240565954692508843 251202110124056595DANANG WIJAYANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101240565954692508843 251202110124056595DANANG WIJAYANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "14372936.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101240565966462500563 251202110124056596MUHAMAD TAUFAN PUT"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101240565966462500563 251202110124056596MUHAMAD TAUFAN PUT"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "7545500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101250565985812502057 251202110125056598IRWANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101250565985812502057 251202110125056598IRWANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3945500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101250565974812500284 251202110125056597SOFIAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101250565974812500284 251202110125056597SOFIAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "12174000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101250566004722408403 251202110125056600MUHAMMAD REZA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101250566004722408403 251202110125056600MUHAMMAD REZA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4495500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101250566015132505665 251202110125056601ALFONSUS YULIANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101250566015132505665 251202110125056601ALFONSUS YULIANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101250565994622507510 251202110125056599MUHAMMAD HARKAT WA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6340500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101250566024662405974 251202110125056602HERMANSYAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101250566024662405974 251202110125056602HERMANSYAH "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "6428500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101260566035632501215 251202110126056603ROMMEL AUDIE ABRAH"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101260566035632501215 251202110126056603ROMMEL AUDIE ABRAH"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2625500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101260566047482507093 251202110126056604MOCHAMAD ICHSAN KA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101260566047482507093 251202110126056604MOCHAMAD ICHSAN KA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "7295175.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101260566064622509700 251202110126056606FACHRUDIN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101260566064622509700 251202110126056606FACHRUDIN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101260566056392503104 251202110126056605ANDRI CANDRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "13252500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101280566074662504045 251202110128056607IRAWAN SUKMA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101280566074662504045 251202110128056607IRAWAN SUKMA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2330000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101290566096912504103 251202110129056609SUHARJO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101290566096912504103 251202110129056609SUHARJO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "7282000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101280566086372505379 251202110128056608GAYATRI W S SYAFRI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101280566086372505379 251202110128056608GAYATRI W S SYAFRI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3715500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101290566105962500500 251202110129056610ACHMAD IBROHIM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101290566105962500500 251202110129056610ACHMAD IBROHIM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101290566114792408547 251202110129056611LUKMAN HAKIM "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5529500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101290566134662500400 251202110129056613HELENA HANINDYA KA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101290566134662500400 251202110129056613HELENA HANINDYA KA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "9564500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101290566144632404698 251202110129056614RAMDHAN M RACHMAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101290566144632404698 251202110129056614RAMDHAN M RACHMAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101290566124712402160 251202110129056612MUKHDHORI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101300566154792500027 251202110130056615KUNCORO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3578000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101300566166282302164 251202110130056616MAULAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101300566166282302164 251202110130056616MAULAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101320566175682406124 251202110132056617ALDO FARIZI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "26565500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101320566184692400841 251202110132056618JESSY ABDURRAHMAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101320566184692400841 251202110132056618JESSY ABDURRAHMAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3675500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101340566194652502933 251202110134056619YULI KURNIA WULAND"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101340566194652502933 251202110134056619YULI KURNIA WULAND"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3272000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101340566205022500172 251202110134056620YAYUK INDRAWATI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101340566205022500172 251202110134056620YAYUK INDRAWATI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3940000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101340566214652505331 251202110134056621INDANG SEKARWATI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101340566214652505331 251202110134056621INDANG SEKARWATI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101340566224812501173 251202110134056622ELLA NILA ROSYATI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101340566234812500988 251202110134056623FALLEN LAURIE "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "5134500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101350566244652406445 251202110135056624MUHAMMAD HADI YAHY"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101350566244652406445 251202110135056624MUHAMMAD HADI YAHY"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101350566254652405503 251202110135056625PRAHASTYO YUMANTO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101360566264662500544 251202110136056626DWI WARDINI "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4754000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101380566277432403028 251202110138056627FIAN PRASETYO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101380566277432403028 251202110138056627FIAN PRASETYO "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "1695000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101390566297402504055 251202110139056629DUDIK HOLIDATUL AL"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101390566297402504055 251202110139056629DUDIK HOLIDATUL AL"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "2593500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101390566287132501009 251202110139056628IPUNG BAGUS RIYADI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101390566287132501009 251202110139056628IPUNG BAGUS RIYADI"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101400566304812501499 251202110140056630ADERINO AMANDIKA P"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101400566314822504850 251202110140056631HENDRA IDRAWAN "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "3020500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101460566324622308272 251202110146056632DAVID CANDRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101460566324622308272 251202110146056632DAVID CANDRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4255500.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101530566334272500162 251202110153056633YUNITA RIADY "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101530566334272500162 251202110153056633YUNITA RIADY "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADCHG/WS950512512021101530566344622308272 251202110153056634DAVID CANDRA "
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "C",
+            "TransactionAmount": "4315000.00",
+            "TransactionName": "TRSF E-BANKING CR",
+            "Trailer": "0212/ADSCY/WS950512512021101540566355132410506 251202110154056635TARA ADRILIA SALSA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "3000.00",
+            "TransactionName": "BA JASA E-BANKING",
+            "Trailer": "0212/ADSCY/WS950512512021101540566355132410506 251202110154056635TARA ADRILIA SALSA"
+        },
+        {
+            "TransactionDate": "02/12",
+            "BranchCode": "0000",
+            "TransactionType": "D",
+            "TransactionAmount": "1036762238.00",
+            "TransactionName": "TRSF E-BANKING DB",
+            "Trailer": "0212/FTASW/WS95051 1036762238.00SI 2278 BFI FINANCE INDONE"
+        }
+    ]
+}

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tournament Master - Admin Login</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;family=Noto+Sans:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22", // Matching the deeper dark theme
+                        "surface-dark": "#111c22",
+                        "input-bg": "#192b33",
+                        "border-color": "#325567",
+                        "text-secondary": "#92b7c9",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "Noto Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="flex min-h-screen w-full">
+<!-- Left Side: Image Panel (Hidden on mobile) -->
+<div class="hidden relative w-0 flex-1 lg:block">
+<div class="absolute inset-0 h-full w-full bg-cover bg-center" data-alt="Serene lake at sunrise with misty water and mountains in the distance" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDw64qsqaXbpoP45s71lPhO_XTj71234M0eRV03ibC56wpG9N7BGD5uMo86o_dPbst6GXhZWDDufbZJH0QdD3amcYP8XnWtXXaRESuefShlSDYcn1vsbVCPF6zHuAuhnXPt8T4p9qIEadKvQ8IYOlqYZaoz6Vrn4M4nkFHnfwiFqZl7DWpKxOWqYYL9GNsWF9gLmsx6lJBaCPHGLQY-5udbJeyqOxWh9pS77uoNhX2IqmOyPsrYrZdkBOKlyJyi9Vf9MPdP4U-8oms');">
+<div class="absolute inset-0 bg-[#111c22]/60 mix-blend-multiply"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-[#111c22] via-transparent to-transparent opacity-90"></div>
+</div>
+<!-- Branding Overlay on Image -->
+<div class="absolute bottom-0 left-0 p-20 text-white z-10">
+<h2 class="text-4xl font-black tracking-tight mb-4">Tournament Master</h2>
+<p class="text-lg text-text-secondary max-w-md leading-relaxed">
+                    Manage your fishing events with precision. Real-time leaderboards, angler tracking, and seamless tournament administration.
+                </p>
+<div class="mt-8 flex gap-4 text-sm font-medium text-text-secondary">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+                         Secure
+                    </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">bolt</span>
+                        Real-time
+                   </div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">public</span>
+                        Global
+                   </div>
+</div>
+</div>
+</div>
+<!-- Right Side: Login Form -->
+<div class="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24 bg-[#111c22] border-l border-[#233c48]">
+<div class="mx-auto w-full max-w-sm lg:w-96">
+<!-- Logo & Header -->
+<div class="flex flex-col gap-6">
+<div class="flex items-center gap-3 text-white">
+<div class="flex items-center justify-center size-10 rounded-lg bg-[#192b33] border border-[#233c48] text-primary">
+<svg class="size-6" fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<span class="text-xl font-bold tracking-tight">Tournament Master</span>
+</div>
+<div class="flex flex-col gap-2">
+<h1 class="text-white text-3xl font-black leading-tight tracking-[-0.033em]">Admin Portal</h1>
+<p class="text-text-secondary text-base font-normal leading-normal">Welcome back! Please sign in to manage your fishing tournaments.</p>
+</div>
+</div>
+<!-- Meta Text / Demo Banner -->
+<div class="mt-8 rounded-lg bg-[#192b33]/50 border border-[#233c48] p-4 flex items-start gap-3">
+<span class="material-symbols-outlined text-primary text-sm mt-0.5">info</span>
+<p class="text-text-secondary text-sm font-normal leading-normal">
+<span class="text-white font-medium">Demo Credentials:</span><br/>
+                        Username: <span class="font-mono text-primary">admin</span> / Password: <span class="font-mono text-primary">password123</span>
+</p>
+</div>
+<!-- Form Section -->
+<div class="mt-8">
+<form action="#" class="space-y-6" method="POST">
+<!-- Username Field -->
+<div class="space-y-2">
+<label class="block text-sm font-medium text-white" for="username">
+                                Username
+                            </label>
+<div class="relative rounded-md shadow-sm">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-text-secondary">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<input class="block w-full rounded-lg border border-border-color bg-input-bg py-3 pl-11 pr-4 text-white placeholder-text-secondary focus:border-primary focus:ring-1 focus:ring-primary sm:text-sm" id="username" name="username" placeholder="Enter your username" type="text" value="admin"/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="space-y-2">
+<label class="block text-sm font-medium text-white" for="password">
+                                Password
+                            </label>
+<div class="relative rounded-md shadow-sm">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4 text-text-secondary">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="block w-full rounded-lg border border-border-color bg-input-bg py-3 pl-11 pr-12 text-white placeholder-text-secondary focus:border-primary focus:ring-1 focus:ring-primary sm:text-sm" id="password" name="password" placeholder="••••••••" type="password" value="password123"/>
+<div class="absolute inset-y-0 right-0 flex items-center pr-4 cursor-pointer text-text-secondary hover:text-white transition-colors">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</div>
+</div>
+</div>
+<!-- Remember & Forgot -->
+<div class="flex items-center justify-between">
+<div class="flex items-center">
+<input class="h-4 w-4 rounded border-border-color bg-input-bg text-primary focus:ring-primary/20 focus:ring-offset-0" id="remember-me" name="remember-me" type="checkbox"/>
+<label class="ml-2 block text-sm text-text-secondary hover:text-white cursor-pointer transition-colors" for="remember-me">
+                                    Remember me
+                                </label>
+</div>
+<div class="text-sm">
+<a class="font-medium text-primary hover:text-primary/80 transition-colors" href="#">
+                                    Forgot password?
+                                </a>
+</div>
+</div>
+<!-- Submit Button -->
+<div>
+<button class="flex w-full justify-center items-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-bold text-white shadow-lg shadow-primary/20 hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-[#111c22] transition-all" type="submit">
+<span class="material-symbols-outlined text-[20px]">login</span>
+                                Sign in
+                            </button>
+</div>
+</form>
+<!-- Divider -->
+<div class="relative mt-8">
+<div aria-hidden="true" class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-[#233c48]"></div>
+</div>
+<div class="relative flex justify-center">
+<span class="bg-[#111c22] px-2 text-xs text-text-secondary uppercase tracking-wider">
+                                Or continue with
+                            </span>
+</div>
+</div>
+<!-- Social/Alternative Login (Visual Only) -->
+<div class="mt-6 grid grid-cols-2 gap-3">
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#192b33] border border-[#233c48] px-3 py-2.5 text-sm font-medium text-white hover:bg-[#233c48] transition-colors">
+<svg aria-hidden="true" class="h-5 w-5" fill="currentColor" viewbox="0 0 24 24">
+<path d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z"></path>
+</svg>
+<span class="sr-only">Sign in with Google</span>
+                           Google
+                        </button>
+<button class="flex w-full items-center justify-center gap-2 rounded-lg bg-[#192b33] border border-[#233c48] px-3 py-2.5 text-sm font-medium text-white hover:bg-[#233c48] transition-colors">
+<span class="material-symbols-outlined text-[20px]">sos</span>
+                            SSO
+                         </button>
+</div>
+</div>
+<!-- Footer Support -->
+<div class="mt-12 text-center">
+<p class="text-sm text-text-secondary">
+                        Need help accessing your account? <br/>
+<a class="font-medium text-primary hover:text-white transition-colors" href="#">Contact Tournament Support</a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</body></html>

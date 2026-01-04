@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fisherman Login</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&amp;family=Noto+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                        "surface-dark": "#192b33", 
+                        "border-dark": "#325567",
+                        "text-secondary": "#92b7c9",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"],
+                        "body": ["Noto Sans", "sans-serif"],
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white overflow-hidden">
+<!-- Main Container / Viewport -->
+<div class="relative min-h-screen w-full flex items-center justify-center p-4">
+<!-- Background Visual (Desktop Wrapper) -->
+<div class="absolute inset-0 z-0">
+<!-- Background Image -->
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Dark moody lake surface with ripples reflecting blue light" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCiJW2qFESQo5o-UIeBqmzJrw4xMtk2zLnok26xfDFRhORgenCiIJgkFYr-TDKa7rICa4hipqfELJcT7_aicQ9XsCdQVE8-blTKy1mP_GyAN-8WIyUuH6y5_Nz5h0EK3KZH0o2luKDFa1KlL3MZc1b-yQXzm7Veor2jGbWWG1mkuDcoJTZNxHDuYJLibgh_un6Xh7_dc6vVIX8a5Xy3SqVxfUDtO89IWH6XjA33NY4EqJA3SIm2WKNsFFN6ntF0n3zMHebr867Nh4Q');">
+</div>
+<!-- Gradient Overlay for legibility -->
+<div class="absolute inset-0 bg-gradient-to-b from-[#101c22]/90 via-[#101c22]/80 to-[#101c22]/95 backdrop-blur-[2px]"></div>
+</div>
+<!-- Mobile-Emulated Card -->
+<div class="relative z-10 w-full max-w-[420px] flex flex-col bg-surface-dark/95 backdrop-blur-md border border-border-dark rounded-2xl shadow-2xl overflow-hidden transition-all duration-300">
+<!-- Card Header Image/Banner -->
+<div class="h-32 w-full relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Underwater view of bubbles rising to the surface" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDrL0BrdTEilrtPRWXUfI7enoqB_RbNpJDbLf3-Qit1eBmCN15b2sNrnYyeFR1JZzbxKp_1-SXczkKt6XvoEwoxM6chGeXg3GkB3s6DyZkihJQNtnwavYQyVCvMS7cyff1skv1sTn3HaI13d4LDeLwKs49Iptow7ZqUqX7Cf988zl6j6SCwiOVBULNQTZNJf4PncwJ4pqQuLqUWaVzID6GswSef4-JJRbcQWAu5G33BFAG3NL5T4DKITX309nEdrtQZAW1xz9Q9VpE');">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dark via-surface-dark/20 to-transparent"></div>
+<!-- Logo Icon centered overlapping header -->
+<div class="absolute -bottom-8 left-1/2 -translate-x-1/2 flex items-center justify-center w-16 h-16 rounded-full bg-surface-dark border-4 border-surface-dark shadow-lg">
+<div class="w-full h-full rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-3xl">phishing</span>
+</div>
+</div>
+</div>
+<!-- Card Content -->
+<div class="px-6 pb-8 pt-10 flex flex-col items-center w-full">
+<!-- Text Content -->
+<div class="text-center mb-8 w-full">
+<h1 class="text-white tracking-tight text-2xl font-bold leading-tight mb-2">Tournament Login</h1>
+<p class="text-text-secondary text-sm font-normal leading-relaxed">
+                        Enter your Participant ID to access the live leaderboard and dashboard.
+                    </p>
+</div>
+<!-- Login Form -->
+<form class="w-full space-y-5" onsubmit="event.preventDefault();">
+<!-- Input Field -->
+<div class="w-full">
+<label class="block mb-2 text-sm font-medium text-white" for="participant-id">
+                            Participant ID
+                        </label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-text-secondary">badge</span>
+</div>
+<input class="block w-full pl-11 pr-4 py-3.5 bg-[#111c22] border border-border-dark rounded-lg text-white placeholder-text-secondary/50 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all text-lg tracking-wide font-medium" id="participant-id" inputmode="numeric" placeholder="e.g., 8492" required="" type="number"/>
+</div>
+</div>
+<!-- Action Button -->
+<button class="w-full flex items-center justify-center gap-2 bg-primary hover:bg-primary/90 text-white font-bold py-3.5 px-6 rounded-lg transition-colors duration-200 shadow-lg shadow-primary/20 group">
+<span>Access Dashboard</span>
+<span class="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">arrow_forward</span>
+</button>
+</form>
+<!-- Helper Links -->
+<div class="mt-6 flex flex-col items-center gap-3 w-full">
+<a class="text-sm text-primary hover:text-primary/80 font-medium transition-colors flex items-center gap-1" href="#">
+<span class="material-symbols-outlined text-[16px]">help</span>
+                        Find my ID
+                    </a>
+<div class="w-full h-px bg-border-dark/50 my-1"></div>
+<a class="text-xs text-text-secondary hover:text-white transition-colors" href="#">
+                        Contact Tournament Admin
+                    </a>
+</div>
+</div>
+<!-- Footer Area -->
+<div class="bg-[#111c22] py-3 px-6 text-center border-t border-border-dark">
+<p class="text-[10px] text-text-secondary/60 uppercase tracking-wider font-semibold">
+                    Fishing Tournament Manager v1.0
+                </p>
+</div>
+</div>
+</div>
+</body></html>

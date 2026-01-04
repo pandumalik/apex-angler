@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tournament Tracker - Role Selection</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22", // Matches the provided snippet's dark bg
+                        "surface-dark": "#192b33", // Matches card bg
+                        "surface-hover": "#233c48", // Matches button bg
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                    backgroundImage: {
+                        'water-pattern': "url('data:image/svg+xml,%3Csvg width=\"20\" height=\"20\" viewBox=\"0 0 20 20\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cpath d=\"M1 1h2v2H1V1zm4 4h2v2H5V5zm4 4h2v2H9V9zm4 4h2v2h-2v-2zm4 4h2v2h-2v-2z\" fill=\"%2313a4ec\" fill-opacity=\"0.05\" fill-rule=\"evenodd\"/%3E%3C/svg%3E')",
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col items-center justify-center bg-water-pattern">
+<!-- Mobile Container Wrapper -->
+<div class="relative w-full max-w-[480px] h-full min-h-[100dvh] md:min-h-[800px] md:h-auto md:my-8 bg-[#111c22] md:rounded-2xl md:shadow-2xl md:border md:border-[#233c48] overflow-hidden flex flex-col">
+<!-- Header Image / Hero -->
+<div class="relative w-full h-48 shrink-0">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Deep blue underwater scene with light rays from above" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC4dLta9vCbdt6WJ6ZRerpWEV29Sd1FIIZLEjczY4TMOpAz4LkRRLcJifOpiz0VrSgtp-V9HYRFmNrNOtSdaQjl-JDh2Kz4RAapSnOd_p9aBuh04omcOW2Nmg_sVH37adW_nzERs9HZFDyBIllTiy7YOq5X2YLW_qt36TVtl5anqOkzKhG9rQEzNgsLbnWEaQKeqyARrGv9tdLSiyGvXO__K8YaWR6-jwMEKpbuiAjdVSfcAPMvhY0oLAXGLXeLQ0EM3O7ORg9Mc84");'>
+<div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#111c22]"></div>
+</div>
+<!-- App Icon/Logo Overlay -->
+<div class="absolute bottom-0 left-6 translate-y-1/2 bg-surface-dark border-4 border-[#111c22] rounded-2xl p-3 shadow-lg">
+<span class="material-symbols-outlined text-primary !text-[40px]">phishing</span>
+</div>
+</div>
+<!-- Content Body -->
+<div class="flex-1 flex flex-col px-6 pt-10 pb-6 gap-8">
+<!-- Headings -->
+<div class="flex flex-col gap-2">
+<h1 class="text-3xl font-black leading-tight tracking-tight text-white">
+                    Tournament<br/><span class="text-primary">Tracker</span>
+</h1>
+<p class="text-[#92b7c9] text-base font-normal leading-relaxed">
+                    Welcome! Please select your role to continue into the competition.
+                </p>
+</div>
+<!-- Role Selection Cards -->
+<div class="flex flex-col gap-4">
+<!-- Admin Card -->
+<div class="group relative flex flex-col gap-4 rounded-xl bg-surface-dark p-5 shadow-lg border border-transparent hover:border-primary/50 transition-all duration-300 cursor-pointer hover:bg-[#1e323b]">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary">admin_panel_settings</span>
+<h2 class="text-white text-lg font-bold">Panitia</h2>
+</div>
+<p class="text-[#92b7c9] text-sm leading-normal">
+                                Manage events, verify catches, &amp; update scoring.
+                            </p>
+</div>
+</div>
+<button class="flex w-full items-center justify-between rounded-lg bg-[#233c48] px-4 py-3 text-white group-hover:bg-primary group-hover:text-white transition-colors duration-200">
+<span class="text-sm font-medium">Login as Admin</span>
+<span class="material-symbols-outlined !text-[18px]">arrow_forward</span>
+</button>
+<!-- Decorative BG Image Opacity -->
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-10 rounded-r-xl pointer-events-none bg-cover bg-center" data-alt="Abstract clipboard and pen graphic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD6WxrTQiuPIHv9EzoM2DNjLKC5mkq3aveesNVl2QrjTSA5m5dzrHIMelOurQcOt0phl7fDyTf38IZ9zU2cFIm4AcYBzOVLIsbJtYLuZfPcmb3p8x-1eER37LCDVwuZUlGVKXF_GO1MSgNkWgdLRllbcEpxzajHkIB5QGfjHwJkBjLgT1-tORUUE-8v8bS-W3apzqb22z26O_ODE-zUwRrDpD4m7BA_H33TfQzopEtLJNkSms1ma3a_64FPBo07Z7CYuygYAk2suZg"); mask-image: linear-gradient(to left, black, transparent); -webkit-mask-image: linear-gradient(to left, black, transparent);'>
+</div>
+</div>
+<!-- Fisherman Card -->
+<div class="group relative flex flex-col gap-4 rounded-xl bg-surface-dark p-5 shadow-lg border border-transparent hover:border-primary/50 transition-all duration-300 cursor-pointer hover:bg-[#1e323b]">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary">sailing</span>
+<h2 class="text-white text-lg font-bold">Peserta</h2>
+</div>
+<p class="text-[#92b7c9] text-sm leading-normal">
+                                Submit catches &amp; view live rankings.
+                            </p>
+</div>
+</div>
+<button class="flex w-full items-center justify-between rounded-lg bg-[#233c48] px-4 py-3 text-white group-hover:bg-primary group-hover:text-white transition-colors duration-200">
+<span class="text-sm font-medium">Enter Tournament</span>
+<span class="material-symbols-outlined !text-[18px]">arrow_forward</span>
+</button>
+<!-- Decorative BG Image Opacity -->
+<div class="absolute right-0 top-0 h-full w-1/3 opacity-10 rounded-r-xl pointer-events-none bg-cover bg-center" data-alt="Fisherman casting a line at sunset" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAIol6KKZxqsCe-GzLOrSV_euE1eOZxvTahIzHlEAhRo_-yAZ7L4UsvvqidpYsQg86tuMJV_su386aEFWXpDzwLUlVcCleEivzlCtbAvL5KXS3LDY9_yncLf-Byodwfs1Fnol-fh4K29yD2PV5uqHAv0YQ1zBoqK8WoelvitL8rjiXR8T8agp-R_bfJ3h-uZqe4QX12qltUZARAdt7ojXJUqrIM4iCP6cSzmdAKeVvhNUhddlSuK6mAvmYHhRq1KfRsH5PxSkHgIrY"); mask-image: linear-gradient(to left, black, transparent); -webkit-mask-image: linear-gradient(to left, black, transparent);'>
+</div>
+</div>
+</div>
+<!-- Spacer to push footer down -->
+<div class="flex-1"></div>
+<!-- Footer -->
+<div class="flex flex-col items-center gap-3 pt-4 border-t border-[#233c48]">
+<div class="flex gap-4 text-xs font-medium text-[#5a7685]">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<span class="w-[1px] bg-[#233c48]"></span>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<p class="text-[#5a7685] text-xs font-normal text-center">© 2024 Tournament Tracker. v1.0</p>
+</div>
+</div>
+</div>
+</body></html>

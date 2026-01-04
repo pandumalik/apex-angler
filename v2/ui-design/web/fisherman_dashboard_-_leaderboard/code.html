@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fisherman Dashboard - Leaderboard</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-display bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-slate-200 dark:border-[#233c48] bg-white dark:bg-[#111c22] px-4 py-3 md:px-10 sticky top-0 z-50">
+<div class="flex items-center gap-4">
+<div class="flex items-center justify-center size-10 rounded-lg bg-primary/10 text-primary">
+<span class="material-symbols-outlined text-3xl">sailing</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em]">ProFish Tournament</h2>
+</div>
+<div class="flex items-center gap-8">
+<nav class="hidden md:flex items-center gap-9">
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Dashboard</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Submit Catch</a>
+<a class="text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary text-sm font-medium leading-normal transition-colors" href="#">Rules</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="flex items-center gap-2 cursor-pointer text-slate-600 dark:text-slate-300 hover:text-red-500 transition-colors">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span class="text-sm font-medium hidden sm:block">Log Out</span>
+</button>
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-10 border-2 border-primary/30" data-alt="Profile picture of a fisherman with sunglasses" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAna0G9iVYn6UK66s3fiOk_qeQ43HzQqDwyiXOLqMT67BMlfi9D2CrxTz73JKdFH1IFtm3x9yfVYWoUHlTFX2jrzFrNrS8km2RAIGML4C_CO0noEU4mSfru0xFD_PF4-8sDbODXlAoiTfa9Hu-DdM4dzXXmawVzGUWh_Dj3wvynKjJDy2m97Fx3gXo9rJdGJjH2Vx_LLjBkAGZZB97UUR2xMzUsHKwXo2Zt9yR2A7GxkWA2InPKb0kUPX-ITF8EkNP2fEG5mZ0tteQ");'></div>
+</div>
+</div>
+</header>
+<main class="flex-1 w-full max-w-7xl mx-auto px-4 md:px-8 py-8">
+<!-- Page Heading & Controls -->
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 mb-8">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-3">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+</span>
+<span class="text-red-500 font-bold text-xs uppercase tracking-wider">Live Leaderboard</span>
+</div>
+<h1 class="text-3xl md:text-4xl font-black leading-tight tracking-tight text-slate-900 dark:text-white">Lake Okeechobee Bass Classic</h1>
+<p class="text-slate-500 dark:text-[#92b7c9] text-base font-normal">Tournament ends in <span class="font-mono font-bold text-slate-700 dark:text-white">02:45:12</span></p>
+</div>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-6 bg-primary hover:bg-sky-500 text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all active:scale-95">
+<span class="material-symbols-outlined text-lg">refresh</span>
+<span>Refresh Data</span>
+</button>
+</div>
+<!-- Personal Stats Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+<div class="bg-white dark:bg-[#192b33] rounded-xl p-5 border border-slate-200 dark:border-[#325567] shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">leaderboard</span>
+</div>
+<p class="text-slate-500 dark:text-[#92b7c9] text-sm font-medium uppercase tracking-wider mb-1">My Rank</p>
+<div class="flex items-baseline gap-2">
+<p class="text-slate-900 dark:text-white text-3xl font-bold">#12</p>
+<span class="text-emerald-500 text-sm font-bold flex items-center">
+<span class="material-symbols-outlined text-sm">arrow_upward</span> 2
+                    </span>
+</div>
+</div>
+<div class="bg-white dark:bg-[#192b33] rounded-xl p-5 border border-slate-200 dark:border-[#325567] shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">scale</span>
+</div>
+<p class="text-slate-500 dark:text-[#92b7c9] text-sm font-medium uppercase tracking-wider mb-1">Total Weight</p>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">8.2 <span class="text-lg font-medium text-slate-400 dark:text-[#92b7c9]">lbs</span></p>
+</div>
+<div class="bg-white dark:bg-[#192b33] rounded-xl p-5 border border-slate-200 dark:border-[#325567] shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">phishing</span>
+</div>
+<p class="text-slate-500 dark:text-[#92b7c9] text-sm font-medium uppercase tracking-wider mb-1">Biggest Catch</p>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">4.5 <span class="text-lg font-medium text-slate-400 dark:text-[#92b7c9]">lbs</span></p>
+</div>
+<div class="bg-white dark:bg-[#192b33] rounded-xl p-5 border border-slate-200 dark:border-[#325567] shadow-sm relative overflow-hidden group">
+<div class="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+<span class="material-symbols-outlined text-6xl text-primary">set_meal</span>
+</div>
+<p class="text-slate-500 dark:text-[#92b7c9] text-sm font-medium uppercase tracking-wider mb-1">Fish Count</p>
+<p class="text-slate-900 dark:text-white text-3xl font-bold">3 <span class="text-lg font-medium text-slate-400 dark:text-[#92b7c9]">/ 5 limit</span></p>
+</div>
+</div>
+<!-- Leaderboard Section -->
+<div class="bg-white dark:bg-[#192b33] rounded-xl border border-slate-200 dark:border-[#325567] shadow-sm overflow-hidden flex flex-col">
+<!-- Search & Filter -->
+<div class="p-4 border-b border-slate-200 dark:border-[#325567] bg-slate-50 dark:bg-[#111c22]/50 flex flex-col sm:flex-row gap-4 justify-between items-center">
+<div class="relative w-full sm:max-w-md">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-slate-400">search</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 border border-slate-300 dark:border-[#325567] rounded-lg leading-5 bg-white dark:bg-[#233c48] text-slate-900 dark:text-white placeholder-slate-500 dark:placeholder-[#92b7c9] focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm" placeholder="Search angler name or team..." type="text"/>
+</div>
+<div class="flex gap-2 w-full sm:w-auto">
+<select class="block w-full pl-3 pr-10 py-2.5 text-base border border-slate-300 dark:border-[#325567] focus:outline-none focus:ring-primary focus:border-primary sm:text-sm rounded-lg bg-white dark:bg-[#233c48] text-slate-900 dark:text-white">
+<option>All Statuses</option>
+<option>Active</option>
+<option>Disqualified</option>
+</select>
+</div>
+</div>
+<!-- Table -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-slate-100 dark:bg-[#111c22] border-b border-slate-200 dark:border-[#325567] text-xs uppercase tracking-wider text-slate-500 dark:text-slate-400 font-semibold">
+<th class="px-6 py-4 w-24">Rank</th>
+<th class="px-6 py-4">Angler</th>
+<th class="px-6 py-4 text-right">Total Weight</th>
+<th class="px-6 py-4 text-right hidden sm:table-cell">Big Bass</th>
+<th class="px-6 py-4 text-center hidden md:table-cell">Count</th>
+<th class="px-6 py-4 text-center w-32">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-slate-200 dark:divide-[#325567] bg-white dark:bg-[#192b33]">
+<!-- Rank 1 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-[#233c48]/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center justify-center size-8 rounded-full bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-400 font-bold border border-yellow-200 dark:border-yellow-700">
+                                    1
+                                </div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="John Doe profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFGmCFpjaCK_Vb5PL1hYc5Rokk-fpeKG0tcqB5Ry4LSHRRUY6QwwnRA0_Ndre2Qu01uau-TgWrXMRLPBmHII7H8-b0ys4q2cfJ8GU8ahm9EuZGV9zyYz3muPOMsrE48nzOoYNIKbx0tgVjn2C-EFjD6ZzcGmrncywB93FRdirKiEDZTNqNxYfAziopi538MqNqIOBVMt8idPq8QahS9iRr9C7iWHyWIo3t50tnLQhDWMTdAAM29hpiZWLt7Y4K0cZ2_snuSrKdloM");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-900 dark:text-white">John Doe</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Team Strike King</span>
+</div>
+<span class="material-symbols-outlined text-yellow-500 text-lg" title="Current Leader">emoji_events</span>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<span class="text-sm font-bold text-slate-900 dark:text-white">15.4 lbs</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right hidden sm:table-cell">
+<span class="text-sm text-slate-500 dark:text-[#92b7c9]">5.2 lbs</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center hidden md:table-cell">
+<span class="text-sm text-slate-500 dark:text-[#92b7c9]">5</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                    Active
+                                </span>
+</td>
+</tr>
+<!-- Rank 2 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-[#233c48]/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center justify-center size-8 rounded-full bg-slate-100 dark:bg-slate-700 text-slate-600 dark:text-slate-300 font-bold border border-slate-200 dark:border-slate-600">
+                                    2
+                                </div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Jane Smith profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDWi_sICRWBVCFJWdvUEoX-1Ju5jWpnb0K2MmeSVpl3QimchNzPc9-49T6jh5cuJQZKPZ4dA3b12lsdIQ-eOMx74eDKKhX-_v5W7otdbRe67XdHFExzn-ZYTnftO_I362G5dTas2UVT_8RPur3oxGiCu-vBSoNhxdNUd7Lpns9o79yP3FAk4tw7hQPqxsXNEKFx4N1-UR4DDLjOknrVDtAqRlVTkiSalXnOv6gRYrWAbs8GWvn-k7_Taga3C4_A7syPOwGOc_oZWmE");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-900 dark:text-white">Jane Smith</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Reel Experts</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<span class="text-sm font-bold text-slate-900 dark:text-white">14.8 lbs</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right hidden sm:table-cell">
+<span class="text-sm text-slate-500 dark:text-[#92b7c9]">4.8 lbs</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center hidden md:table-cell">
+<span class="text-sm text-slate-500 dark:text-[#92b7c9]">5</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                    Active
+                                </span>
+</td>
+</tr>
+<!-- Rank 3 -->
+<tr class="hover:bg-slate-50 dark:hover:bg-[#233c48]/50 transition-colors">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center justify-center size-8 rounded-full bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-400 font-bold border border-orange-200 dark:border-orange-800">
+                                    3
+                                </div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center" data-alt="Bob Angler profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDiRblkocWgiD4158eXDHXplddaBZKMgOPal3n8ttQyLBY8sS5oRKmS7gLUzFiAHxqn-Fb-w5Im1fLUyW_GajBNsyLtmAACvm-yZ6r5OLy6jsv--Ou7GA-XLJciORLjIU6VVdrLKtY95fx7qXYhm7h2SSvoB3scTK8W0nYEuyLbwRhPIzcYNhWvFr40guablPrzO4_7q0VgPHRogyMj2Dn1u35uZcp0KRCjkb90LeaOMmPhraclZCA3PXC-LVGMFrR0emEFSLXSWyg");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-900 dark:text-white">Bob Angler</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<span class="text-sm font-bold text-slate-900 dark:text-white">14.1 lbs</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right hidden sm:table-cell">
+<span class="text-sm text-slate-500 dark:text-[#92b7c9]">4.1 lbs</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center hidden md:table-cell">
+<span class="text-sm text-slate-500 dark:text-[#92b7c9]">5</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                    Active
+                                </span>
+</td>
+</tr>
+<!-- Skipped Ranks visual indicator -->
+<tr>
+<td class="px-6 py-2 text-center text-slate-400 dark:text-slate-600 bg-slate-50 dark:bg-[#111c22]" colspan="6">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</td>
+</tr>
+<!-- Rank 12 (Current User - Highlighted) -->
+<tr class="bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 relative">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center justify-center size-8 rounded-full bg-white dark:bg-[#111c22] text-slate-500 dark:text-slate-400 font-bold border border-slate-200 dark:border-[#325567]">
+                                    12
+                                </div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center ring-2 ring-yellow-500" data-alt="Mike Fisher profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB-EvGNmByAqLTm3MbjGnACJk3u-WoEKSYk_--J9vHe8nujzdqdHq2BN1OWXKUFQHi8SukG5fj0bAYr9rz2v7PeNI2VZogWVOS2nmwTh6HyNllZ0wQ9ohSQpClcZj7Niecb23Wjo48QAp7bv005HfqYEEuWEzdlsONLnl6XeMJDTWuHdJMjU3n0hR5WbUR9TH-vfaiH3Uk8gosTtmFIZdhaWSGKsWJQPuA9yhxdb0sp_2wjQNrWDVyyCPmk9Mry5QmtnR-yDB5-VGE");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-bold text-slate-900 dark:text-white flex items-center gap-2">
+                                            Mike Fisher
+                                            <span class="px-1.5 py-0.5 rounded text-[10px] font-bold bg-yellow-100 dark:bg-yellow-900 text-yellow-800 dark:text-yellow-200 uppercase">You</span>
+</span>
+<span class="text-xs text-slate-500 dark:text-slate-400">Independent</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<span class="text-sm font-bold text-slate-900 dark:text-white">8.2 lbs</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right hidden sm:table-cell">
+<span class="text-sm text-slate-600 dark:text-[#92b7c9]">4.5 lbs</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center hidden md:table-cell">
+<span class="text-sm text-slate-600 dark:text-[#92b7c9]">3</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900/30 px-2.5 py-0.5 text-xs font-medium text-green-700 dark:text-green-400 border border-green-200 dark:border-green-800">
+                                    Active
+                                </span>
+</td>
+</tr>
+<!-- Skipped Ranks visual indicator -->
+<tr>
+<td class="px-6 py-2 text-center text-slate-400 dark:text-slate-600 bg-slate-50 dark:bg-[#111c22]" colspan="6">
+<span class="material-symbols-outlined text-lg">more_horiz</span>
+</td>
+</tr>
+<!-- Rank 15 (Disqualified) -->
+<tr class="hover:bg-slate-50 dark:hover:bg-[#233c48]/50 transition-colors opacity-75">
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center justify-center size-8 rounded-full bg-red-100 dark:bg-red-900/20 text-red-500 dark:text-red-400 font-bold border border-red-200 dark:border-red-900/50">
+                                    15
+                                </div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap">
+<div class="flex items-center gap-3">
+<div class="size-8 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center grayscale" data-alt="Tom Cheater profile" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnNvMw66QZ8js4Owgm2W0gmSfachFJiUF_zHy9aMCrG0_z_PVSpdK1Esl8mhT2EzfVfYYYYwgXfTWKw4BnYgCcIp9B099d4bMd7CLsK3WaBcGV_R-Q0WR5qJqAMMiduZfjwdtgfQwpgZlLdIzS8KUafR6JN8QckSYJ2jA7C1JnaZphMfe1Iv-8Enj0AvRl6I-cUuFO1Cs-c7IL1wKaK0f9moztCpZAttyy4O_K4Nfu576ppo2HnNcbRFJclcl_ZJ58BGj7wa9_JJs");'></div>
+<div class="flex flex-col">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-400 line-through">Tom Cheater</span>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right">
+<span class="text-sm font-medium text-slate-500 dark:text-slate-500">0.0 lbs</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-right hidden sm:table-cell">
+<span class="text-sm text-slate-500 dark:text-slate-600">-</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center hidden md:table-cell">
+<span class="text-sm text-slate-500 dark:text-slate-600">0</span>
+</td>
+<td class="px-6 py-4 whitespace-nowrap text-center">
+<span class="inline-flex items-center rounded-full bg-red-100 dark:bg-red-900/30 px-2.5 py-0.5 text-xs font-medium text-red-700 dark:text-red-400 border border-red-200 dark:border-red-800">
+                                    Disqualified
+                                </span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer/Pagination -->
+<div class="px-6 py-4 border-t border-slate-200 dark:border-[#325567] bg-slate-50 dark:bg-[#111c22] flex items-center justify-between">
+<span class="text-sm text-slate-500 dark:text-slate-400">Showing top 15 anglers</span>
+<div class="flex gap-2">
+<button class="px-3 py-1 text-sm rounded border border-slate-300 dark:border-[#325567] text-slate-500 dark:text-slate-400 opacity-50 cursor-not-allowed">Previous</button>
+<button class="px-3 py-1 text-sm rounded border border-slate-300 dark:border-[#325567] text-slate-700 dark:text-white hover:bg-slate-100 dark:hover:bg-[#233c48]">Next</button>
+</div>
+</div>
+</div>
+</main>
+<footer class="mt-auto py-6 border-t border-slate-200 dark:border-[#233c48] bg-white dark:bg-[#111c22]">
+<div class="max-w-7xl mx-auto px-4 md:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
+<p>© 2024 ProFish Tournament Series. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Support</a>
+</div>
+</div>
+</footer>
+</body></html>

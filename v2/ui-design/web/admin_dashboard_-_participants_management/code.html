@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard - Participants Management</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Config -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Sidebar -->
+<aside class="w-64 flex-none flex flex-col bg-[#111c22] border-r border-[#1e2e38] h-full hidden md:flex">
+<div class="p-6 flex flex-col gap-8 h-full">
+<!-- User Profile Summary -->
+<div class="flex gap-3 items-center">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Profile picture of the current admin user" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDgN3Kdoqj9F_GeFJEd0HoqS4KMoBUbkj3KsVDdsB6gZAjGLdQM5WT6IXbo1sVXfx-8NMc2ASaJVBLLQn0hVS2FoKy8jTSQ2PSD3xknSqFtqvhcQkO7UaD3pklIU6qwIF83mPGLX468yBTSTn7oKwHQ8-gQHM8X1mn09Kp0GyBTZWb1idB9O3egTVasaby0Y63JO6fNUIMpsVnhiohCwn-oyULlxjcVS-TnMCESLMMfyqIRjsGyaawCRQSfUmnx0cPnyLu_e8oO_2M");'>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-sm font-semibold leading-normal">Alex Morgan</h1>
+<p class="text-[#92b7c9] text-xs font-normal leading-normal">Super Admin</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<nav class="flex flex-col gap-2 flex-1">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#92b7c9] hover:bg-[#1e2e38] hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#92b7c9] group-hover:text-white">dashboard</span>
+<p class="text-sm font-medium leading-normal">Dashboard</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#92b7c9] hover:bg-[#1e2e38] hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#92b7c9] group-hover:text-white">trophy</span>
+<p class="text-sm font-medium leading-normal">Tournaments</p>
+</a>
+<!-- Active State -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg bg-primary/20 text-primary border border-primary/10" href="#">
+<span class="material-symbols-outlined text-primary fill-1">group</span>
+<p class="text-sm font-bold leading-normal">Participants</p>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#92b7c9] hover:bg-[#1e2e38] hover:text-white transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#92b7c9] group-hover:text-white">settings</span>
+<p class="text-sm font-medium leading-normal">Settings</p>
+</a>
+</nav>
+<!-- Logout -->
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-[#92b7c9] hover:bg-[#1e2e38] hover:text-red-400 transition-colors group mt-auto" href="#">
+<span class="material-symbols-outlined text-[#92b7c9] group-hover:text-red-400">logout</span>
+<p class="text-sm font-medium leading-normal">Logout</p>
+</a>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 flex flex-col h-full overflow-hidden bg-background-light dark:bg-background-dark relative">
+<!-- Scrollable Area -->
+<div class="flex-1 overflow-y-auto p-4 md:p-8">
+<div class="max-w-[1200px] mx-auto flex flex-col gap-6">
+<!-- Breadcrumbs -->
+<div class="flex flex-wrap gap-2 text-sm">
+<a class="text-[#92b7c9] hover:text-white transition-colors" href="#">Dashboard</a>
+<span class="text-[#92b7c9]">/</span>
+<a class="text-[#92b7c9] hover:text-white transition-colors" href="#">Tournament A</a>
+<span class="text-[#92b7c9]">/</span>
+<span class="text-white font-medium">Participants</span>
+</div>
+<!-- Page Header -->
+<div class="flex flex-wrap items-center justify-between gap-4">
+<h2 class="text-white text-3xl font-black tracking-tight">Participants Management</h2>
+<button class="flex items-center justify-center gap-2 rounded-lg h-10 px-4 bg-primary hover:bg-primary/90 text-white text-sm font-bold shadow-lg shadow-primary/20 transition-all">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Add Participant</span>
+</button>
+</div>
+<!-- Stats Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<div class="flex flex-col gap-1 rounded-xl p-5 border border-[#325567] bg-[#16262e]">
+<p class="text-[#92b7c9] text-sm font-medium">Total Participants</p>
+<p class="text-white text-2xl font-bold">142</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-5 border border-[#325567] bg-[#16262e]">
+<p class="text-[#92b7c9] text-sm font-medium">Active Anglers</p>
+<p class="text-white text-2xl font-bold">138</p>
+</div>
+<div class="flex flex-col gap-1 rounded-xl p-5 border border-[#325567] bg-[#16262e]">
+<p class="text-[#92b7c9] text-sm font-medium">Disqualified</p>
+<p class="text-white text-2xl font-bold text-red-400">4</p>
+</div>
+</div>
+<!-- Filters & Search -->
+<div class="flex flex-col sm:flex-row gap-4">
+<div class="relative flex-1 max-w-md">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#92b7c9]">search</span>
+<input class="w-full rounded-lg bg-[#192b33] border border-[#325567] text-white placeholder-[#92b7c9] h-12 pl-12 pr-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all" placeholder="Search by name or ID..."/>
+</div>
+<div class="relative w-full sm:w-48">
+<select class="w-full appearance-none rounded-lg bg-[#192b33] border border-[#325567] text-white h-12 px-4 focus:ring-2 focus:ring-primary focus:border-transparent outline-none cursor-pointer">
+<option value="all">All Statuses</option>
+<option value="active">Active</option>
+<option value="disqualified">Disqualified</option>
+</select>
+<span class="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-[#92b7c9] pointer-events-none">expand_more</span>
+</div>
+</div>
+<!-- Data Table -->
+<div class="overflow-hidden rounded-xl border border-[#325567] bg-[#16262e]">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-[#1e2e38] border-b border-[#325567]">
+<th class="p-4 text-xs font-semibold uppercase tracking-wider text-[#92b7c9]">Participant</th>
+<th class="p-4 text-xs font-semibold uppercase tracking-wider text-[#92b7c9]">ID</th>
+<th class="p-4 text-xs font-semibold uppercase tracking-wider text-[#92b7c9]">Team</th>
+<th class="p-4 text-xs font-semibold uppercase tracking-wider text-[#92b7c9]">Reg. Date</th>
+<th class="p-4 text-xs font-semibold uppercase tracking-wider text-[#92b7c9]">Status</th>
+<th class="p-4 text-xs font-semibold uppercase tracking-wider text-[#92b7c9] text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-[#325567]">
+<!-- Row 1 -->
+<tr class="hover:bg-[#1e2e38] transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-cover bg-center bg-gray-700" data-alt="Avatar of John Fisher" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyogy6dGURlVDjO9wHmdG2xnv0n1M8L8o5goSFTZnizkWFPwRG8hCBlvy8UFPhqCujkS1L45usSpaQjrHm7qZ2peHHw3ocbA086NtAXpXJEJqhcaVomCCp99oc-q8CS8ewww_DsX7KFPKbnep0WMNG1KiTxZRcHM_pG3zj4dPXYitW6MMkznZ6eWKQ6K0tXsmWKO_I9QUtfkF_U6IC19L3ItvO3LLqOozqK9efh0PBiPXYCvdh136KmmvhycSen7dyqKlVBJwdkRM");'></div>
+<div>
+<p class="text-sm font-medium text-white">John Fisher</p>
+<p class="text-xs text-[#92b7c9]">john.fisher@example.com</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-sm text-[#92b7c9]">FISH-8829</span>
+<button class="text-primary hover:text-white transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="p-4">
+<span class="text-sm text-white">The Big Catchers</span>
+</td>
+<td class="p-4">
+<span class="text-sm text-[#92b7c9]">Oct 24, 2023</span>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-emerald-400/10 px-2.5 py-0.5 text-xs font-medium text-emerald-400 border border-emerald-400/20">
+                                                Active
+                                            </span>
+</td>
+<td class="p-4 text-right">
+<button class="inline-flex items-center justify-center rounded p-2 text-red-400 hover:bg-red-400/10 transition-colors" title="Disqualify Participant">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-[#1e2e38] transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-cover bg-center bg-gray-700" data-alt="Avatar of Sarah Hooks" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAUgJwWVCAMh5kEkaS7ZwESxd-2GC4ocwfsaURJGAVx-ExKm4QXXtKCG8G5mJIy-Pe2-6t-vN48joXn04zQoBD0yXNZD1kqwLJop0CcapE4yOvN7lwRe8FhtpC_9OPmdH5tOjHFEnMCyBaTUPQ4DBs4ZhTBSOs-Dyi8rzZaq-rtqQ-9Hne1wP1LG3qalks0bG57H6pKw6gNT2EY2huw4Txola-0aCOdOJ4vorNItl4shZ6raCxJdHCPodXEShh8dgbYLzhJPPhQJ54");'></div>
+<div>
+<p class="text-sm font-medium text-white">Sarah Hooks</p>
+<p class="text-xs text-[#92b7c9]">sarah.h@example.com</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-sm text-[#92b7c9]">FISH-9921</span>
+<button class="text-primary hover:text-white transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="p-4">
+<span class="text-sm text-white">River Raiders</span>
+</td>
+<td class="p-4">
+<span class="text-sm text-[#92b7c9]">Oct 22, 2023</span>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-emerald-400/10 px-2.5 py-0.5 text-xs font-medium text-emerald-400 border border-emerald-400/20">
+                                                Active
+                                            </span>
+</td>
+<td class="p-4 text-right">
+<button class="inline-flex items-center justify-center rounded p-2 text-red-400 hover:bg-red-400/10 transition-colors" title="Disqualify Participant">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-[#1e2e38] transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-cover bg-center bg-gray-700" data-alt="Avatar of Mike Trout" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHr4-PB9h70mpUDKcKm8CutlGIbpxfHKglwCdP9aqvE9ZtNGHInobYdhgTejOdsYyUWskq6-gdBwC7jglEBf0RTgOVqH7MypeV1z37_cPetSUHV-6M6s1UWn606N3mJTTkCn3b0JhV9MYqfZn8gjzWePfV0AdImv0rao3Ov5z_74LEhX_QKS5vyQb6LhLr-exRbZFyGeG4Im67iWUCxcVHXy-ZmyiOq5-EiQo75qHQrZirvoJc_ZMF1FC_dbmhwekNPcKOAsy6LnI");'></div>
+<div>
+<p class="text-sm font-medium text-white">Mike Trout</p>
+<p class="text-xs text-[#92b7c9]">mike.trout@example.com</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-sm text-[#92b7c9]">FISH-1022</span>
+<button class="text-primary hover:text-white transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="p-4">
+<span class="text-sm text-[#92b7c9] italic">Individual</span>
+</td>
+<td class="p-4">
+<span class="text-sm text-[#92b7c9]">Oct 20, 2023</span>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-red-400/10 px-2.5 py-0.5 text-xs font-medium text-red-400 border border-red-400/20">
+                                                Disqualified
+                                            </span>
+</td>
+<td class="p-4 text-right">
+<button class="inline-flex items-center justify-center rounded p-2 text-[#92b7c9] hover:text-white transition-colors" title="Details">
+<span class="material-symbols-outlined text-[20px]">info</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-[#1e2e38] transition-colors group">
+<td class="p-4">
+<div class="flex items-center gap-3">
+<div class="h-10 w-10 rounded-full bg-cover bg-center bg-gray-700" data-alt="Avatar of Emily Bass" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDcgLBHAzPFCelFwZ5g2LOjNtOJ0goRHLnVeoZNkvd8h7CP8xbftXBN6rTTe6DghMjgrnY72DPTWgwA-8QjqlwDqp2BjIP6NciYG0MuGiyD43TovcJJasD-QSHzHisOfuwoD3fS4rU18uxO_2G49rSdavXxaMGabwEnjsbTLkNDEgseQdu9UM_y6m0I2cNcemP9ctvVHC9aWIq8Xdnd_eMLXqYWjHaNKefdAI4sDH77uvoZKOMvZdVtIDz-7KtUnnQqgacdVJUhqqA");'></div>
+<div>
+<p class="text-sm font-medium text-white">Emily Bass</p>
+<p class="text-xs text-[#92b7c9]">emily.bass@example.com</p>
+</div>
+</div>
+</td>
+<td class="p-4">
+<div class="flex items-center gap-2">
+<span class="font-mono text-sm text-[#92b7c9]">FISH-4401</span>
+<button class="text-primary hover:text-white transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</td>
+<td class="p-4">
+<span class="text-sm text-white">Bass Masters</span>
+</td>
+<td class="p-4">
+<span class="text-sm text-[#92b7c9]">Oct 19, 2023</span>
+</td>
+<td class="p-4">
+<span class="inline-flex items-center rounded-full bg-emerald-400/10 px-2.5 py-0.5 text-xs font-medium text-emerald-400 border border-emerald-400/20">
+                                                Active
+                                            </span>
+</td>
+<td class="p-4 text-right">
+<button class="inline-flex items-center justify-center rounded p-2 text-red-400 hover:bg-red-400/10 transition-colors" title="Disqualify Participant">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="flex items-center justify-between px-4 py-3 bg-[#1e2e38] border-t border-[#325567]">
+<div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
+<div>
+<p class="text-sm text-[#92b7c9]">
+                                        Showing <span class="font-medium text-white">1</span> to <span class="font-medium text-white">10</span> of <span class="font-medium text-white">142</span> results
+                                    </p>
+</div>
+<div>
+<nav aria-label="Pagination" class="isolate inline-flex -space-x-px rounded-md shadow-sm">
+<a class="relative inline-flex items-center rounded-l-md px-2 py-2 text-[#92b7c9] ring-1 ring-inset ring-[#325567] hover:bg-[#325567] focus:z-20 focus:outline-offset-0" href="#">
+<span class="sr-only">Previous</span>
+<span class="material-symbols-outlined text-[20px]">chevron_left</span>
+</a>
+<a aria-current="page" class="relative z-10 inline-flex items-center bg-primary px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="#">1</a>
+<a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-[#92b7c9] ring-1 ring-inset ring-[#325567] hover:bg-[#325567] focus:z-20 focus:outline-offset-0" href="#">2</a>
+<a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-[#92b7c9] ring-1 ring-inset ring-[#325567] hover:bg-[#325567] focus:z-20 focus:outline-offset-0" href="#">3</a>
+<span class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-[#92b7c9] ring-1 ring-inset ring-[#325567] focus:outline-offset-0">...</span>
+<a class="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-[#92b7c9] ring-1 ring-inset ring-[#325567] hover:bg-[#325567] focus:z-20 focus:outline-offset-0" href="#">15</a>
+<a class="relative inline-flex items-center rounded-r-md px-2 py-2 text-[#92b7c9] ring-1 ring-inset ring-[#325567] hover:bg-[#325567] focus:z-20 focus:outline-offset-0" href="#">
+<span class="sr-only">Next</span>
+<span class="material-symbols-outlined text-[20px]">chevron_right</span>
+</a>
+</nav>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Participants Management</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary": "#13a4ec",
+              "background-light": "#f6f7f8",
+              "background-dark": "#101c22",
+              "card-dark": "#182830",
+              "border-dark": "#233c48",
+              "text-secondary": "#92b7c9",
+            },
+            fontFamily: {
+              "display": ["Inter", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .filled-icon { font-variation-settings: 'FILL' 1; }
+        
+        /* Custom Scrollbar Hiding */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white h-screen overflow-hidden flex items-center justify-center p-4">
+<!-- Mobile Device Container (simulating mobile view on desktop) -->
+<div class="relative flex h-full max-h-[850px] w-full max-w-[480px] flex-col overflow-hidden rounded-2xl bg-background-light dark:bg-background-dark shadow-2xl border border-gray-200 dark:border-border-dark ring-8 ring-gray-900/5">
+<!-- Sticky Header -->
+<header class="sticky top-0 z-20 flex flex-col gap-4 border-b border-gray-200 dark:border-border-dark bg-background-light/95 dark:bg-background-dark/95 backdrop-blur-md px-5 py-4">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<button class="text-gray-500 hover:text-gray-900 dark:text-text-secondary dark:hover:text-white transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<h1 class="text-xl font-bold tracking-tight text-gray-900 dark:text-white">
+                        Participants <span class="ml-1 text-sm font-medium text-primary">(42)</span>
+</h1>
+</div>
+<div class="flex gap-2">
+<button class="flex h-9 w-9 items-center justify-center rounded-lg bg-gray-200 dark:bg-card-dark text-gray-700 dark:text-white transition hover:bg-gray-300 dark:hover:bg-border-dark" title="Filter list">
+<span class="material-symbols-outlined text-[20px]">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="relative group">
+<div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400 dark:text-text-secondary">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="block w-full rounded-lg border-none bg-gray-200 dark:bg-card-dark py-3 pl-10 pr-4 text-sm text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-text-secondary focus:ring-2 focus:ring-primary transition-shadow" placeholder="Search by name, ID or team..." type="text"/>
+</div>
+<!-- Filter Chips (Horizontal Scroll) -->
+<div class="flex gap-2 overflow-x-auto no-scrollbar pb-1">
+<button class="whitespace-nowrap rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-white shadow-sm shadow-primary/20">All</button>
+<button class="whitespace-nowrap rounded-full bg-gray-200 dark:bg-card-dark px-4 py-1.5 text-xs font-semibold text-gray-600 dark:text-text-secondary hover:bg-gray-300 dark:hover:bg-border-dark transition-colors">Active</button>
+<button class="whitespace-nowrap rounded-full bg-gray-200 dark:bg-card-dark px-4 py-1.5 text-xs font-semibold text-gray-600 dark:text-text-secondary hover:bg-gray-300 dark:hover:bg-border-dark transition-colors">Disqualified</button>
+<button class="whitespace-nowrap rounded-full bg-gray-200 dark:bg-card-dark px-4 py-1.5 text-xs font-semibold text-gray-600 dark:text-text-secondary hover:bg-gray-300 dark:hover:bg-border-dark transition-colors">Pending</button>
+</div>
+</header>
+<!-- Main List Content -->
+<main class="flex-1 overflow-y-auto p-4 space-y-3 pb-24 relative">
+<!-- List Item: Active -->
+<div class="group relative flex items-center justify-between rounded-xl bg-white dark:bg-card-dark p-3 shadow-sm border border-transparent hover:border-gray-200 dark:hover:border-border-dark transition-all">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="relative shrink-0">
+<img class="h-12 w-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-[#233c48]" data-alt="Portrait of fisherman John Doe with a beard" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3QjbrYhqFlPyI4jDw9_3bzhQk2AxN87Qfbzi92wEKHyJFpqVzUOwsMSvtnO-JDa1yahcaquoDMaeIQSP2bOVlhZ-dHgo3LLVX_rdyv4haYvVQu4o_v6op9pDkBDvybZuYFz82Up-FTKkSyzpE7_HdEV0H8lRfRYa-K2JlVR0InP2bKXXTLr1cR1BnH4mkjecMAHfq9Hd5wN1yXrLUGhePTD2tMNrUXLOr0DkMdP-ti18rcJ8P1X3WsGkKzDiSpeabHtGWkT0aJiA"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full border-2 border-white dark:border-card-dark bg-green-500" title="Active"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="truncate text-sm font-semibold text-gray-900 dark:text-white">John Doe</h3>
+<span class="inline-flex items-center rounded bg-gray-100 dark:bg-[#111c22] px-1.5 py-0.5 text-[10px] font-medium text-gray-600 dark:text-text-secondary border border-gray-200 dark:border-border-dark">#8821</span>
+</div>
+<p class="truncate text-xs text-gray-500 dark:text-text-secondary mt-0.5">Team: <span class="text-primary font-medium">Bass Hunters</span></p>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 ml-2">
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-primary/10 hover:text-primary transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-red-500/10 hover:text-red-500 transition-colors" title="Disqualify">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</button>
+</div>
+</div>
+<!-- List Item: Active -->
+<div class="group relative flex items-center justify-between rounded-xl bg-white dark:bg-card-dark p-3 shadow-sm border border-transparent hover:border-gray-200 dark:hover:border-border-dark transition-all">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="relative shrink-0">
+<img class="h-12 w-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-[#233c48]" data-alt="Portrait of angler Sarah Smith smiling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw4U6szcFPssbL4H9h75Xeu8ectQPK52saKGuWmfzIHGzwd6dP1FkpxebUlPhftQO9BHj3ehbd7Qrje5XFvNyA834sB6DRIcp6qMDdumYwle3D14HuTn4fukoebmAPdTRZMqZpP6dagQqIHHv5W8n3rAJPkfIBKAA69x-UMhk74c9m9Koqxi9CCvapMUN4iHJ5563kSbx4vihe9sMZr7UI1IDI6Hqfp9Cf_kthc_t-dkrATpJ4y0OLaoN4r_k_d7YNzhIiwX2ua9c"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full border-2 border-white dark:border-card-dark bg-green-500" title="Active"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="truncate text-sm font-semibold text-gray-900 dark:text-white">Sarah Smith</h3>
+<span class="inline-flex items-center rounded bg-gray-100 dark:bg-[#111c22] px-1.5 py-0.5 text-[10px] font-medium text-gray-600 dark:text-text-secondary border border-gray-200 dark:border-border-dark">#9932</span>
+</div>
+<p class="truncate text-xs text-gray-500 dark:text-text-secondary mt-0.5">Team: <span class="text-primary font-medium">River Rats</span></p>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 ml-2">
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-primary/10 hover:text-primary transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-red-500/10 hover:text-red-500 transition-colors" title="Disqualify">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</button>
+</div>
+</div>
+<!-- List Item: Disqualified -->
+<div class="group relative flex items-center justify-between rounded-xl bg-white dark:bg-card-dark p-3 shadow-sm border border-red-500/20 dark:border-red-900/30 bg-red-50/50 dark:bg-red-900/5 transition-all">
+<div class="flex items-center gap-3 overflow-hidden opacity-75">
+<div class="relative shrink-0">
+<img class="h-12 w-12 rounded-full object-cover grayscale ring-2 ring-gray-100 dark:ring-[#233c48]" data-alt="Portrait of disqualified participant Mike Ross" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAtzh84rlSGrs0B757OEdv94ctwMtT6QivsAhqN8C4pJcF-AILCNb3Ai7Jvo9g3bjZxEezchkEOqHAPlZ0uGzB4zE2plIlkHGsZuk39qS3GzDfXogvy1B_oxiGDrVfP0oIZqAZr9f3X_LMaLQwsedDRpARJszEc-Uj5CXF4NcPMzw94l20Cw_UIXj3ZKv2wTwYKmap__Cj4sm8S5_7mCpBPs6QSyXPw6QWKnahDxEFmuSFjs5McsQKrPdfGdIMelloeIhfoP95Atk"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full border-2 border-white dark:border-card-dark bg-red-500" title="Disqualified"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="truncate text-sm font-semibold text-gray-900 dark:text-white line-through decoration-red-500">Mike Ross</h3>
+<span class="inline-flex items-center rounded bg-red-100 dark:bg-red-900/30 px-1.5 py-0.5 text-[10px] font-bold text-red-600 dark:text-red-400 border border-transparent">DQ</span>
+</div>
+<p class="truncate text-xs text-gray-500 dark:text-text-secondary mt-0.5">ID: #1120</p>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 ml-2">
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-primary/10 hover:text-primary transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-primary hover:bg-primary/20 transition-colors" title="Re-qualify">
+<span class="material-symbols-outlined text-[20px]">undo</span>
+</button>
+</div>
+</div>
+<!-- List Item: Active -->
+<div class="group relative flex items-center justify-between rounded-xl bg-white dark:bg-card-dark p-3 shadow-sm border border-transparent hover:border-gray-200 dark:hover:border-border-dark transition-all">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="relative shrink-0">
+<img class="h-12 w-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-[#233c48]" data-alt="Portrait of angler David Kim" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqeTM5Zsg-V4Aw3nxKRIL3XgSE0koM2NVqvi1LDmlF13RM1DhUj7-MKaZN6ZFUVQ2ZdOlsu1R-2CFJrGf6f7BLplJdoYC7r53NYO4UbtbnOxpfzHEkQG7L8NnRcnXx3c--zaRjECj50oIahcPhF7omL0v6w8p8DWbtIHl3GPOIW8vCRO3HD86_2dd91Rbjo9qPss4sYizfA92KWr7a1fBA7oywJn4e2Pt4fJTmsEL84qpeHencEZbkQxZCMkCz7sTYilNkKSeG8Lw"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full border-2 border-white dark:border-card-dark bg-green-500" title="Active"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="truncate text-sm font-semibold text-gray-900 dark:text-white">David Kim</h3>
+<span class="inline-flex items-center rounded bg-gray-100 dark:bg-[#111c22] px-1.5 py-0.5 text-[10px] font-medium text-gray-600 dark:text-text-secondary border border-gray-200 dark:border-border-dark">#4451</span>
+</div>
+<p class="truncate text-xs text-gray-500 dark:text-text-secondary mt-0.5">Team: <span class="text-primary font-medium">Lure Legends</span></p>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 ml-2">
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-primary/10 hover:text-primary transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-red-500/10 hover:text-red-500 transition-colors" title="Disqualify">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</button>
+</div>
+</div>
+<!-- List Item: Active -->
+<div class="group relative flex items-center justify-between rounded-xl bg-white dark:bg-card-dark p-3 shadow-sm border border-transparent hover:border-gray-200 dark:hover:border-border-dark transition-all">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="relative shrink-0">
+<img class="h-12 w-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-[#233c48]" data-alt="Portrait of angler Emily Chen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFKfD1LgYjprNYneNBQqGqAFtlidnJttd1Cnr4Yfpo_zM9Wj23ktvM5mxtaB_9JGEGMB0cXsp_iUPME1C7wOXrtxLRiAW9WEzgNGPWTGiKTnscRIXv4jH1wp5Xwy18MJJzsUv5MPb73ZQHQX2lwwG_MSQtj0f-FNM259iP9qOTQwOl04DDTLBM9XPQ-n846FWp5CDvtWvRIEF6k-Sr0ZQDAnEeL8JKyvjWsKLg4I_3iLchRHCTfvOUPjOq4V_mlbT-lShSUg4Hzvg"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full border-2 border-white dark:border-card-dark bg-green-500" title="Active"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="truncate text-sm font-semibold text-gray-900 dark:text-white">Emily Chen</h3>
+<span class="inline-flex items-center rounded bg-gray-100 dark:bg-[#111c22] px-1.5 py-0.5 text-[10px] font-medium text-gray-600 dark:text-text-secondary border border-gray-200 dark:border-border-dark">#7782</span>
+</div>
+<p class="truncate text-xs text-gray-500 dark:text-text-secondary mt-0.5">Team: <span class="text-primary font-medium">Tackle Titans</span></p>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 ml-2">
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-primary/10 hover:text-primary transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-red-500/10 hover:text-red-500 transition-colors" title="Disqualify">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</button>
+</div>
+</div>
+<!-- List Item: Active -->
+<div class="group relative flex items-center justify-between rounded-xl bg-white dark:bg-card-dark p-3 shadow-sm border border-transparent hover:border-gray-200 dark:hover:border-border-dark transition-all">
+<div class="flex items-center gap-3 overflow-hidden">
+<div class="relative shrink-0">
+<img class="h-12 w-12 rounded-full object-cover ring-2 ring-gray-100 dark:ring-[#233c48]" data-alt="Portrait of angler Jessica Alba lookalike" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtMXs4EZtuMs2uWQtzSQpe1STwXvwmjbugei2xyH7ik1uUQd0JGLfb8Z5k8iOiY8fneuXx56x2ZG5W71AHa7X3FhrVmgP16Vt7Qw2bTLw0GVSjFMTHoMDF8kJ0k5MiQJ2PqDVQgJ0mneckc5BU-CY-NSiKma8G_Xz8iah-XY0dFvo4Y5cDVsLqZQNwZd5HIo4szivAupqMQdEuGeaJ1owmTseiYH6R2-WEtZtbEDM-Oune4QSGb0dH12CPkow33OSVM27jst-iojA"/>
+<span class="absolute bottom-0 right-0 block h-3 w-3 rounded-full border-2 border-white dark:border-card-dark bg-green-500" title="Active"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<h3 class="truncate text-sm font-semibold text-gray-900 dark:text-white">Jessica L.</h3>
+<span class="inline-flex items-center rounded bg-gray-100 dark:bg-[#111c22] px-1.5 py-0.5 text-[10px] font-medium text-gray-600 dark:text-text-secondary border border-gray-200 dark:border-border-dark">#3321</span>
+</div>
+<p class="truncate text-xs text-gray-500 dark:text-text-secondary mt-0.5">Team: <span class="text-primary font-medium">Reel Experts</span></p>
+</div>
+</div>
+<div class="flex items-center gap-1 shrink-0 ml-2">
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-primary/10 hover:text-primary transition-colors" title="Copy ID">
+<span class="material-symbols-outlined text-[20px]">content_copy</span>
+</button>
+<button class="group/btn flex h-9 w-9 items-center justify-center rounded-lg text-gray-400 dark:text-text-secondary hover:bg-red-500/10 hover:text-red-500 transition-colors" title="Disqualify">
+<span class="material-symbols-outlined text-[20px]">block</span>
+</button>
+</div>
+</div>
+</main>
+<!-- Floating Action Button (FAB) -->
+<div class="absolute bottom-6 right-6 z-30">
+<button class="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-white shadow-lg shadow-primary/40 transition hover:scale-105 active:scale-95 group">
+<span class="material-symbols-outlined text-3xl group-hover:rotate-90 transition-transform">add</span>
+</button>
+</div>
+<!-- Toast Notification (Static Visual Mockup) -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-30 flex items-center gap-2 rounded-lg bg-gray-900 dark:bg-white px-4 py-2.5 text-sm font-medium text-white dark:text-background-dark shadow-xl animate-bounce" style="animation-duration: 3s; animation-iteration-count: 1;">
+<span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+            ID #8821 copied to clipboard
+        </div>
+</div>
+</body></html>

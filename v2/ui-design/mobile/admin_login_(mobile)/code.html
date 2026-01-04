@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fishing Tournament Manager - Admin Login</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem", 
+                        "lg": "0.5rem", 
+                        "xl": "0.75rem", 
+                        "2xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display min-h-screen flex flex-col items-center justify-center relative overflow-hidden">
+<!-- Background Decoration -->
+<div class="absolute inset-0 z-0 pointer-events-none opacity-10 dark:opacity-20 bg-cover bg-center" data-alt="Abstract topographic map pattern suggesting water depth contours" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChzXNpOzRMiCzX-_btYyBN-pYTuQCwWSmRaNYiPZ_7W5zNGVNJxxxaO1k_vYrF0hriauLTi0t78w3GfVUQxXDwfdcdRRQY5MWnDFBM28K1epv38ZuXuCT7LMknBqa_3enkaSRuA9NSRxA5fIZm0vW7-bqXxhU-Nj6PL7AG8G4UdHwCdkAFdb-YSrHXQzLrscg6ZL4WKm-dSMDZ-rDMxAw2KLc9B9fXx8Y7wORAV111t7U3xP59W7BsVUU3TX9rmuR0unGuPqWn3L4');">
+</div>
+<div class="absolute inset-0 z-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
+<!-- Main Content Area -->
+<main class="relative z-10 w-full max-w-[420px] px-4">
+<!-- Mobile Card Container -->
+<div class="bg-white dark:bg-[#1a262d] rounded-2xl shadow-2xl border border-slate-200 dark:border-[#233c48] overflow-hidden w-full">
+<!-- Branding Header -->
+<div class="flex flex-col items-center pt-8 pb-4 px-6 text-center">
+<div class="size-16 rounded-full bg-primary/20 flex items-center justify-center mb-4 text-primary">
+<svg class="w-10 h-10" fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M39.475 21.6262C40.358 21.4363 40.6863 21.5589 40.7581 21.5934C40.7876 21.655 40.8547 21.857 40.8082 22.3336C40.7408 23.0255 40.4502 24.0046 39.8572 25.2301C38.6799 27.6631 36.5085 30.6631 33.5858 33.5858C30.6631 36.5085 27.6632 38.6799 25.2301 39.8572C24.0046 40.4502 23.0255 40.7407 22.3336 40.8082C21.8571 40.8547 21.6551 40.7875 21.5934 40.7581C21.5589 40.6863 21.4363 40.358 21.6262 39.475C21.8562 38.4054 22.4689 36.9657 23.5038 35.2817C24.7575 33.2417 26.5497 30.9744 28.7621 28.762C30.9744 26.5497 33.2417 24.7574 35.2817 23.5037C36.9657 22.4689 38.4054 21.8562 39.475 21.6262ZM4.41189 29.2403L18.7597 43.5881C19.8813 44.7097 21.4027 44.9179 22.7217 44.7893C24.0585 44.659 25.5148 44.1631 26.9723 43.4579C29.9052 42.0387 33.2618 39.5667 36.4142 36.4142C39.5667 33.2618 42.0387 29.9052 43.4579 26.9723C44.1631 25.5148 44.659 24.0585 44.7893 22.7217C44.9179 21.4027 44.7097 19.8813 43.5881 18.7597L29.2403 4.41187C27.8527 3.02428 25.8765 3.02573 24.2861 3.36776C22.6081 3.72863 20.7334 4.58419 18.8396 5.74801C16.4978 7.18716 13.9881 9.18353 11.5858 11.5858C9.18354 13.988 7.18717 16.4978 5.74802 18.8396C4.58421 20.7334 3.72865 22.6081 3.36778 24.2861C3.02574 25.8765 3.02429 27.8527 4.41189 29.2403Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h1 class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-tight">Tournament Admin</h1>
+<p class="text-slate-500 dark:text-[#92b7c9] text-base font-normal mt-2">Sign in to manage the event</p>
+</div>
+<!-- Login Form -->
+<form class="p-6 flex flex-col gap-5">
+<!-- Admin ID Field -->
+<div class="flex flex-col gap-2">
+<label class="text-slate-700 dark:text-white text-sm font-medium leading-normal" for="admin-id">Admin ID</label>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 dark:text-[#92b7c9]">
+<span class="material-symbols-outlined text-[20px]">badge</span>
+</div>
+<input class="form-input w-full pl-11 rounded-lg border border-slate-300 dark:border-[#325567] bg-white dark:bg-[#111c22] text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#92b7c9]/60 text-base" id="admin-id" placeholder="Enter your ID" type="text" value=""/>
+</div>
+</div>
+<!-- Password Field -->
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-center">
+<label class="text-slate-700 dark:text-white text-sm font-medium leading-normal" for="password">Password</label>
+<a class="text-xs text-primary font-medium hover:text-primary/80" href="#">Forgot?</a>
+</div>
+<div class="relative flex w-full items-stretch rounded-lg">
+<div class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400 dark:text-[#92b7c9]">
+<span class="material-symbols-outlined text-[20px]">lock</span>
+</div>
+<input class="form-input flex-1 w-full min-w-0 pl-11 rounded-lg rounded-r-none border border-r-0 border-slate-300 dark:border-[#325567] bg-white dark:bg-[#111c22] text-slate-900 dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/50 focus:border-primary h-12 placeholder:text-slate-400 dark:placeholder:text-[#92b7c9]/60 text-base" id="password" placeholder="Enter password" type="password" value=""/>
+<button class="flex items-center justify-center px-4 rounded-r-lg border border-l-0 border-slate-300 dark:border-[#325567] bg-white dark:bg-[#111c22] text-slate-400 dark:text-[#92b7c9] hover:text-primary transition-colors focus:outline-none focus:ring-2 focus:ring-primary/50 z-10" type="button">
+<span class="material-symbols-outlined text-[20px]">visibility</span>
+</button>
+</div>
+</div>
+<!-- Feedback Area (Empty state) -->
+<div class="min-h-[20px] text-center">
+<!-- Error messages would go here, e.g.: -->
+<!-- <p class="text-red-500 text-xs">Invalid credentials. Please try again.</p> -->
+</div>
+<!-- Submit Button -->
+<button class="w-full bg-primary hover:bg-primary/90 text-white font-semibold h-12 rounded-lg transition-all shadow-lg shadow-primary/20 active:scale-[0.98] flex items-center justify-center gap-2" type="button">
+<span>Log In</span>
+<span class="material-symbols-outlined text-[20px]">login</span>
+</button>
+<!-- Helper Links -->
+<div class="flex items-center justify-center gap-1 mt-2">
+<p class="text-slate-500 dark:text-[#92b7c9] text-sm">Need help?</p>
+<a class="text-primary text-sm font-medium hover:underline" href="#">Contact Support</a>
+</div>
+</form>
+<!-- Card Footer Decor -->
+<div class="h-1 w-full bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+</div>
+<!-- Footer -->
+<footer class="mt-8 text-center">
+<p class="text-xs text-slate-400 dark:text-[#92b7c9]/60">© 2024 Fishing Tournament Manager</p>
+</footer>
+</main>
+</body></html>

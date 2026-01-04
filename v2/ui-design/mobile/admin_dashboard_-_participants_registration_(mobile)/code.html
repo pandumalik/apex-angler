@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin Dashboard - Participants Registration</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13a4ec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101c22",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for dark theme feel */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #111c22; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #233c48; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #325567; 
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen text-slate-900 dark:text-white font-display overflow-hidden">
+<div class="flex h-screen w-full">
+<!-- Sidebar Navigation (Desktop) -->
+<aside class="w-72 bg-[#111c22] border-r border-[#233c48] hidden lg:flex flex-col flex-shrink-0 z-20">
+<div class="flex h-full flex-col justify-between p-4">
+<div class="flex flex-col gap-6">
+<!-- User Profile / App Header -->
+<div class="flex gap-3 items-center px-2 pt-2">
+<div class="bg-center bg-no-repeat bg-cover rounded-full size-12 shadow-inner border border-[#233c48]" data-alt="Abstract blue ocean waves pattern representing fishing tournament branding" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDC97CGWzBha4aH37TsOEdO2GSxCkuhWAja4RdP2-HlKLFDaqxQ8FImiLxm-91QrPeenxeLYyAomijMvUbwEChE0pjZyIHKolGtagu9avkwExEB1r2YkgNpaQF2UXtJByxfiGWjwlk0wkN5QKjy54Wj8Hk3OZMgq53V1eLFqd01VjN0WnH9ed7lHzGnmDVJN3bjKyTOhzD_ngb7HbdnW6F9Nroe484wET-6Snl0ood-Yvj1jHGaKcpmodsu_3FYeGIfJY1uTKX2ta4");'>
+</div>
+<div class="flex flex-col">
+<h1 class="text-white text-base font-semibold leading-tight">Tournament Admin</h1>
+<p class="text-[#92b7c9] text-xs font-normal">Coastal Classic 2024</p>
+</div>
+</div>
+<!-- Nav Items -->
+<div class="flex flex-col gap-2 mt-4">
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#192b33] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#92b7c9] group-hover:text-white transition-colors">grid_view</span>
+<p class="text-[#92b7c9] group-hover:text-white text-sm font-medium leading-normal transition-colors">Dashboard</p>
+</a>
+<!-- Active Item -->
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl bg-primary/10 border border-primary/20 shadow-[0_0_15px_rgba(19,164,236,0.1)]" href="#">
+<span class="material-symbols-outlined text-primary">person_add</span>
+<p class="text-white text-sm font-semibold leading-normal">Registration</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#192b33] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#92b7c9] group-hover:text-white transition-colors">leaderboard</span>
+<p class="text-[#92b7c9] group-hover:text-white text-sm font-medium leading-normal transition-colors">Leaderboard</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#192b33] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#92b7c9] group-hover:text-white transition-colors">sailing</span>
+<p class="text-[#92b7c9] group-hover:text-white text-sm font-medium leading-normal transition-colors">Tournaments</p>
+</a>
+<a class="flex items-center gap-3 px-4 py-3 rounded-xl hover:bg-[#192b33] transition-colors group" href="#">
+<span class="material-symbols-outlined text-[#92b7c9] group-hover:text-white transition-colors">settings</span>
+<p class="text-[#92b7c9] group-hover:text-white text-sm font-medium leading-normal transition-colors">Settings</p>
+</a>
+</div>
+</div>
+<div class="px-4 py-4 border-t border-[#233c48]">
+<button class="flex items-center gap-3 w-full text-left text-[#92b7c9] hover:text-white transition-colors">
+<span class="material-symbols-outlined text-xl">logout</span>
+<span class="text-sm font-medium">Sign Out</span>
+</button>
+</div>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col relative overflow-y-auto overflow-x-hidden bg-[#0d161b]">
+<!-- Mobile Header (Visible only on small screens) -->
+<div class="lg:hidden flex items-center justify-between p-4 bg-[#111c22] border-b border-[#233c48] sticky top-0 z-30">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-white">menu</span>
+<span class="text-white font-semibold">Registration</span>
+</div>
+<div class="size-8 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-sm">person</span>
+</div>
+</div>
+<div class="flex flex-1 flex-col items-center py-8 px-4 lg:px-8">
+<div class="w-full max-w-md flex flex-col gap-6">
+<!-- Page Context Title -->
+<div class="text-center pb-2">
+<h2 class="text-white text-2xl font-bold tracking-tight">Participant Registration</h2>
+<p class="text-[#92b7c9] text-sm mt-1">Register new anglers and generate credentials.</p>
+</div>
+<!-- Registration Card -->
+<div class="bg-[#111c22] rounded-2xl border border-[#233c48] shadow-xl overflow-hidden">
+<div class="p-6 flex flex-col gap-5">
+<div class="flex items-center gap-3 pb-2 border-b border-[#233c48]/50">
+<div class="bg-[#192b33] p-2 rounded-lg text-primary">
+<span class="material-symbols-outlined">badge</span>
+</div>
+<h3 class="text-white text-lg font-semibold">New Entry</h3>
+</div>
+<!-- Form -->
+<div class="flex flex-col gap-5">
+<label class="flex flex-col gap-2">
+<span class="text-white text-sm font-medium">Full Name</span>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[#92b7c9] text-lg">person</span>
+</div>
+<input class="w-full bg-[#192b33] border border-[#325567] text-white text-sm rounded-lg focus:ring-primary focus:border-primary block pl-10 p-3.5 placeholder-[#5c7280] transition-all" placeholder="e.g. Michael Fisher" type="text"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-white text-sm font-medium">Team Name <span class="text-[#5c7280] font-normal">(Optional)</span></span>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[#92b7c9] text-lg">groups</span>
+</div>
+<input class="w-full bg-[#192b33] border border-[#325567] text-white text-sm rounded-lg focus:ring-primary focus:border-primary block pl-10 p-3.5 placeholder-[#5c7280] transition-all" placeholder="e.g. The Big Catchers" type="text"/>
+</div>
+</label>
+<label class="flex flex-col gap-2">
+<span class="text-white text-sm font-medium">Category</span>
+<div class="relative">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[#92b7c9] text-lg">category</span>
+</div>
+<select class="w-full bg-[#192b33] border border-[#325567] text-white text-sm rounded-lg focus:ring-primary focus:border-primary block pl-10 p-3.5 appearance-none">
+<option>Pro Angler</option>
+<option>Amateur</option>
+<option>Junior</option>
+</select>
+<div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+<span class="material-symbols-outlined text-[#92b7c9]">expand_more</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Action Button -->
+<button class="mt-2 w-full bg-primary hover:bg-[#0f8ecf] text-white font-semibold py-3.5 px-4 rounded-xl shadow-lg shadow-primary/20 flex items-center justify-center gap-2 transition-all transform active:scale-[0.98]">
+<span class="material-symbols-outlined">qr_code_2</span>
+                            Generate Credential
+                        </button>
+</div>
+</div>
+<!-- Result Preview (Simulated as if a user was just added for context) -->
+<div class="bg-[#192b33]/50 rounded-2xl border border-[#233c48] border-dashed p-6 flex flex-col items-center text-center relative">
+<div class="absolute top-4 right-4">
+<span class="material-symbols-outlined text-green-500">check_circle</span>
+</div>
+<p class="text-[#92b7c9] text-xs font-medium uppercase tracking-wider mb-4">Last Registered</p>
+<div class="bg-white p-2 rounded-xl shadow-lg mb-4">
+<!-- Simulated QR Code using a CSS pattern or simple placeholder image -->
+<div class="size-32 bg-contain bg-center bg-no-repeat" data-alt="QR Code for tournament participant verification" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVhNrIPkz8AGcleNCaW3tSq4CKNmPC4wl0XNV3vXqnY2J3rZgVxP-cclffwN_b0WUUptTmNQvhTQyZ0XVVhKmDXqdy_ylBt_JPh47u5r3FQsGr7gqStLkpF99k6RFKUtohyIpgbPWCyRhtPpAJnmY58wEDF-IhYdNR8FF_1Y51ITWIPxCtOWnJ2TVGyS7ncd1-gqdYxnZUz1LzahClMYh9Z1EdqXNQ-FAojLLUCC0-nHBBvg16ReratcmxxARNBJi0U7lvhLXU3So");'>
+</div>
+</div>
+<h4 class="text-white text-xl font-mono font-bold tracking-widest">FISH-9921</h4>
+<p class="text-white text-base font-medium mt-1">Sarah Jenkins</p>
+<p class="text-[#5c7280] text-sm">Team: River Runners</p>
+<div class="flex gap-3 mt-6 w-full">
+<button class="flex-1 bg-[#111c22] border border-[#325567] hover:bg-[#1f2e36] text-[#92b7c9] hover:text-white py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">print</span>
+                            Print
+                        </button>
+<button class="flex-1 bg-[#111c22] border border-[#325567] hover:bg-[#1f2e36] text-[#92b7c9] hover:text-white py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg">share</span>
+                            Share
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

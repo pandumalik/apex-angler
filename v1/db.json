@@ -1,0 +1,22 @@
+{
+  "fishermen": [
+    {
+      "id": "LEI873",
+      "name": "Malik",
+      "weight": 0,
+      "isEliminated": false,
+      "registeredAt": "2025-11-25T18:41:14.889Z"
+    },
+    {
+      "id": "LLX428",
+      "name": "Ridho",
+      "weight": 0,
+      "isEliminated": true,
+      "registeredAt": "2025-11-25T18:41:19.052Z"
+    }
+  ],
+  "settings": {
+    "eventName": "Lomba Mancing Mania 2025",
+    "bgImage": "https://images.unsplash.com/photo-1544551763-46a013bb70d5?q=80&w=2070&auto=format&fit=crop"
+  }
+}

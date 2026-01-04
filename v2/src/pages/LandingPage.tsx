@@ -1,0 +1,130 @@
+import { Link } from 'react-router-dom';
+import { Anchor, ClipboardList, Fish, ArrowRight } from 'lucide-react';
+
+export default function LandingPage() {
+    return (
+        <div className="relative flex h-auto min-h-screen w-full flex-col bg-background-light dark:bg-background-dark overflow-x-hidden text-slate-900 dark:text-white">
+            {/* Navigation */}
+            <header className="w-full border-b border-solid border-slate-200 dark:border-[#233c48] bg-white dark:bg-[#111c22]">
+                <div className="flex justify-center w-full">
+                    <div className="flex w-full max-w-[960px] items-center justify-between px-4 py-3 lg:px-10">
+                        <div className="flex items-center gap-4">
+                            <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                                <Anchor size={24} />
+                            </div>
+                            <h2 className="text-lg font-bold leading-tight tracking-[-0.015em]">Fishing Tournament Portal</h2>
+                        </div>
+                        <div className="hidden md:flex flex-1 justify-end gap-8 items-center">
+                            <div className="flex items-center gap-9">
+                                <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Help</a>
+                                <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Rules</a>
+                                <a className="text-sm font-medium hover:text-primary transition-colors" href="#">Sponsors</a>
+                            </div>
+                            <div
+                                className="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 ring-2 ring-primary/20"
+                                style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuAs-wc50BKwdFSotvhneIiWccTc_gqgPugOTD1Ln9ZGKFknF58w1MVlU64mKqqaT_2pfyDABVRZz7NfkXISpGruta73bhkVtXcCyD0l487QSMcvEXiEzBcKElv5-P76SZL6whH73oUnriSRrgOxIuTSzLkwlcd1Hb5xO82QP8ZILm9-aTcv-vh_FCECJt1v4TrmkC1T3gbkBeqo_bAq-iP0CvvUxj2qBkYjggimNScT9dqRY7LAbd9ilaaV-UjbXdgeKjsCA-KPIuA")' }}
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main className="flex-grow flex flex-col items-center">
+                <div className="w-full max-w-[960px] flex flex-col">
+                    {/* Hero Section */}
+                    <div className="px-4 py-6 md:px-10 md:py-10">
+                        <div className="overflow-hidden rounded-xl bg-slate-900 relative min-h-[320px] flex flex-col justify-center items-center text-center p-8 md:p-12 shadow-2xl">
+                            {/* Background Image with Overlay */}
+                            <div
+                                className="absolute inset-0 z-0 bg-cover bg-center"
+                                style={{ backgroundImage: 'linear-gradient(rgba(16, 28, 34, 0.7) 0%, rgba(16, 28, 34, 0.9) 100%), url("https://lh3.googleusercontent.com/aida-public/AB6AXuB1OMbwiKYx510cQ5w_DMjyOL6LkTtuiX76EzJYuu1M_sV9tzZHxXW_aiYp2MKAm16WoXQXavGV1iI9e-sqD1jhvJCvNYlojqJzZfGFAwhpaU4vGBCESfFfOFNVPwB9OU2K4H_GWItFLlHyGxcLLpO--Lq5sMxRdKdJcaDuYdU2Jk2rTgzL9gjstigeXtLHwuPBr1z-Zq38vyuXOV-zrkGzN3GYwZBP6BEP6XgVJyxKtjaaRhqbrinrszAd2GjLwKUkjZD55kAHxLI")' }}
+                            ></div>
+                            <div className="relative z-10 flex flex-col gap-4 max-w-2xl mx-auto">
+                                <div className="inline-flex items-center justify-center gap-2 px-3 py-1 rounded-full bg-green-500/20 text-green-400 border border-green-500/30 text-xs font-bold uppercase tracking-wide w-fit mx-auto animate-pulse">
+                                    <span className="w-2 h-2 rounded-full bg-green-500"></span>
+                                    Live Status: Tournament In Progress
+                                </div>
+                                <h1 className="text-white text-4xl md:text-5xl font-black leading-tight tracking-tight">
+                                    Welcome to the <span className="text-primary">Fishing Tournament</span> Portal
+                                </h1>
+                                <p className="text-slate-300 text-lg md:text-xl font-normal leading-relaxed">
+                                    Manage your event or track your catch. Please select your role below to access the appropriate dashboard.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Role Selection Section */}
+                    <div className="px-4 pb-12 md:px-10">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+                            {/* Admin Card */}
+                            <Link to="/login/admin" className="group relative flex flex-col gap-6 rounded-xl border border-slate-200 dark:border-[#325567] bg-white dark:bg-[#192b33] p-8 transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_rgba(19,164,236,0.15)] hover:-translate-y-1">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-100 dark:bg-[#233c48] text-slate-900 dark:text-white group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                        <ClipboardList size={32} />
+                                    </div>
+                                    <ArrowRight className="text-slate-400 group-hover:text-primary transition-colors" />
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <h2 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                                        Panitia (Admin)
+                                    </h2>
+                                    <p className="text-slate-500 dark:text-[#92b7c9]">
+                                        Access the management dashboard to oversee event details, approve catch submissions, and manage tournament rules.
+                                    </p>
+                                </div>
+                                <div className="mt-auto pt-4">
+                                    <span className="inline-flex items-center text-sm font-bold group-hover:text-primary transition-colors">
+                                        Go to Admin Dashboard
+                                    </span>
+                                </div>
+                            </Link>
+
+                            {/* Fisherman Card */}
+                            <Link to="/login/fisherman" className="group relative flex flex-col gap-6 rounded-xl border border-slate-200 dark:border-[#325567] bg-white dark:bg-[#192b33] p-8 transition-all duration-300 hover:border-primary hover:shadow-[0_0_20px_rgba(19,164,236,0.15)] hover:-translate-y-1">
+                                <div className="flex items-center justify-between">
+                                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-100 dark:bg-[#233c48] text-slate-900 dark:text-white group-hover:bg-primary group-hover:text-white transition-colors duration-300">
+                                        <Fish size={32} />
+                                    </div>
+                                    <ArrowRight className="text-slate-400 group-hover:text-primary transition-colors" />
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <h2 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                                        Peserta (Fisherman)
+                                    </h2>
+                                    <p className="text-slate-500 dark:text-[#92b7c9]">
+                                        Log your latest catches, view real-time leaderboards, and track your personal ranking against other anglers.
+                                    </p>
+                                </div>
+                                <div className="mt-auto pt-4">
+                                    <span className="inline-flex items-center text-sm font-bold group-hover:text-primary transition-colors">
+                                        Enter Tournament Area
+                                    </span>
+                                </div>
+                            </Link>
+
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            {/* Footer */}
+            <footer className="w-full border-t border-solid border-slate-200 dark:border-[#233c48] bg-white dark:bg-[#111c22]">
+                <div className="flex justify-center py-10">
+                    <div className="flex flex-col max-w-[960px] w-full px-4 md:px-10">
+                        <div className="flex flex-col gap-6 text-center">
+                            <div className="flex flex-wrap items-center justify-center gap-6 md:justify-around">
+                                <a className="text-slate-500 dark:text-[#92b7c9] text-sm md:text-base font-normal hover:text-primary transition-colors min-w-[100px]" href="#">Help Center</a>
+                                <a className="text-slate-500 dark:text-[#92b7c9] text-sm md:text-base font-normal hover:text-primary transition-colors min-w-[100px]" href="#">Official Rules</a>
+                                <a className="text-slate-500 dark:text-[#92b7c9] text-sm md:text-base font-normal hover:text-primary transition-colors min-w-[100px]" href="#">Sponsor Logos</a>
+                                <a className="text-slate-500 dark:text-[#92b7c9] text-sm md:text-base font-normal hover:text-primary transition-colors min-w-[100px]" href="#">Privacy Policy</a>
+                            </div>
+                            <p className="text-slate-400 dark:text-[#587383] text-sm">Powered by Fishing App © 2024. All rights reserved.</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    );
+}

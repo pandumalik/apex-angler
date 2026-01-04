@@ -7,8 +7,12 @@ export default function LandingPage() {
 
     useEffect(() => {
         const isAdminAuthenticated = localStorage.getItem('isAdminAuthenticated') === 'true';
+        const isFishermanAuthenticated = localStorage.getItem('isFishermanAuthenticated') === 'true';
+
         if (isAdminAuthenticated) {
             navigate('/admin/overview');
+        } else if (isFishermanAuthenticated) {
+            navigate('/dashboard');
         }
     }, [navigate]);
 

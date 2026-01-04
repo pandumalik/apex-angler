@@ -92,6 +92,24 @@ app.post('/api/clear', (req, res) => {
     res.json({ success: true });
 });
 
+// 6. FISHERMAN LOGIN (Validate ID)
+app.post('/api/login/fisherman', (req, res) => {
+    const db = readDB();
+    const { id } = req.body;
+
+    const fisherman = db.fishermen.find(f => f.id === id);
+
+    if (fisherman) {
+        if (fisherman.status === 'Disqualified') {
+            res.status(403).json({ error: "Account is disqualified" });
+        } else {
+            res.json({ success: true, fisherman });
+        }
+    } else {
+        res.status(401).json({ error: "Invalid Participant ID" });
+    }
+});
+
 // Start Server
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`\n--- HOST SERVER RUNNING ---`);

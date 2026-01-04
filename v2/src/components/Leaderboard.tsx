@@ -84,11 +84,11 @@ export default function Leaderboard() {
                 <div className="bg-white dark:bg-[#16242c] p-5 rounded-xl border border-slate-200 dark:border-[#325567] shadow-sm flex flex-col gap-1 relative overflow-hidden">
                     <div className="absolute right-0 top-0 h-full w-1 bg-primary"></div>
                     <div className="flex items-center justify-between"><p className="text-slate-500 dark:text-[#92b7c9] text-sm font-medium">Total Catch Weight</p><Scale className="text-primary/50" size={24} /></div>
-                    <p className="text-2xl font-bold tracking-tight">{stats.totalWeight.toFixed(2)} <span className="text-sm font-normal text-slate-400">lbs</span></p>
+                    <p className="text-2xl font-bold tracking-tight">{stats.totalWeight.toFixed(2)} <span className="text-sm font-normal text-slate-400">kg</span></p>
                 </div>
                 <div className="bg-white dark:bg-[#16242c] p-5 rounded-xl border border-slate-200 dark:border-[#325567] shadow-sm flex flex-col gap-1">
                     <div className="flex items-center justify-between"><p className="text-slate-500 dark:text-[#92b7c9] text-sm font-medium">Biggest Catch</p><Trophy className="text-primary/50" size={24} /></div>
-                    <p className="text-2xl font-bold tracking-tight text-primary">{stats.bigBass.toFixed(2)} <span className="text-sm font-normal text-slate-400 dark:text-slate-500">lbs</span></p>
+                    <p className="text-2xl font-bold tracking-tight text-primary">{stats.bigBass.toFixed(2)} <span className="text-sm font-normal text-slate-400 dark:text-slate-500">kg</span></p>
                     <p className="text-xs text-slate-400 mt-1">Held by: {stats.bigBassHolder}</p>
                 </div>
             </div>
@@ -116,6 +116,7 @@ export default function Leaderboard() {
                         <thead className="bg-slate-50 dark:bg-[#111c22]">
                             <tr>
                                 <th className="px-6 py-4 text-left text-xs font-semibold text-slate-500 dark:text-[#92b7c9] uppercase tracking-wider w-24">Rank</th>
+                                <th className="px-6 py-4 text-left text-xs font-semibold text-slate-500 dark:text-[#92b7c9] uppercase tracking-wider">ID</th>
                                 <th className="px-6 py-4 text-left text-xs font-semibold text-slate-500 dark:text-[#92b7c9] uppercase tracking-wider">Angler</th>
                                 <th className="px-6 py-4 text-left text-xs font-semibold text-slate-500 dark:text-[#92b7c9] uppercase tracking-wider hidden sm:table-cell">Team</th>
 
@@ -137,6 +138,9 @@ export default function Leaderboard() {
                                             </span>
                                         </div>
                                     </td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-xs font-mono text-slate-500 dark:text-slate-400">
+                                        {angler.id}
+                                    </td>
                                     <td className="px-6 py-4 whitespace-nowrap">
                                         <div className="flex items-center">
                                             <div className="h-10 w-10 flex-shrink-0 rounded-full bg-slate-200 dark:bg-slate-700 bg-cover bg-center ring-2 ring-yellow-400/50" style={{ backgroundImage: `url('${angler.avatar || "https://ui-avatars.com/api/?name=" + angler.name}')` }}></div>
@@ -151,10 +155,10 @@ export default function Leaderboard() {
                                     </td>
 
                                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm text-slate-500 dark:text-slate-400 hidden md:table-cell font-mono">
-                                        {angler.bigBass.toFixed(2)} lbs
+                                        {angler.bigBass.toFixed(2)} kg
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-right">
-                                        <div className="text-lg font-black text-primary font-mono">{angler.totalWeight.toFixed(2)} lbs</div>
+                                        <div className="text-lg font-black text-primary font-mono">{angler.totalWeight.toFixed(2)} kg</div>
                                     </td>
                                     <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                                         <ChevronRight className="text-slate-400 group-hover:text-primary transition-colors" size={20} />

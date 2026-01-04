@@ -38,5 +38,12 @@ export const api = {
     // 5. CLEAR DATA
     clearData: () => fetchJson<{ success: boolean }>('/clear', {
         method: 'POST'
+    }),
+
+    // 6. LOGIN FISHERMAN
+    loginFisherman: (id: string) => fetchJson<{ success: boolean; fisherman: Fisherman }>('/login/fisherman', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id })
     })
 };

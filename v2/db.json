@@ -1,39 +1,49 @@
 {
   "fishermen": [
     {
-      "name": "juminit",
-      "email": "juminto@gamial.com",
-      "team": "Tara-Club",
-      "id": "FISH-7424",
+      "name": "Andi",
+      "email": "rahool@gmail.com",
+      "team": "Individual",
+      "id": "861713",
       "status": "Active",
       "catches": [
         {
-          "id": "0ea3d379-61a3-4076-a145-0ba8386b64f4",
-          "weight": 123,
-          "timestamp": "2026-01-04T08:09:13.981Z"
-        },
-        {
-          "id": "9b3fa56d-9fc1-49b6-aadf-0f8ce8121db4",
-          "weight": 1,
-          "timestamp": "2026-01-04T08:09:30.176Z"
-        },
-        {
-          "id": "aaa70585-47b4-47bf-9284-8ee330fd7e9f",
-          "weight": 111,
-          "timestamp": "2026-01-04T08:09:34.581Z"
-        },
-        {
-          "id": "16d8f5ca-323f-4b3f-b6d0-970af727610c",
-          "weight": 1212,
-          "timestamp": "2026-01-04T08:09:40.472Z"
-        },
-        {
-          "id": "7250acfa-c054-4e40-b91d-8349895a3d95",
+          "id": "019da193-f9d6-48d9-96e5-ad1492739ca4",
           "weight": 12,
-          "timestamp": "2026-01-04T08:09:44.531Z"
+          "timestamp": "2026-01-04T09:03:55.207Z"
         }
       ],
-      "registeredAt": "2026-01-04T08:08:04.698Z"
+      "registeredAt": "2026-01-04T09:02:43.538Z"
+    },
+    {
+      "name": "John",
+      "email": "doe@mail.com",
+      "team": "Individual",
+      "id": "555954",
+      "status": "Active",
+      "catches": [
+        {
+          "id": "25b0ad94-074c-4c98-8c8e-12e8c1362226",
+          "weight": 22,
+          "timestamp": "2026-01-04T09:04:04.748Z"
+        }
+      ],
+      "registeredAt": "2026-01-04T09:02:54.793Z"
+    },
+    {
+      "name": "Reeka",
+      "email": "rondeel@mail.com",
+      "team": "Individual",
+      "id": "410854",
+      "status": "Active",
+      "catches": [
+        {
+          "id": "4a09fa72-26b9-4b38-a62a-2e27959d3463",
+          "weight": 1000,
+          "timestamp": "2026-01-04T09:04:16.077Z"
+        }
+      ],
+      "registeredAt": "2026-01-04T09:03:07.659Z"
     }
   ],
   "settings": {

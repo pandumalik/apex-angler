@@ -1,39 +1,81 @@
-# Apex Angler V2
+# 🎣 Apex Angler V2
 
-The Fishing Contest Manager application for tracking catches, managing tournaments, and viewing leaderboards.
+The **Apex Angler V2** is a modern, real-time fishing tournament management portal. It connects tournament organizers (Admins) and participants (Fishermen) through a live, interactive dashboard.
 
-## Prerequisites
+## 📸 Screenshots
 
-- Node.js (v18 or later)
-- npm or yarn
 
-## Getting Started
+![Landing Page](./screenshot/Screenshot%202026-01-04%20at%204.01.50%E2%80%AFPM.png)
+![Admin Dashboard](./screenshot/Screenshot%202026-01-04%20at%204.03.20%E2%80%AFPM.png)
+![Leaderboard](./screenshot/Screenshot%202026-01-04%20at%204.03.38%E2%80%AFPM.png)
+![Weigh-In](./screenshot/Screenshot%202026-01-04%20at%204.04.30%E2%80%AFPM.png)
 
-1.  **Install Dependencies**
-    ```bash
-    npm install
-    ```
+---
 
-2.  **Start the Development Server**
-    ```bash
-    npm run dev
-    ```
-    This will start the local server, usually at `http://localhost:5173`.
+## ✨ Features
 
-3.  **Build for Production**
-    ```bash
-    npm run build
-    ```
+### 🏢 For Admins
+*   **Overview Dashboard**: Real-time stats on participants, total weight, and catches.
+*   **Participant Management**:
+    *   Register new fishermen with auto-generated **6-digit IDs**.
+    *   Monitor active vs. disqualified participants.
+    *   Copy participant IDs to clipboard.
+*   **Weigh-In Station**:
+    *   record catches with **ID scanning** logic (type or scan ID).
+    *   Live validation of participant IDs.
+    *   Instant visual feedback and history log.
+    *   Support for **Kilograms (kg)** units.
+*   **Live Leaderboard**: Real-time ranking with automatic sorting by total weight.
 
-## Project Structure
+### 🎣 For Fishermen
+*   **Personal Portal**: Secure login with Participant ID.
+*   **Session Persistence**: Stay logged in across browser sessions.
+*   **Live Updates**: View personal stats and current rank on the leaderboard.
+*   **Auto-Redirect**: Verified fishermen are automatically redirected to their dashboard upon visiting the site.
 
-- `src/pages`: Application pages (Admin/Fisherman dashboards, login, landing)
-- `src/components`: Reusable UI components
-- `src/layouts`: Layout components
-- `src/types`: TypeScript definitions
+## 🛠️ Technology Stack
+*   **Frontend**: React, TypeScript, Vite
+*   **Styling**: Tailwind CSS v4, Lucide React Icons
+*   **Backend**: Node.js (Custom server), local JSON database (`db.json`)
+*   **Persistence**: `localStorage` (Session), `fs` (Data persistence)
 
-## Navigation
+## 🚀 Getting Started
 
-- **Landing Page**: `/`
-- **Admin Portal**: `/login/admin` -> `/admin/dashboard`
-- **Fisherman Portal**: `/login/fisherman` -> `/dashboard`
+### 1. Prerequisites
+*   Node.js installed on your machine.
+*   Network access (for local Wi-Fi access on mobile devices).
+
+### 2. Installation
+```bash
+# Clone the repository
+git clone [repo-url]
+
+# Navigate to v2 directory
+cd apex-angler/v2
+
+# Install dependencies
+npm install
+```
+
+### 3. Running the App
+You need two terminals to run the application (one for the Backend, one for the Frontend).
+
+**Terminal 1: Backend Server**
+```bash
+node server.js
+```
+*   Running on `http://localhost:3001`
+*   *Note: This server handles data persistence and local network IP discovery.*
+
+**Terminal 2: Frontend Client**
+```bash
+npm run dev
+```
+*   Accessible at `http://localhost:5173` (or your local IP for mobile access).
+
+## 📝 Usage Guide
+
+1.  **Admin Login**: Access via `/login/admin`. (Default credentials in code if applicable, or currently bypassed for demo).
+2.  **Add Participants**: Go to **Participants** tab -> **Add Participant**. Note the generated ID.
+3.  **Fisherman Login**: Use the generated ID to login at `/login/fisherman`.
+4.  **Weighing**: Go to **Weighing** tab in Admin panel -> Enter ID -> Enter Weight (kg) -> Save.

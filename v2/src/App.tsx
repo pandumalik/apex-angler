@@ -32,7 +32,9 @@ function App() {
               <Route path="/admin/*" element={<AdminDashboard />} />
             </Route>
 
-            <Route path="/dashboard" element={<FishermanDashboard />} />
+            <Route element={<AuthGuard role="fisherman" />}>
+              <Route path="/dashboard" element={<FishermanDashboard />} />
+            </Route>
 
             <Route path="*" element={<Navigate to="/" replace />} />
           </Routes>

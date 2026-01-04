@@ -13,6 +13,11 @@ export default function AuthGuard({ role, redirectPath = '/login/admin', childre
         if (!isAuthenticated) {
             return <Navigate to={redirectPath} replace />;
         }
+    } else if (role === 'fisherman') {
+        const isAuthenticated = localStorage.getItem('isFishermanAuthenticated') === 'true';
+        if (!isAuthenticated) {
+            return <Navigate to={redirectPath || '/login/fisherman'} replace />;
+        }
     }
 
     // Expand for fisherman logic later if needed

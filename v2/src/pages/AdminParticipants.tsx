@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Search, ChevronDown, Copy, Ban, Info, Plus, ChevronLeft, ChevronRight, X, UserPlus } from 'lucide-react';
+import { Search, ChevronDown, Copy, Ban, Info, Plus, X, UserPlus } from 'lucide-react';
 import { api } from '../services/api';
 import type { Fisherman } from '../types';
 
@@ -31,8 +31,8 @@ export default function AdminParticipants() {
     const handleAddParticipant = async (e: React.FormEvent) => {
         e.preventDefault();
         try {
-            // Check if ID is provided, if not generate one
-            const idToUse = newFisherman.id.trim() || `FISH-${Math.floor(1000 + Math.random() * 9000)}`;
+            // Check if ID is provided, if not generate one (6-digit ID like V1)
+            const idToUse = newFisherman.id.trim() || Math.floor(100000 + Math.random() * 900000).toString();
 
             await api.registerFisherman({
                 name: newFisherman.name,
@@ -211,7 +211,10 @@ export default function AdminParticipants() {
                                         <td className="p-4">
                                             <div className="flex items-center gap-2">
                                                 <span className="font-mono text-sm text-slate-500 dark:text-[#92b7c9]">{p.id}</span>
-                                                <button className="text-primary hover:text-slate-900 dark:hover:text-white transition-colors" title="Copy ID">
+                                                <button
+                                                    onClick={() => navigator.clipboard.writeText(p.id)}
+                                                    className="text-primary hover:text-slate-900 dark:hover:text-white transition-colors"
+                                                    title="Copy ID">
                                                     <Copy size={16} />
                                                 </button>
                                             </div>

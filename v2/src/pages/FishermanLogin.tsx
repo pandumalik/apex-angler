@@ -1,24 +1,33 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Anchor, IdCard, ArrowRight, HelpCircle } from 'lucide-react';
+import { api } from '../services/api';
 
 export default function FishermanLogin() {
     const navigate = useNavigate();
     const [participantId, setParticipantId] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    const handleLogin = (e: React.FormEvent) => {
+    const handleLogin = async (e: React.FormEvent) => {
         e.preventDefault();
         if (!participantId.trim()) return;
 
         setIsLoading(true);
-        // Simulate network request
-        setTimeout(() => {
-            // TODO: Validate ID against server/local data
-            // For now, allow any ID to enter dashboard to demo UI
-            navigate('/dashboard');
-            // In real app: navigate('/dashboard', { state: { fishermanId: participantId } });
-        }, 800);
+        try {
+            const response = await api.loginFisherman(participantId.trim());
+            if (response.success && response.fisherman) {
+                // Success
+                localStorage.setItem('isFishermanAuthenticated', 'true');
+                localStorage.setItem('fishermanId', response.fisherman.id);
+                localStorage.setItem('fishermanName', response.fisherman.name);
+                navigate('/dashboard');
+            }
+        } catch (err) {
+            console.error(err);
+            alert('Invalid ID or Account Disqualified');
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     return (

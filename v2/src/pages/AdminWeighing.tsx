@@ -15,13 +15,14 @@ export default function AdminWeighing() {
         fetchParticipants();
     }, []);
 
-    // Effect to identify fisherman when ID is typed
+    // Effect to identify fisherman when ID is typed or Scanned
     useEffect(() => {
         if (!selectedId) {
             setIdentifiedFisherman(null);
             return;
         }
-        const found = participants.find(p => p.id.toLowerCase() === selectedId.toLowerCase() || p.id.toLowerCase().includes(selectedId.toLowerCase()));
+        // Strict match for scanning, loose for typing
+        const found = participants.find(p => p.id.toLowerCase() === selectedId.toLowerCase());
         if (found) {
             setIdentifiedFisherman(found);
         } else {
@@ -98,7 +99,7 @@ export default function AdminWeighing() {
             <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div className="flex flex-col gap-1">
                     <h2 className="text-3xl font-black tracking-tight text-slate-900 dark:text-white">Weigh-In Station</h2>
-                    <p className="text-slate-500 dark:text-slate-400">Record catch data accurately. Verify participant ID before submission.</p>
+                    <p className="text-slate-500 dark:text-slate-400">Record catch data accurately in kg. Verify participant ID before submission.</p>
                 </div>
                 <div className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20">
                     <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></div>
@@ -129,7 +130,7 @@ export default function AdminWeighing() {
                                 </div>
                                 <div className="mt-4 px-4 py-2 bg-black/70 backdrop-blur-md rounded-full border border-white/10 flex items-center gap-2">
                                     <Loader2 className="text-primary animate-spin" size={16} />
-                                    <p className="text-white text-xs font-medium tracking-wide">Scanning for QR Code...</p>
+                                    <p className="text-white text-xs font-medium tracking-wide">Scanning Angler ID...</p>
                                 </div>
                             </div>
                         </div>
@@ -173,7 +174,7 @@ export default function AdminWeighing() {
                                             value={weight}
                                             onChange={(e) => setWeight(e.target.value)}
                                         />
-                                        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 font-medium">lbs</span>
+                                        <span className="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 font-medium">kg</span>
                                     </div>
                                 </label>
                             </div>
@@ -191,7 +192,7 @@ export default function AdminWeighing() {
                                     </div>
                                     <div className="text-right px-4 hidden sm:block">
                                         <p className="text-xs text-slate-500 dark:text-slate-400 mb-1">Current Total</p>
-                                        <p className="text-xl font-mono font-bold text-slate-900 dark:text-white">{currentTotalWeight} lbs</p>
+                                        <p className="text-xl font-mono font-bold text-slate-900 dark:text-white">{currentTotalWeight} kg</p>
                                     </div>
                                 </div>
                             ) : (
@@ -232,7 +233,7 @@ export default function AdminWeighing() {
                                 <Scale size={20} />
                                 <span className="text-xs font-semibold uppercase">Last</span>
                             </div>
-                            <p className="text-3xl font-black text-slate-900 dark:text-white">{recentCatches[0]?.weight || '0.0'} <span className="text-base font-medium text-slate-400">lbs</span></p>
+                            <p className="text-3xl font-black text-slate-900 dark:text-white">{recentCatches[0]?.weight || '0.0'} <span className="text-base font-medium text-slate-400">kg</span></p>
                         </div>
                     </div>
 

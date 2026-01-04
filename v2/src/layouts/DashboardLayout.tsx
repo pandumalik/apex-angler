@@ -1,4 +1,4 @@
-import { NavLink, Outlet } from 'react-router-dom';
+import { useNavigate, NavLink, Outlet } from 'react-router-dom';
 import { LayoutDashboard, Trophy, Users, Settings, Timer, StopCircle, LogOut } from 'lucide-react';
 
 interface SidebarItem {
@@ -13,6 +13,8 @@ interface DashboardLayoutProps {
 }
 
 export default function DashboardLayout({ role, children }: DashboardLayoutProps) {
+    const navigate = useNavigate();
+
     const sidebarItems: SidebarItem[] = role === 'admin' ? [
         { label: 'Overview', icon: <LayoutDashboard size={20} />, to: '/admin/overview' },
         { label: 'Live Leaderboard', icon: <Trophy size={20} />, to: '/admin/leaderboard' },
@@ -22,6 +24,17 @@ export default function DashboardLayout({ role, children }: DashboardLayoutProps
     ] : [
         { label: 'Live Leaderboard', icon: <Trophy size={20} />, to: '/dashboard' },
     ];
+
+    const handleLogout = () => {
+        // Clear session
+        // Clear session
+        localStorage.removeItem('isAdminAuthenticated');
+        localStorage.removeItem('isFishermanAuthenticated');
+        localStorage.removeItem('fishermanId');
+        localStorage.removeItem('fishermanName');
+        // Navigate home
+        navigate('/');
+    };
 
     return (
         <div className="flex h-screen bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-hidden">
@@ -53,7 +66,7 @@ export default function DashboardLayout({ role, children }: DashboardLayoutProps
                         <div className="bg-center bg-no-repeat bg-cover rounded-full h-10 w-10 ring-2 ring-slate-200 dark:ring-slate-700" style={{ backgroundImage: 'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDT1NOHPEXZQO_D7d7y35ZyCtRjJdrLkU3Vf0VPtOewTBinl_IbK70Kv7gAqp8f8Y1YXV_O7p5CSzTkQ2l1BgGztDw-G_NWpipxlNxA6XwfJpoXZEyw_ENG5_lRbEuxSb5JCUgLy90lYRZO9PRbTV89vJu1_RbPj4Yah2ZuNiQ1LaRVp6apWhm1tYVEGaUlrkM-f982E5f41Z4ulMvCqnphZn2K8hPMUfCF_LvO7NaGFNzXWn9F4NLQr4fdywS-eLYt6BCasgganFE")' }}></div>
                         <div className="flex flex-col">
                             <p className="text-sm font-medium">{role === 'admin' ? 'Administrator' : 'Angler'}</p>
-                            <button className="text-xs text-slate-500 text-left hover:text-red-400 flex items-center gap-1">Log Out <LogOut size={10} /></button>
+                            <button onClick={handleLogout} className="text-xs text-slate-500 text-left hover:text-red-400 flex items-center gap-1">Log Out <LogOut size={10} /></button>
                         </div>
                     </div>
                 </div>
